@@ -2,6 +2,6 @@
 
 ## Overview
 
-### This is a custom website design for AESL 
+### This is a custom website design tempalte for KDA Design Technologies.
 
 ## Project Description
