@@ -1,0 +1,196 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   Home Page
+{% endblock pagetitle %}
+
+
+{% block custom_css %} 
+<!-- Custom Stylesheets -->
+<!-- Custom Stylesheets --> 
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+<!-- Custom Scripts -->
+
+<!-- Custom Scripts -->
+{% endblock scripts %}
+
+{% block content %}
+    <!-- 00.00   main Body -->
+        {% block pagecontent %}
+            
+            <!-- Page Header -->
+            <header id ="search-page-header"
+                class="" 
+            >
+                <figure class="gc1s12 mb-00">
+                    <img src="{% static './_media/images/search/search.jpg' %}"          
+                        alt=""
+                        class="w-100 vh-60 cover">
+                    <hgroup class="flex justify-around items-start flex-column">
+                        <h2 class="
+                            w-100 h-100
+                            ph1-00 f3-00
+                            ">
+                            SEARCH
+                        </h2>     
+                    </hgroup>    
+                </figure>
+            </header>
+            <!-- Page Header -->
+            
+            <div id="search-page"
+                class=""
+            >
+                <div class="
+                    pa1-00">
+                    
+                    <article class="flex justify-between">
+                        
+                        <div id="m_filters"
+                            class="flex justify-between">
+                            <div class="flex flex-column">
+                                <hgroup>
+                                    <h2>
+                                        Departments
+                                    </h2>
+                                </hgroup>
+                                
+                                <select name="" id="">
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">All</li>
+                                    </option>
+                                    <option value="">
+                                        <li class="pa0-50 bg-black-20">Architecture</li>
+                                    </option>
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">Engineering</li>
+                                    </option>
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">Information Technology</li>
+                                    </option>
+                                    <option value="">
+                                        <li class="pa0-50 bg-black-20">Human Relations</li>
+                                    </option>
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">Regional Consultants</li>
+                                    </option>
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">Solicitor Secretary</li>
+                                    </option>
+                                    <option value="">
+                                            <li class="pa0-50 bg-black-20">Finance</li>
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-column">
+                            <hgroup>
+                                <h2>
+                                    Regions
+                                </h2>
+                            </hgroup>
+                            <select id="departments"
+                                class=""  
+                            >
+                                <option value=""><li class="pa0-50 bg-black-20">All</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Greater Accra</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Ashanti</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Brong Ahafo</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Bono East</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Ahafo</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Eastern</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Western</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Central</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Volta</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Oti</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Northern</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Savanna</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Upper West</li></option>
+                                <option value=""><li class="pa0-50 bg-black-20">Upper East</li></option>
+                            </select>
+                        </div> 
+
+                        <div class="flex flex-column">
+                            <hgroup>
+                                <h2>
+                                    Projects
+                                </h2>
+                            </hgroup>
+                            <select id="project_categories"
+                                class=""  
+                            >
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">All</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Civic and Culture</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Education</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Health</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Office and Mixed-Use</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Hospitality</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Industrial and Retail</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Sports and Leisure</li>
+                                </option>
+                                <option value="">
+                                    <li class="pa0-50 bg-black-20">Landscape and Master Planning</li>
+                                </option>
+                            </select>
+                        </div> 
+
+                    </article>
+                    <div>
+                    <fieldset>
+                        <legend>
+                            Search
+                        </legend>
+                        <label>
+                            <input id=""
+                                type="search" 
+                                name="" 
+                                class="w-100 pa0-50 mb2-00"
+                                placeholder="Enter project Name, Region or Deparment"
+                            />
+                        </label>
+                        <button class="pa0-50 bg-blue0 white-90 ba">Submit</button>
+                    </fieldset>
+                </div>
+                </div>    
+                
+            </div>
+            <!-- Page Footer Start -->
+            <footer id = "home-page-footer">
+                <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
+                    <div>
+                        AESL
+                    </div>
+                    <div>
+                        Consulting Architects, Engineers and Surveyors
+                    </div>
+                </div> 
+            </footer>
+            <!-- Page Footer End -->
+        {% endblock pagecontent %}
+    <!-- 00.00   main Body -->
+{% endblock content %}
+
+
+
+
+

@@ -1,0 +1,118 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Projects List
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white ">
+            <figure class="gc1s12">
+                <img src="{% static '_images\projects\civic_and_culture\civic\2.PNG' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover">
+            </figure>
+            <hgroup class="gc1s12 w-100 blue0">
+                <h2 class="w-100 h-100
+                    pa1-00 pb1-00 mb0-00
+                    f3-00
+                    ">
+                    PROJECTS LIST
+                </h2>     
+            </hgroup> 
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="bg-white">
+            <!-- Page Navigation -->
+            {% include 'website/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
+            <!-- Projects List-->
+            <div id="projects"
+                class = "
+                    ph1-00
+                ">
+                <div 
+                    class="flex justify-between 
+                        w-100
+                        mb0-50 
+                        b
+                        bb"
+                >
+                    <span class="w8-00 pb0-50 mb0-50 ">Start Date</span>
+                    <span class="w8-00 pb0-50 mb0-50 ">End Date</span>
+                    <span class="w8-00 pb0-50 mb0-50">Category</span>
+                    <span class="w15-00 pb0-50 mb0-50">Name</span>
+                    <span class="w6-00 pb0-50 mb0-50">Location</span>
+                </div>
+                <ul class=" "
+                >
+                    {% for project in projects_list %}
+                        <a href="{% url 'website:project-details' project.slug %}">
+                            <li class="">
+                                <article id="" 
+                                    class=""
+                                >
+                                    <hgroup 
+                                        class="
+                                            h-100
+                                            
+                                            blue0
+                                            "
+                                    >   <div class="flex justify-between w-100">
+                                            <p class="w8-00">{{ project.start_date}}</p>
+                                            <p class="w8-00">{{ project.end_date}}</p>
+                                            <p class="w8-00">{{ project.sub_category }} || </p> 
+                                            
+                                            <p class="w15-00">{{ project.name }}</p>
+                                            <p class="w6-00">{{ project.location }}</p>   
+                                        </div>
+                                    </hgroup>
+                                </article>
+                            </li>
+                        </a>
+                    
+                    {% endfor %}
+                </ul>
+                <article id="misc_gold" 
+                    class="gr3s2 gc1s3
+                        flex items-center justify-center
+                        bg-gold
+                    ">
+                </article>
+
+                <article id="misc_blue" 
+                    class="gr3s2 gc10s3
+                        flex items-center justify-center
+                        bg-black-90
+                        ">
+                </article>
+            </div>
+            <!-- Projects List -->
+        </main>
+        <!-- Page Main -->
+
+        <!-- Main Footer -->
+        <footer id="pageFooter"
+            class="">
+        
+        </footer>
+        <!-- Main Footer -->
+    {% endblock pagecontent %}
+{% endblock content %}
+
+   
+        

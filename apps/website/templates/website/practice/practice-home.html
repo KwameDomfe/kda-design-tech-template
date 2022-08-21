@@ -1,0 +1,866 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Practice Home
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+<!-- Custom Stylesheets -->
+<!-- Custom Stylesheets --> 
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+<!-- Custom Scripts -->
+
+<!-- Custom Scripts -->
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body -->
+    {% block pagecontent %}
+    <div id="projects-home-page"
+        class=""
+    > 
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white">
+            <figure class="gc1s12">
+                <img src="{% static '_images/practice/_partials/practice_1.jpg' %}"          
+                    alt=""
+                    class="w-100 vh-50 vh-60-l cover">
+            </figure>
+            <hgroup class="w-100 blue0 gc1s12">
+                <h2 class="
+                    w-100 h-100
+                    pa1-00 mb0-00
+                    f5-00
+                    ">
+                    PRACTICE
+                </h2>     
+            </hgroup> 
+            <!-- Page Navigation --> 
+                {% include 'website\practice\_partials\practice-page-nav.html' %}  
+            <!-- Page Navigation -->   
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="ph1-00">
+             <!-- Overview -->
+             <div id="overview"
+             class="grid gtc12 ggap1-00
+                 ph1-00
+                 mb3-00"
+         >
+             <!-- Overview Description --> 
+             <header class="gr1s1 gc3s6 pa1-00 bg-gold white-90 w-100">
+                 <hgroup id=""
+                     class=""
+                 >
+                     <h2 class=" 
+                         f2-00 ttu"
+                     >
+                         Overview
+                     </h2>
+                     <div id="Project_Overview_1" 
+                         class="gr2s1 gc2s8 f1-50"
+                     > 
+                         <p>
+                             {% lorem 30 w random %}
+                         </p>
+                     </div>     
+                 </hgroup> 
+             </header>
+             <!-- Overview Description -->
+         </div>
+         <!-- Overview -->
+            <div id="practice__content" 
+            class="">
+            <article id="l__sector_ministry"
+                class="grid gtc12 
+                    container white-90
+                    ph1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id=""
+                    class="gr1s1 gc5s8 w-100 h-100 items-center justify-center">
+                    <!-- Figure Start -->   
+                    <figure id=""
+                        class=" grid items-center justify-center
+                                shadow-5  ">
+
+                        <img id=""
+                            src="{% static '_images\practice\sector_ministry\sm-02.jpg' %}"                
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 class="ma0-00 bb"
+                            >
+                                AESL Sector Ministry
+                            </h1>
+                            <h3 id=""
+                                class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p id="">
+                                This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.
+                            </p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure>
+                    <!-- Figure Start -->   
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption -->   
+                <div id="" 
+                    class="gr1s1 gc1s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The sector Ministry is the overall 
+                                </h1>    
+                                <a  href="{% url 'website:sector-ministry' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        blue0 
+                                        ba b
+                                        f1-00
+                                        ttu"
+                                >
+                                    sector ministry
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption -->   
+                
+            </article>
+            
+            <article id="l__corporate corporate_governance"
+                class="grid gtc12 
+                    container white-90
+                    pa1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id="" 
+                    class="gr1s1 gc1s8 items-center justify-center
+                        w-100 h-100 ">
+                    <figure id =""
+                        class="grid items-center justify-center
+                            shadow-5  "
+                    >
+                        <img id=""
+                            src="{% static '_images\practice\corporate-governance\board-meeting.jpeg' %}"           
+                            alt="AESL Board Meeting"
+                            class="gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 class="ma0-00 bb">
+                                AESL Board
+                            </h1>
+                            <h3 class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p>This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.</p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure> 
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption-->
+                <div id="" 
+                    class="gr1s1 gc9s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The governing boar of the AESL is ...........
+                                </h1>    
+                                <a  href="{% url 'website:corporate-governance' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        bg-blue0
+                                        white-90 b
+                                        ba 
+                                        f1-00
+                                        ttu"
+                                >
+                                    corporate governance
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption-->
+
+            </article>
+        
+            <article id="l__management"
+                class="grid gtc12 
+                    container white-90
+                    ph1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id=""
+                    class="gr1s1 gc5s8 w-100 h-100 items-center justify-center">
+                    <!-- Figure Start -->   
+                    <figure id=""
+                        class=" grid items-center justify-center
+                                shadow-5  ">
+
+                        <img id=""
+                            src="{% static '_images\practice\management\2.jpeg' %}"                
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 id=""
+                                class="ma0-00 bb"
+                            >
+                                Management
+                            </h1>
+                            <h3 id=""
+                                class="bb pa0-50 mb0-00 f1-00">
+                                Image Title 
+                            </h3>
+                            <p id="">
+                                Image Description.
+                            </p>
+                            <small>Location, Town.</small>    
+                        </hgroup>
+                    </figure>
+                    <!-- Figure Start -->   
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption -->   
+                <div id="" 
+                    class="gr1s1 gc1s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    Management Leadership w..............
+                                </h1>    
+                                <a  href="{% url 'website:management' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        blue0 
+                                        ba b
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL Management
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption -->   
+                
+            </article>
+            
+            <article id="l__history"
+                class="grid gtc12 
+                    container white-90
+                    pa1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id="" 
+                    class="gr1s1 gc1s8 items-center justify-center
+                        w-100 h-100 ">
+                    <figure id =""
+                        class="grid items-center justify-center
+                            shadow-5  "
+                    >
+                        <img id=""
+                            src="{% static '_images\practice\history\History-01.JPG' %}"            
+                            alt="AESL Board Meeting"
+                            class="gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   
+                            <h1 class="ma0-00 bb">
+                                AESL History
+                            </h1>
+                            <h3 class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p>This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.</p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure> 
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption-->
+                <div id="" 
+                    class="gr1s1 gc9s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The history of the AESL is dates back t0 ...........
+                                </h1>    
+                                <a  href="{% url 'website:history' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        bg-blue0
+                                        white-90 b
+                                        ba 
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL History
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption-->
+
+            </article>
+            
+            <article id="l__mandate"
+                class="grid gtc12 
+                    container white-90
+                    ph1-00 mv6-00"
+            >   
+                
+                <div id=""
+                    class="gr1s1 gc5s8 w-100 h-100 items-center justify-center">
+                    <!-- Figure Start -->   
+                    <figure id=""
+                        class=" grid items-center justify-center
+                                shadow-5  ">
+
+                        <img id=""
+                            src="{% static '_images\practice\mandate\mandate-01.jpg' %}"                
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 id=""
+                                class="ma0-00 bb"
+                            >
+                                AESL Mandate
+                            </h1>
+                            <h3 id=""
+                                class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p id="">
+                                This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.
+                            </p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure>
+                    <!-- Figure Start -->   
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption -->   
+                <div id="" 
+                    class="gr1s1 gc1s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The mandate of AESL is the overall 
+                                </h1>    
+                                <a  href="{% url 'website:sector-ministry' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        blue0 
+                                        ba b
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL Mandate
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption -->   
+                
+            </article>
+            
+            <article id="l__functions"
+                class="grid gtc12 
+                    container white-90
+                    pa1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id="" 
+                    class="gr1s1 gc1s8 items-center justify-center
+                        w-100 h-100 ">
+                    <figure id =""
+                        class="grid items-center justify-center
+                            shadow-5  "
+                    >
+                        <img id=""
+                            src="{% static '_images\practice\functions\sod_cutting.jpg' %}"            
+                            alt="AESL Board Meeting"
+                            class="gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 class="ma0-00 bb">
+                                AESL Functions
+                            </h1>
+                            <h3 class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p>This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.</p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure> 
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption-->
+                <div id="" 
+                    class="gr1s1 gc9s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The functions  of the AESL is ...........
+                                </h1>    
+                                <a  href="{% url 'website:functions' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        bg-blue0
+                                        white-90 b
+                                        ba 
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL Functions
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption-->
+
+            </article>
+            
+            <article id="l__mission_vision_values"
+                class="grid gtc12 
+                    container white-90
+                    ph1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id=""
+                    class="gr1s1 gc5s8 w-100 h-100 items-center justify-center">
+                    <!-- Figure Start -->   
+                    <figure id=""
+                        class=" grid items-center justify-center
+                                shadow-5  ">
+
+                        <img id=""
+                            src="{% static '_images\practice\mission_vision_values\01.jpg' %}"                
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 id=""
+                                class="ma0-00 bb"
+                            >
+                                AESL Mission Vision and Values
+                            </h1>
+                            <h3 id=""
+                                class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p id="">
+                                This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.
+                            </p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure>
+                    <!-- Figure Start -->   
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption -->   
+                <div id="" 
+                    class="gr1s1 gc1s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The Mission Vision and Values is the overall 
+                                </h1>    
+                                <a  href="{% url 'website:mission-vision-values' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        blue0 
+                                        ba b
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL Mission Vision and Values
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption -->   
+                
+            </article>
+            
+            <article id="l__alliances"
+                class="grid gtc12 
+                    container white-90
+                    pa1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id="" 
+                    class="gr1s1 gc1s8 items-center justify-center
+                        w-100 h-100 ">
+                    <figure id =""
+                        class="grid items-center justify-center
+                            shadow-5  "
+                    >
+                        <img id=""
+                            src="{% static '_images\practice\alliances\practice_2.jpg' %}"            
+                            alt="AESL Board Meeting"
+                            class="gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 class="ma0-00 bb">
+                                AESL Alliances
+                            </h1>
+                            <h3 class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p>This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.</p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure> 
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption-->
+                <div id="" 
+                    class="gr1s1 gc9s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The allaiances  ..
+                                </h1>    
+                                <a  href="{% url 'website:alliances' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        bg-blue0
+                                        white-90 b
+                                        ba 
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL Alliances
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption-->
+
+            </article>
+            
+            <article id="l__client_Speak"
+                class="grid gtc12 
+                    container white-90
+                    ph1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id=""
+                    class="gr1s1 gc5s8 w-100 h-100 items-center justify-center">
+                    <!-- Figure Start -->   
+                    <figure id=""
+                        class=" grid items-center justify-center
+                                shadow-5  ">
+
+                        <img id=""
+                            src="{% static '_images\_partials\02.jpg' %}"                
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 id=""
+                                class="ma0-00 bb"
+                            >
+                                AESL Client Speaks
+                            </h1>
+                            <h3 id=""
+                                class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p id="">
+                                This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.
+                            </p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure>
+                    <!-- Figure Start -->   
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption -->   
+                <div id="" 
+                    class="gr1s1 gc1s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The client speaks is the overall 
+                                </h1>    
+                                <a  href="{% url 'website:client-speak' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        blue0 
+                                        ba b
+                                        f1-00
+                                        ttu"
+                                >
+                                    client speaks
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption -->   
+                
+            </article>
+            
+            <article id="l__corporate_responsibilities"
+                class="grid gtc12 
+                    container white-90
+                    pa1-00 mv6-00"
+            >   
+                <!-- Media -->
+                <div id="" 
+                    class="gr1s1 gc1s8 items-center justify-center
+                        w-100 h-100 ">
+                    <figure id =""
+                        class="grid items-center justify-center
+                            shadow-5  "
+                    >
+                        <img id=""
+                            src="{% static '_images\practice\corporate_responsilities\01.jpg' %}"            
+                            alt="AESL Board Meeting"
+                            class="gc1s1 gr1s1 h-100 cover"
+                        /> 
+                        <hgroup id = ""
+                            class="gr1s1 gc1s1 items-center justify-start
+                            mt2-00 mb10-00 pa1-00 ml4-00 mr10-00-m mr2-00
+                            white-90 bg-blue0 br0-50"                                  
+                        >   <h1 class="ma0-00 bb">
+                                AESL Corporate Responsibilities
+                            </h1>
+                            <h3 class="bb pa0-50 mb0-00 f1-00">
+                                Quarterly Meeting 
+                            </h3>
+                            <p>This is the one we are editing consectetur adipisicing elit. Rerum deleniti suscipit numquam assumenda ipsum obcaecati consectetur.</p>
+                            <small>Royal Senchi, Akosombo.</small>    
+                        </hgroup>
+                    </figure> 
+                </div>
+                <!-- Media -->
+
+                <!-- Media Caption-->
+                <div id="" 
+                    class="gr1s1 gc9s4 w-100 h-100 items-center justify-center">
+                    <article 
+                        class="grid
+                            h-100"  
+                    >   <!-- Media Caption -->                        
+                            <hgroup id = ""
+                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    w-100 h-100
+                                    ph1-00
+                                    blue0
+                                    f0-75
+                                    tc
+                                    shadow-5
+                                        ">
+                                <h1 class = " mv1-00">
+                                    The The corporate responsibilities of the AESL is ...........
+                                </h1>    
+                                <a  href="{% url 'website:corporate-responsibilities' %}"
+                                    class="dib 
+                                        pa0-50 mb0-50 
+                                        bg-blue0
+                                        white-90 b
+                                        ba 
+                                        f1-00
+                                        ttu"
+                                >
+                                    AESL corporate responsibilities
+                                </a>   
+                                
+                            </hgroup> 
+                        <!-- Media Caption -->
+                    </article>
+                </div>
+                <!-- Media Caption-->
+
+            </article>
+        </div>
+           
+        </main>
+        <!-- Page Main --> 
+
+        <!-- Page Footer -->
+        <footer id = "home-page-footer">
+            <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
+                <div>
+                    AESL
+                </div>
+                <div>
+                    Consulting Architects, Engineers and Surveyors
+                </div>
+            </div> 
+        </footer>
+        <!-- Page Footer -->
+    </div>
+    <!-- main Body -->
+    {% endblock pagecontent %}
+{% endblock content %}

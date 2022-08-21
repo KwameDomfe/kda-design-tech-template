@@ -1,0 +1,2344 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block pagetitle %} 
+   Home Page
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+{% endblock custom_css %}
+
+
+{% block custom_scripts %}   
+{% endblock custom_scripts %}
+
+{% block content %}
+   
+    {% block pagecontent %}
+
+        <div id="homePage"
+            class=""
+        >
+            <!-- Page Header Start -->
+            <header id ="homePage__Header"
+                class="mb2-00" 
+            >
+                <div id="aesl-core" 
+                    class="grid gtc12 ggap0-50 
+                        mb0-50
+                        f1-25"     
+                >
+                    <figure id="main-banner"
+                        class="gr1s2 gc1s12 mb2-00"
+                    >
+                        <img src="{% static '_images\index\index-01.jpg' %}"            
+                            alt=""
+                            class="w-100 vh-75
+                            ba b--gold
+                            cover "
+                        > 
+                        
+                        <figcaption class = "ttu mh1-00 blue0">
+                            <h1 class = "mv0-50 f5-00">The new aesl......</h1> 
+                            <h3 class = "mv0-50 f3-00">Positioned to build the nation......</h3> 
+                        </figcaption>
+                    </figure>
+    
+                    <article id="aesl-brief" 
+                        class="gr3s1 gc1s12 
+                            gr3s2-s gc1s8-s
+                            gr3s2-s gc1s6-l
+                            w-100 
+                            blue0"     
+                    >
+                        <hgroup 
+                            class="
+                                w-100 
+                                ph1-00"
+                        >
+                            <p>The Architectural & Engineering Services Limited (AES Ltd) is a practicing professional group of Consulting Architects, Civil, Structural, Electrical and Mechanical Engineers ,Land and Quantity Surveyors.
+                            </P>
+    
+                            <P>To meet the needs of a broad range of clients, our practice has developed a multi-disciplinary approach to Building and Engineering Consultancy and to provide effective nation-wide coverage, we are located in all the ten regions of Ghana. 
+                            </p>   
+                            
+                            <P>To meet the needs of a broad range of clients, our practice has developed a multi-disciplinary approach to Building and Engineering Consultancy and to provide effective nation-wide coverage, we are located in all the ten regions of Ghana. 
+                            </p>   
+                            
+                            <a  href="{% url 'website:practice-home' %}"
+                                class="blue0 ba br0-50 dib pa0-50 mb0-50 f1-00"
+                            >Read More</a> 
+                        </hgroup> 
+                    </article>
+                            
+                    <article id="architecture-and-planning" 
+                        class= "gr4s1 gc1s12 gr3s1-s gc9s4-s gc9s4-m gc7s3-l
+                            grid gtc1 justify-center items-center 
+                            
+                            "
+                    >
+                        <figure class="gr1s1 gc1s1 w-100 h00-00 ">
+                            <img src="{% static '\_images\_partials\regular-03.jpg' %}"            
+                                alt=""
+                                class="br0-50 w-100 h00-00
+                                ba b--gold br0-50
+                                cover 
+                                ">
+                        </figure>
+                        <hgroup 
+                            class="w-100 h-100
+                            pa0-50
+                            bg-black-50
+                            white-90 br0-50
+                            gr1s1 gc1s1
+                            ttu"
+                        >
+                            <h3 
+                                class=""
+                            >
+                                Architecture & Planning
+                            </h3>
+                            <ul class="">
+                                <li>
+                                    <a href="javascript:void()">Architecture</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Land Surveying</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Quantity Surveying</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Valuation</a>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </hgroup> 
+                    </article>
+    
+                    <article id="engineering" 
+                        class=" gr5s1 gc1s12
+                            gr4s1-s gc9s4-s 
+                            gr4s1-m gc9s4-m
+                            gr3s1-l gc10s3-l
+                            grid gtc1
+                            "
+                    >
+                        <figure class="gc1s1 gr1s1">
+                            <img src="{% static '_images\placeholders\regular_images\square-01.png' %}"            
+                                alt=""
+                                class="br0-50 ba b--gold bg-blue0 w-100
+                                    cover br0-50"
+                            >
+                        </figure>
+                        <hgroup 
+                            class="gc1s1 gr1s1 flex flex-column justify-start
+                                w-100 h-100
+                                pa0-50 br0-50
+                                white-90 
+                                bg-black-50  ttu"
+                        >
+                            <h3 class="
+                                
+                                ">
+                                Engineering
+                            </h3> 
+                            <ul class="">
+                                <li>
+                                    <a href="javascript:void()">Civil / Structural</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Geotech</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Installations </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void()">Water</a>
+                                </li>
+                            </ul>    
+                        </hgroup> 
+                    </article>
+                </div>
+            </header>
+            <!-- Page Header End -->
+
+            <!-- Page Main Start -->
+            <main class="ph1-00">
+                <!-- Project Categories Start -->
+                <section id="projectCategories">
+                    <header id="projectCategories__header"
+                        class=" 
+                            h-100 w-100
+                            pa1-00 mb2-00
+                            blue0 ba
+                            f4-00">
+                        <h3 class="pa0-50 mb0-00 blue0 bg-white f4-00 ttu">
+                            projects categories
+                        </h3>     
+                        <h4 class="blue0 bg-white dib pa0-50 mb0-00 f2-00">
+                            {% lorem 20 w random %}
+                        </h4>     
+                    </header>
+                    <div id="projectCategories__content"
+                        class="mb2-00">
+                        <div id="4x4_Grid"
+                            class="grid gtc12 ggap1-00
+                                "
+                        >
+                            <article id="projectCategories__civicAndCulture"
+                                class="gr1s3 gc1s3 
+                                   
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure id=""
+                                        class="grid items-center justify-center
+                                            shadow-5"
+                                    >
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="gc1s1 gr1s1 
+                                                br0-50 br0-50"
+                                        /> 
+                                        <hgroup id =""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc"
+                                        >
+                                            <h3 class="dib 
+                                                pa0-50 mb0-00 
+                                                blue0 bg-white 
+                                                ba 
+                                                f1-00"
+                                            >
+                                                Civic and Culture
+                                            </h3>
+                                        </hgroup>
+                                    </figure> 
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__education"
+                                class="gr1s3 gc4s3 
+                                   
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >    
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Education
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a> 
+                            </article>
+
+                            <article id="projectCategories__health" 
+                                class="gr1s3 gc7s3
+                                   
+                                    grid items-center justify-center"
+                            >
+                                <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                            Health
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </article> 
+                                
+                            <article id="projectCategories__officeAndMixedUse" 
+                                class="gr1s3 gc10s3
+                                    grid items-center justify-center
+                                    
+                                    "
+                            >
+                                <a href="javascript:void()"
+                                class = ""  
+                                >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc"
+                                        >
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Office and Mixed Use
+                                            </h3>    
+                                        </hgroup>
+                                    </figure>
+                                </a>        
+                            </article>
+            
+                            <article id="projectCategories__industrialAndRetail" 
+                                class="gr4s3 gc1s3
+                                grid items-center justify-center
+                                
+                                ">
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    "
+                                            >
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                
+                                                Industrial and Retail
+                                            </h3>      
+                                        </hgroup> 
+                                    </figure>
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__hospitality" 
+                                class="gr4s3 gc10s3
+                                grid items-center justify-center
+                                "
+                            >   <a href="javascript:void()">
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Hospitality
+                                            </h3>       
+                                        </hgroup> 
+                                    </figure>
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__infrastructureAndSurvey" 
+                                class="gr7s3 gc4s3
+                                    grid items-center justify-center
+                                    "
+                            >
+                                <a href="javascript:void()">
+                                    <figure id=""
+                                        class="shadow-5  grid  items-center     justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Infrastructure and Survey
+                                            </h3>       
+                                        </hgroup> 
+                                    </figure>
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__residential" 
+                                class="gr7s3 gc10s3
+                                    grid items-center justify-center
+                                    "
+                            >
+                                <a href="javascript:void()">
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Residential
+                                            </h3>    
+                                        </hgroup> 
+                                    </figure>
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__landscapeAndMmasterplanning" 
+                                class="gr7s3 gc7s3
+                                    grid items-center justify-center
+                                    "
+                            >
+                                <a href="javascript:void()">
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Landscape and Masteer planning
+                                            </h3>     
+                                        </hgroup>
+                                    </figure> 
+                                </a>
+                            </article>
+                            
+                            <article id="projectCategories__sportsAndLeisure" 
+                                class="gr7s3 gc1s3
+                                    grid items-center justify-center
+                                    "
+                            >
+                                <a href="javascript:void()">
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                            Sports and Leisure
+                                            </h3>      
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </article>
+                        
+                            <article id="projectCategories__projects" 
+                                class="gr4s3 gc4s6
+                                    grid
+                                    "
+                            >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                ph1-00
+                                                blue0
+                                                f0-75
+                                                tc
+                                                
+                                                    ">
+                                            <h1 class = "blue0 f2-00 mv1-00">
+                                                Losts of projects and still counting
+                                            </h1>    
+                                            <a  href="{% url 'website:projects-home' %}"
+                                                class="blue0 ba dib pa0-50 mb0-50 f1-00"
+                                            >
+                                                AESL Projects
+                                            </a>   
+                                        </hgroup> 
+                                    </figure>
+                            
+                            </article>
+                        </div>
+                    </div>
+                    <footer id="projectCategories__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section>
+                <!-- Project Categories End -->
+
+                <!-- Services Start -->
+                <section id="services">
+                    <header id="services__header"
+                        class="grid
+                            h-100 w-100
+                            pa1-00 mb2-00
+                            blue0 ba"
+                    >
+                        <img src="{% static '_images\_partials\01.jpg' %}"            
+                            alt=""
+                            class="br0-50 gc1s1 gr1s1 "
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 pl2-00 pr8-00 bg-blue1t2">
+                            <h3 class="pa0-50 mb0-00 white-90 f3-00 ttu">
+                                aesl services
+                            </h3>     
+                            <h4 class="gold pa0-50 mb0-00 f1-50">
+                                {% lorem 20 w random %}
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    
+                    <div id="services__architecture" 
+                        class="mb2-00">
+                        <div id="4x4_Grid_services"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            <article id="services__urbanPlanning"
+                                class="gr1s1 gc1s3
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="br0-50 br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Urban Planning
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure> 
+                                </a>
+                            </article>
+                            
+                            <article id="service__buildingDesign"
+                                class="gr1s1 gc4s3
+                                grid items-center justify-center
+                                white-90"      
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >    
+                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                               
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                Building Design
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a> 
+                            </article>
+
+                            <article id="landscapeDesign" 
+                                class="gr2s1 gc4s3
+                                grid items-center justify-center
+                               "
+                            >
+                                <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Landscape Design
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </article> 
+                                
+                            <article id="interiorDesign" 
+                                class="gr2s1 gc1s3
+                                    grid items-center justify-center
+                                    
+                                    "
+                            >
+                                <a href="javascript:void()"
+                                class = ""  
+                                >
+                                    <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc"
+                                        >
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                interior Design
+                                            </h3>    
+                                        </hgroup>
+                                    </figure>
+                                </a>        
+                            </article>
+            
+                            <article id="" 
+                                class="gr1s2 gc7s6
+                                    grid
+                                    "
+                            >
+                                <figure class="shadow-5  grid  items-center justify-center">
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                            
+                                            ph4-00
+                                            blue0
+                                            f0-75
+                                            tc
+                                            
+                                                ">
+                                        <h1 class = "blue0 f2-00 mv1-00">
+                                            Architectural Services
+                                        </h1>
+                                        <p>{% lorem 30 w random %}  </p>  
+                                        <a  href="{% url 'website:projects-home' %}"
+                                            class="blue0 ba dib pa0-50 mb0-50 f1-00"
+                                        >
+                                            EXPLORE 
+                                        </a>   
+                                    </hgroup> 
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div id="services__engineering" 
+                        class="mb2-00">
+                        <div id="4x4_Grid_services"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            <article id="services__urbanPlanning"
+                                class="gr1s1 gc7s3
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Civil/Structural Design
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure> 
+                                </a>
+                            </article>
+                            
+                            <article id="service__buildingDesign"
+                                class="gr1s1 gc10s3
+                                grid items-center justify-center
+                                white-90"      
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >    
+                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                               
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                Installations
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a> 
+                            </article>
+
+                            <article id="landscapeDesign" 
+                                class="gr2s1 gc10s3
+                                grid items-center justify-center
+                               "
+                            >
+                                <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Water
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </article> 
+                                
+                            <article id="interiorDesign" 
+                                class="gr2s1 gc7s3
+                                    grid items-center justify-center
+                                    
+                                    "
+                            >
+                                <a href="javascript:void()"
+                                class = ""  
+                                >
+                                    <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
+                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc"
+                                        >
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Geo-Technical
+                                            </h3>    
+                                        </hgroup>
+                                    </figure>
+                                </a>        
+                            </article>
+            
+                            <article id="" 
+                                class="gr1s2 gc1s6
+                                    grid
+                                    "
+                            >
+                                <figure class="shadow-5  grid  items-center justify-center">
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                            
+                                            ph4-00
+                                            blue0
+                                            f0-75
+                                            tc
+                                            
+                                                ">
+                                        <h1 class = "blue0 f2-00 mv1-00">
+                                            Engineering Services
+                                        </h1>
+                                        <p>{% lorem 30 w random %}  </p>  
+                                        <a  href="{% url 'website:projects-home' %}"
+                                            class="blue0 ba dib pa0-50 mb0-50 f1-00"
+                                        >
+                                            EXPLORE 
+                                        </a>   
+                                    </hgroup> 
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="services__surveying" 
+                        class="mb2-00">
+                        <div id="4x4_Grid_services"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            <article id="services__urbanPlanning"
+                                class="gr1s1 gc1s3
+                                    grid items-center justify-center
+                                    white-90"
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >
+                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\landscape_Images\environment-AdobeStock_289963126.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                h-100 w-100
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Quantities
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure> 
+                                </a>
+                            </article>
+                            
+                            <article id="service__buildingDesign"
+                                class="gr1s1 gc4s3
+                                grid items-center justify-center
+                                white-90"      
+                            >
+                                <a href="javascript:void()"
+                                    class = ""  
+                                >    
+                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\landscape_Images\environment-AdobeStock_289963126.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                               
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                white-90 tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                Valuations
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a> 
+                            </article>
+
+                            <article id="landscapeDesign" 
+                                class="gr2s1 gc4s3
+                                grid items-center justify-center
+                               "
+                            >
+                                <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                        <img src="{% static '_images\placeholders\landscape_Images\environment-AdobeStock_289963126.jpg' %}"            
+                                            alt=""
+                                            class="br0-50 gc1s1 gr1s1 "
+                                        /> 
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                
+                                                pa1-00
+                                                bg-blue0-50
+                                                f0-75
+                                                tc
+                                                
+                                                    ">
+                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                Land (Geomatics)
+                                            </h3>    
+                                            
+                                        </hgroup>
+                                    </figure>
+                                </a>
+                            </article> 
+                            
+            
+                            <article id="" 
+                                class="gr1s2 gc7s6
+                                    grid
+                                    "
+                            >
+                                <figure class="shadow-5  grid  items-center justify-center">
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                            
+                                            ph4-00
+                                            blue0
+                                            f0-75
+                                            tc
+                                            
+                                                ">
+                                        <h1 class = "blue0 f2-00 mv1-00">
+                                           Surveying Services
+                                        </h1>
+                                        <p>{% lorem 30 w random %}  </p>  
+                                        <a  href="{% url 'website:projects-home' %}"
+                                            class="blue0 ba dib pa0-50 mb0-50 f1-00"
+                                        >
+                                            EXPLORE 
+                                        </a>   
+                                    </hgroup> 
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+
+                    <footer id="services__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section>
+                <!-- Services End -->
+        
+                <!-- Practice Start -->
+                <section id="practice">
+                    <hgroup id="practice__header"
+                        class=" 
+                            
+                            pa1-00 mb2-00
+                            blue0 ba
+                            f4-00">
+                        <h3 class="pa0-50 mb0-00 blue0 bg-white f4-00 ttu">
+                            practice
+                        </h3>     
+                        <h4 class="blue0 bg-white dib pa0-50 mb0-00 f2-00">
+                            {% lorem 20 w random %}
+                        </h4>     
+                    </hgroup>
+
+                   
+
+                    <footer id="practice__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section>
+                <!-- Practice End-->
+        
+                <!-- Principles Start -->
+                <section id = "principles">
+                    <hgroup id="principles__header"
+                        class=" 
+                            h-100 w-100
+                            pa1-00 mb2-00
+                            blue0 ba
+                            f4-00">
+                        <h3 class="pa0-50 mb0-00 blue0 bg-white f4-00 ttu">
+                            principles
+                        </h3>     
+                        <h4 class="blue0 bg-white dib pa0-50 mb0-00 f2-00">
+                            {% lorem 20 w random %}
+                        </h4>     
+                    </hgroup>
+                    <section id="principles_content"
+                        class="grid gtc12 ggap1-00
+                            container white-90
+                            pa1-00 mv6-00 vh-100"
+                    >    
+                        <article id="civic"
+                            class="gr3s2 gc5s4 
+                                    w-100 h-100
+                                "
+                        >
+                            <a href="{% url 'website:principles-civic' %}"
+                                class = ""  
+                            >    
+                                <figure class="shadow-5 w-100 h-100 grid  ">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1
+                                            flex items-center
+                                            justify-center
+                                            bg-blue0
+                                            f0-75
+                                            white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            Civic
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+
+                        <article id="excellence" 
+                            class="gr2s2 gc1s4
+                                w-100 h-100 grid
+                                "
+                        >
+                            <a href="{% url 'website:principles-excellence' %}"
+                            class = ""  
+                            >    
+                                <figure class="shadow-5 w-100 h-100 grid  ">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s2 gc1s2
+                                        flex items-center
+                                        justify-center
+                                        bg-blue0
+                                        
+                                        white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            Excellence
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+        
+                        <article id="integrity_and_honesty" 
+                            class="gr4s2 gc1s4
+                            grid "
+                        >
+                            <a href="{% url 'website:principles-integrity-and-honesty' %}"
+                            class = ""  
+                            >    
+                                <figure class="shadow-5 w-100 h-100 grid  ">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1
+                                            
+                                        flex items-center
+                                        justify-center
+                                        bg-blue0
+                                        f0-75
+                                        white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            Integrity and Honesty
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+                        
+                        <article id="professionalism" 
+                            class="gr1s2 gc5s4 w-100 h-100
+                            grid "
+                        >
+                            <a href="{% url 'website:principles-professionalism' %}"
+                            class = ""  
+                            >    
+                                <figure class="grid shadow-5 w-100 h-100 "
+                                >
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1
+                                        flex items-center justify-center  
+                                        
+                                        bg-blue0
+                                        f0-75
+                                        white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            professionalism
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+                        
+                        <article id="Sustainability" 
+                            class="gr4s2 gc9s4 h-100 w-100
+                                grid
+                                "
+                        >   
+                            <a href="{% url 'website:principles-sustainability' %}">
+                                <figure class="shadow-5 grid w-100 h-100">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex
+                                        items-center justify-center
+                                        w-100 h-100
+                                        bg-blue0
+                                        f0-75
+                                        white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                            Sustainability
+                                        </h3>    
+                                        
+                                    </hgroup> 
+                                </figure>
+                            </a>
+                        </article>
+                            
+                        <article id="timeliness_and_cost_effectiveness" 
+                            class="gr2s2 gc9s4
+                                grid"
+                        >
+                            <a href="{% url 'website:principles-timeliness-and-cost-effectiveness' %}"
+                                class = ""  
+                            >    
+                                <figure class="shadow-5 w-100 h-100 grid  ">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1
+                                        flex items-center justify-center
+                                            w-100 h-100
+                                            bg-blue0
+                                            f0-75
+                                            white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            timeliness and cost effectiveness
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+                        
+                        <article id= "empowerment" 
+                            class="gr5s2 gc5s4
+                                grid 
+                                "
+                        >
+                            <a href="{% url 'website:principles-empowerment' %}"
+                                class = ""  
+                            >    
+                                <figure class="shadow-5 w-100 h-100 grid ">
+                                    
+                                    <hgroup id = ""
+                                        class="gr1s1 gc1s1 flex items-center justify-center
+                                            w-100 h-100
+                                            bg-blue0
+                                            f0-75
+                                            white-90 tc ba
+                                            
+                                                ">
+                                        <h3 class="blue0 bg-white pa0-50 mb0-00 f1-00">
+                                            Empowerment
+                                        </h3>    
+                                        
+                                    </hgroup>
+                                </figure>
+                            </a> 
+                        </article>
+                    </section>
+                    <footer id="principles__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>
+                </section>
+                <!-- Principles End -->
+        
+                <!-- People Start -->
+                <section id="people"
+                    class=""
+                >   
+                    <header id="people__header"
+                    >
+                        <hgroup
+                            class=" 
+                                h-100 w-100
+                                pa1-00 mb2-00
+                                blue0 ba
+                                f4-00">
+                            <h3 class="pa0-50 mb0-00 blue0 bg-white f4-00 ttu">
+                                people
+                            </h3>     
+                            <h4 class="blue0 bg-white dib pa0-50 mb0-00 f2-00">
+                                {% lorem 20 w random %}
+                            </h4>     
+                        </hgroup>
+                    </header>
+                    <div id="people__content">
+                        <div id="6x6_Grid_People" 
+                            class="grid gc1s12 ggap0-50 mb4-00 ttu"
+                        >
+                            <article id="people_01" 
+                                class="gr1s1 gc1s2
+                                    flex items-center justify-center
+                                    pa0-50 
+                                    relative">
+                                <hgroup 
+                                    class="flex 
+                                    w-100 h-100 
+                                    bg-blue1t3
+                                    z-5
+                                    absolute">
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        Architects
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_02" 
+                                class="gr1s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        hrms
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_03" 
+                                class="gr1s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        Inforamation Technologists
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                            
+                            <article id="people_04" 
+                                class="gr1s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        valuers
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_05" 
+                                class="gr1s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                        Solicitor Secretary
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_06" 
+                                class="gr1s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex items-center justify-center
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex 
+                                            w-100 h-100 ">
+                                        structural engineers
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id ="people_07" 
+                                class="gr2s1 gc1s2
+                                    flex items-center justify-center flex-wrap
+                                    pa0-50 
+                                    relative"
+                            >
+                                <hgroup 
+                                    class="flex 
+                                    w-100 h-100 
+                                    bg-blue1t3
+                                    z-5
+                                    absolute">
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        pro
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_08" 
+                                class="gr2s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        Mechanical Engineers
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_09" 
+                                class="gr2s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_10" 
+                                class="gr2s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_11" 
+                                class="gr2s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex items-center justify-center
+                                            w-100 h-100 ">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_12" 
+                                class="gr2s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                    
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id ="people_13" 
+                                class="gr3s1 gc1s2
+                                    flex items-center justify-center flex-wrap
+                                    pa0-50 
+                                    relative"
+                            >
+                                <hgroup 
+                                    class="flex 
+                                        w-100 h-100 
+                                        bg-blue1t3
+                                        z-5
+                                        absolute"
+                                >
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        Electrical Engineers
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_14" 
+                                class="gr3s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_15" 
+                                class="gr3s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_16" 
+                                class="gr3s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_17" 
+                                class="gr3s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex items-center justify-center
+                                            w-100 h-100 ">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_18" 
+                                class="gr3s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                    
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id ="people_19" 
+                                class="gr4s1 gc1s2
+                                    flex items-center justify-center flex-wrap
+                                    pa0-50 
+                                    relative">
+                                <hgroup 
+                                    class="flex 
+                                    w-100 h-100 
+                                    bg-blue1t3
+                                    z-5
+                                    absolute">
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        pro
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_20" 
+                                class="gr4s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_21" 
+                                class="gr4s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_22" 
+                                class="gr4s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_23" 
+                                class="gr4s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex items-center justify-center
+                                            w-100 h-100 ">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_24" 
+                                class="gr4s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                    
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id ="people_25" 
+                                class="gr5s1 gc1s2
+                                    flex items-center justify-center flex-wrap
+                                    pa0-50 
+                                    relative">
+                                <hgroup 
+                                    class="flex 
+                                    w-100 h-100 
+                                    bg-blue1t3
+                                    z-5
+                                    absolute">
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        pro
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_26" 
+                                class="gr5s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_27" 
+                                class="gr5s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>  
+                                    Interior Designer   
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_28" 
+                                class="gr5s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_29" 
+                                class="gr5s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex items-center justify-center
+                                            w-100 h-100 ">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_30" 
+                                class="gr5s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                    
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id ="people_31" 
+                                class="gr6s1 gc1s2
+                                    flex items-center justify-center flex-wrap
+                                    pa0-50 
+                                    relative">
+                                <hgroup 
+                                    class="flex 
+                                    w-100 h-100 
+                                    bg-blue1t3
+                                    z-5
+                                    absolute">
+                                    <h5 
+                                        class="flex items-center justify-center 
+                                        w-100 h-100 
+                                        white-90 ">
+                                        pro
+                                    </h5>     
+                                </hgroup> 
+                                <figure 
+                                    class=""
+                                >
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                </figure> 
+                            </article>
+                            
+                            <article id="people_32" 
+                                class="gr6s1 gc7s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_33" 
+                                class="gr6s1 gc5s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative"
+                            >
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 
+                                    bg-gold
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_34" 
+                                class="gr6s1 gc3s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 w-100 h-100
+                                            ba b--gold 
+                                            cover">
+                                        
+                                </figure> 
+                                <hgroup class="flex justify-around items-start flex-column 
+                                    w-100 h-100 bg-black-50
+                                    absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 tc 
+                                        white-90">
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_35" 
+                                class="gr6s1 gc11s2
+                                flex items-center justify-center
+                                pa0-50
+                                relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100 h-100
+                                            ba b--gold 
+                                            cover
+                                            ">
+                                </figure> 
+                                <hgroup 
+                                    class="flex
+                                    w-100 h-100 
+                                    bg-black-50
+                                    white-90
+                                    absolute"
+                                >
+                                    <h5 
+                                        class=" flex items-center justify-center
+                                            w-100 h-100 ">
+                                        
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        
+                            <article id="people_36" 
+                                class="gr6s1 gc9s2
+                                    flex items-center justify-center
+                                    pa0-50
+                                    relative">
+                                <figure>
+                                    <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        alt=""
+                                        class="br0-50 
+                                            w-100
+                                            ba b--gold
+                                            relative cover">
+                                </figure> 
+                                <hgroup 
+                                    class="flex justify-around items-center flex-column 
+                                        w-100 h-100 
+                                        bg-blue0
+                                        white-90
+                                        absolute">
+                                    <h5 class="flex items-center justify-center
+                                        w-100 h-100 
+                                        ">
+                                    
+                                    </h5>     
+                                </hgroup> 
+                            </article>
+                        </div> 
+                    </div>
+
+                    <footer id="people__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>   
+                </section>
+                <!-- People End -->
+                
+                <!-- Regional Offices Start -->
+                <section id="regionalOffices"
+                    class=""
+                >    
+                    <hgroup id="regionalOffices__header"
+                        class=" 
+                            h-100 w-100
+                            pa1-00 mb2-00
+                            blue0 ba
+                            f4-00">
+                        <h3 class="pa0-50 mb0-00 blue0 bg-white f4-00 ttu">
+                            Nationwide Coverage
+                        </h3>     
+                        <h4 class="blue0 bg-white dib pa0-50 mb0-00 f2-00">
+                            {% lorem 20 w random %}
+                        </h4>     
+                    </hgroup>
+                    <div id="regionalOffices__content" 
+                        class="grid ggap0-50                     
+                            w-100
+                            mb2-00"
+                    >   
+                        <figure class="gc1s4 vh-75">
+                            <img src="{% static 'svgs\Greater_Accra_in_Ghana_2018.svg' %}" 
+                                alt=""
+                                class="br0-50 h-100">
+                        </figure>
+                        <article id="regional-office-details"
+                            class="gc5s8"
+                        >
+                            <h2>Regional Office Details</h2>
+                            <h2>Regional Consultant</h2>
+                            <h2>Locational Addresses</h2>
+                            <h2>Email Address</h2>
+                            <h2>Phone</h2>
+                        </article>
+                    </div>
+                    <footer id="regionalOffices__footer">
+                        <div class="flex justify-between bg-blue0 pa1-00 white-90 mb4-00">
+                            <div>
+                                AESL
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div> 
+                    </footer>    
+                </section>
+                <!-- Regional Offices End -->
+            </main>
+            <!-- Page Main End -->
+
+            <!-- Page Footer Start -->
+            <footer id = "homePage__footer">
+                <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
+                    <div>
+                        AESL
+                    </div>
+                    <div>
+                        Consulting Architects, Engineers and Surveyors
+                    </div>
+                </div> 
+            </footer>
+            <!-- Page Footer End -->
+        </div>
+    {% endblock pagecontent %}
+    
+{% endblock content %}

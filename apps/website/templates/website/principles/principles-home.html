@@ -1,0 +1,358 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+   Principles Home 
+{% endblock pagetitle %}
+
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body -->
+    {% block pagecontent %}
+        <div id="projects-home-page"
+            class=""
+        > 
+                <!-- Page Header Start -->
+                <header id = "princeples_pageHeader"
+                    class="grid"
+                >
+                    <!-- Page Banner Start-->
+                    <figure class="gc1s12">
+                        <img src="{% static '_images/principles/_partials/principles_1.png' %}"          
+                            alt=""         
+                            class="w-100 vh-50 vh-60-l cover">
+                    </figure>
+                    <!-- Page Banner End-->
+                    <!-- Page Title Start-->
+                    <hgroup class="w-100 blue0 gc1s12">
+                        <h2 class="
+                            w-100 h-100
+                            pa1-00 mb0-00
+                            f5-00
+                            ">
+                            PRINCIPLES
+                        </h2>     
+                    </hgroup>
+                    <!-- Page Title End --> 
+                    <!-- Page Navigation Start-->
+                    {% include 'website\principles\_partials\principles-page-nav.html' %}
+                    <!-- Page Navigation End -->
+                </header>
+                <!-- Page Header End -->
+            
+                <!-- Page Main -->
+                <main id="" 
+                    class="bg-white"
+                >
+                    <!-- Overview -->
+                    <div id="overview"
+                        class="grid gtc12 ggap1-00
+                            ph1-00
+                            mb3-00"
+                    >
+                        <!-- Overview Description --> 
+                        <header class="gr1s1 gc3s6 pa1-00 bg-red white-90 w-100">
+                            <hgroup id=""
+                                class=""
+                            >
+                                <h2 class=" 
+                                    f2-00 ttu"
+                                >
+                                    Overview
+                                </h2>
+                                <div id="Project_Overview_1" 
+                                    class="gr2s1 gc2s8 f1-50"
+                                > 
+                                    <p>
+                                        {% lorem 30 w random %}
+                                    </p>
+                                </div>     
+                            </hgroup> 
+                        </header>
+                        <!-- Overview Description -->
+                    </div>
+                    <!-- Overview -->
+                    
+                    <div id="practice"
+                        class="gr3s1 gc1s12
+                                grid gtc12 ggap1-00
+                                ph0-25 mb4-00 white-90">
+                        
+                        <article id="principles_Civic" 
+                            class="gr1s1 gc2s6
+                                grid items-center justify-center
+                                "
+                        > 
+                            <figure  class="gc1s1 gr1s1 grid items-center justify-center
+                                    pa0-50 bg-blue0 
+                            
+                                ">
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        w-100 h-100
+                                        cover"
+                                    /> 
+                            </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    ma4-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    CIVIC
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span> 
+                                <a href="{% url 'website:principles-civic' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>       
+                            </hgroup> 
+                        </article>
+                        
+                        <article id="principles_Professionalism" 
+                            class="gr2s1 gc4s6
+                                grid items-center justify-center
+                                "
+                        >
+                            <figure  
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    pa0-50 bg-blue0" 
+                            >
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        w-100 h-100
+                                        cover"
+                                /> 
+                            </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    ma6-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    PROFESSIONALISM
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span>
+                                <a href="{% url 'website:principles-professionalism' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>    
+                            </hgroup> 
+                        </article>
+                    
+                        <article id="principles_Excellence" 
+                            class="gr3s1 gc2s6
+                            grid items-center justify-center
+                            ">
+                             <figure class="gc1s1 gr1s1 grid items-center justify-center shadow-5">
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="w-100
+                                    
+                                        ba b--gold 
+                                        "
+                                    /> 
+                            </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    ma6-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    Excellence
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span>
+                                <a href="{% url 'website:principles-excellence' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>        
+                            </hgroup> 
+                        </article>
+                    
+                        <article id="principles_IntegrityAndHonesty" 
+                            class="gr4s1 gc4s6
+                                grid items-center justify-center
+                                ">
+                                <figure  class="gc1s1 gr1s1 grid items-center justify-center
+                                    pa0-50 bg-blue0 
+                            
+                                    ">
+                                    <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                        alt=""
+                                        class="
+                                            w-100 h-100
+                                            cover"
+                                        /> 
+                                </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    ma4-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    Integrity And Honesty
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span>
+                                <a href="{% url 'website:principles-integrity-and-honesty' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>            
+                            </hgroup> 
+                        </article>
+
+                        <article id="principles_TimelinessAndCostEffectiveness" 
+                            class="gr5s1 gc2s6
+                                grid items-center justify-center
+                                "
+                        >
+                            <figure  class="gc1s1 gr1s1 grid items-center justify-center
+                            pa0-50 bg-blue0 
+                    
+                                ">
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        w-100 h-100
+                                        cover"
+                                    /> 
+                            </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 grid items-center justify-center
+                                    ma4-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    Timeliness And Cost Effectiveness
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span> 
+                                <a href="{% url 'website:principles-timeliness-and-cost-effectiveness' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>           
+                            </hgroup> 
+                        </article>
+                    
+                        <article id="principles_sustainability" 
+                            class="gr6s1 gc4s6
+                                grid items-center justify-center"
+                            
+                        >
+                            <figure  class="gc1s1 gr1s1 
+                                grid items-center justify-center
+                                    pa0-50 bg-blue0 
+                            
+                                ">
+                                <img src="{% static '_images\practice\_partials\practice_2.jpg' %}"            
+                                    alt=""
+                                    class="
+                                        w-100 h-100
+                                        cover"
+                                    /> 
+                            </figure>
+                            <hgroup 
+                                class="gc1s1 gr1s1 
+                                    grid items-center justify-center
+                                    ma4-00 pa1-00 bg-blue0 z1"
+                            >
+                                <h3>
+                                    sustainability
+                                </h3>    
+                                <span>
+                                    {% lorem 20 w random %}
+                                </span>
+                                <a href="{% url 'website:principles-sustainability' %}"
+                                    class="pa0-25 mt2-00 ba tc"
+                                >
+                                    EXPLORE
+                                </a>            
+                            </hgroup> 
+                        </article>
+                    
+                        <article id="misc_gold" 
+                            class="gr1s1 gc8s1
+                                grid items-center justify-center
+                                bg-red
+                                ">
+                        </article>
+                    
+                        <article id="misc_black" 
+                            class="gr2s1 gc3s1
+                                flex items-center justify-center
+                                bg-black-90
+                                ">
+                        </article>
+
+                        <article id="misc_gold" 
+                            class="gr3s1 gc8s1
+                                grid items-center justify-center
+                                bg-red
+                                ">
+                        </article>
+                    
+                        <article id="misc_black" 
+                            class="gr4s1 gc3s1
+                                flex items-center justify-center
+                                bg-black-90
+                                ">
+                        </article>
+
+                        <article id="misc_gold" 
+                            class="gr5s1 gc8s1
+                                grid items-center justify-center
+                                bg-red
+                                ">
+                        </article>
+                    
+                        <article id="misc_black" 
+                            class="gr6s1 gc3s1
+                                flex items-center justify-center
+                                bg-black-90
+                                ">
+                        </article>
+                        <!-- Practice -->
+                    </div>
+                    
+                </main>
+                <!-- Page Main --> 
+
+                <!-- page Footer -->
+                <footer id = "home-page-footer"
+                    class="w-100"
+                >
+                    <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
+                        <div>
+                            AESL
+                        </div>
+                        <div>
+                            Consulting Architects, Engineers and Surveyors
+                        </div>
+                    </div> 
+                </footer>
+                <!-- page Footer -->
+        </div>
+    {% endblock pagecontent %}   
+    <!-- main Body --> 
+{% endblock content %}
+
+

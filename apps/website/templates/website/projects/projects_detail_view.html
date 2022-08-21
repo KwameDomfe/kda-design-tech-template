@@ -1,0 +1,1301 @@
+
+{% extends 'base_layout.html' %}
+
+{% load static %}
+
+{% block title %} 
+    {{ project }} 
+{% endblock title %}
+
+{% block others %}   
+    
+{% endblock others %}
+
+{% block content %}
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header id="project_details_header"
+            class="grid gtc12
+            bg-black-10"
+        >
+            <figure class="gc1s12">
+                <img src="{% static '_images\projects\civic_and_culture\civic\1.png' %}"          
+                    alt=""
+                    class="w-100 vh-60 cover mb3-00">
+            </figure>
+            <hgroup class="gc1s12
+                    ph1-00 mb3-00">
+                <h2 class="
+                        f3-00
+                    "
+                >
+                    {{ project.name }}, <span class="f2-00">{{ project.location }}</span>
+                </h2>     
+            </hgroup> 
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="bg-white">
+            <!-- Projects summary -->
+            {% include 'website/projects/_partials/project_details_summary.html' %}
+            <!-- Projects summary -->
+
+            <!-- Page Navigation -->
+            <!-- Project Details-->
+            <div id="project__details"
+                class="min-vh-100 w-100">
+    
+                
+                
+                <!-- Projects gallery -->
+                <div id="project_gallery"
+                    class="grid gtc12 ggap1-00
+                        mb3-00"
+                >
+                    <article id="project_gallery_1" 
+                        class="gr2s3 gc7s6
+                            flex items-center justify-center
+                            relative"
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/projects/rcc1.jpg' %}"            
+                                alt=""
+                                class="
+                                    w-100 h-100
+                                    ba b--blue1 bw3
+                                    cover"
+                            /> 
+                        </figure>
+                    
+                    </article>
+
+                    <article id="Project_gallery_2" 
+                        class="gr5s3 gc1s6
+                            flex items-center justify-center
+                            relative"
+                    >
+                    
+                        <figure class="shadow-5" 
+                        >
+                            <img src="{% static '_media/images/projects/rcc2.jpg' %}"            
+                                alt=""
+                                class="
+                                    w-100 h-100
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                    
+                    </article>
+
+                    <article id="project_gallery_3" 
+                        class="gr3s2 gc1s6
+                        flex items-center justify-center
+                        relative">
+                    
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/projects/rcc3.jpg' %}"            
+                                alt=""
+                                class="
+                                    w-100 h-100
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                    </article>
+
+                    <article id="project_gallery_4" 
+                        class="gr6s2 gc8s5
+                        flex items-center justify-center
+                        relative">
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/projects/rcc4.jpg' %}"            
+                                alt=""
+                                class="
+                                    w-100 h-100
+                                    ba b--gold bw3
+                                    cover"
+                                /> 
+                        </figure>
+                    </article>
+
+                    <article id="misc_1" 
+                        class="gr6s1 gc7s1
+                            flex items-center justify-center
+                            bg-gold"
+                    >
+                    </article>
+
+                    <article id="misc_2" 
+                        class="gr7s1 gc7s1
+                            flex items-center justify-center
+                            bg-blue0"
+                    >
+                    </article>
+                </div>
+                <!-- Projects gallery -->
+                
+                <!-- Projects Overview -->
+                <div id="project_Overview"
+                    class="grid gtc12 ggap1-00
+                        ph1-00
+                        mb3-00"
+                >
+                    <hgroup id=""
+                        class="gc1s12"
+                    >
+                        <h2 class="mb3-00
+                            f3-00"
+                        >
+                            PROJECT OVERVIEW
+                        </h2>     
+                    </hgroup> 
+        
+                    <article id="Project_Overview_1" 
+                        class="gr2s1 gc1s4
+                        
+                        "
+                    > 
+                    <P>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                    </P>
+                    <P>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                    </P>
+                    <P>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                    </P>
+                    
+                    </article>
+
+                    <article id="Project_Overview_2" 
+                        class="gr2s1 gc5s4
+
+                        ">
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                        
+                    </article>
+
+                    <article id="Project_Overview_3" 
+                        class="gr2s1 gc9s4
+                        
+                    ">
+                    
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                        </P>
+                    
+                    </article>
+                </div>
+                <!-- Projects Overview -->
+
+                <!-- Projects Concept -->
+                <div id="project_Concept"
+                    class="grid gtc12 ggap1-00
+                    ph1-00 mb3-00">
+                    
+                    <!-- Project Conception Title -->
+                    <hgroup id="project_Concept Title"
+                        class="gc1s12">
+                        <h2 class="
+                        mb3-00
+                            f3-00
+                            ">
+                            PROJECT CONCEPT
+                        </h2>     
+                    </hgroup>
+                    <!--x-- Project Conception Title --x-->
+
+                    <!-- Project Concept Description -->
+                    <article id="project_Concept_Description" 
+                        class="gr2s1 gc1s12 flex w-100"
+                    >
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                    </article>    
+                    <!--x-- Project Concept Description --x-->
+
+                    <!-- Project Concept gallery -->
+                    <article id="project_Concept_gallery_1" 
+                        class="gr3s2 gc2s4
+                            flex items-center justify-center
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        Concept Image One
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_Concept_gallery_2" 
+                        class="gr3s3 gc7s6
+                            flex items-center justify-center
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        Concept Image Two
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_Concept_gallery_3" 
+                        class="gr6s3 gc7s6
+                            flex items-center justify-center
+                            min-vh-50
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        Concept Image Three
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_Concept_gallery_4" 
+                        class="gr5s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        Concept Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+                    <article id="project_Concept_gallery_5" 
+                        class="gr7s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        Concept Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+                    
+                    <article id="misc_1" 
+                        class="gr6s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr3s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr5s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr6s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue1
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr5s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue0
+                            ">
+                    </article>
+                    <!-- Project Concept gallery -->
+                </div>
+                <!-- Projects Concept --> 
+
+                <!-- Projects Design -->
+                <div id="project_design"
+                    class="grid gtc12 ggap1-00
+                    ph1-00 mb3-00">
+                    
+                    <!-- Project Design Title -->
+                    <hgroup id="project_design_title"
+                        class="gc1s12">
+                        <h2 class="
+                        mb3-00
+                            f3-00
+                            ">
+                            PROJECT DESIGN
+                        </h2>     
+                    </hgroup>
+                    <!--x-- Project Design Title --x-->
+
+                    <!-- Project design Description -->
+                    <article id="project_design_description" 
+                        class="gr2s1 gc1s12 flex w-100"
+                    >
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                    </article>    
+                    <!--x-- Project design Description --x-->
+
+                    <!-- Project design gallery -->
+                    <article id="project_design_gallery_1" 
+                        class="gr3s2 gc2s4
+                            flex items-center justify-center
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        design Image One
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_design_gallery_2" 
+                        class="gr3s3 gc7s6
+                            flex items-center justify-center
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        design Image Two
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_design_gallery_3" 
+                        class="gr6s3 gc7s6
+                            flex items-center justify-center
+                            min-vh-50
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        design Image Three
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_design_gallery_4" 
+                        class="gr5s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        design Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+                    <article id="project_design_gallery_5" 
+                        class="gr7s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        design Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+                    
+                    <article id="misc_1" 
+                        class="gr6s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr3s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr5s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr6s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue1
+                            ">
+                    </article>
+                    <article id="misc_2" 
+                        class="gr5s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue0
+                            ">
+                    </article>
+                    <!-- Project Concept gallery -->
+                </div>
+                <!-- Projects Concept --> 
+
+                <!-- Projects Construction -->
+                <div id="project_Concept"
+                    class="grid gtc12 ggap1-00
+                    ph1-00 mb3-00">
+                    
+                    <!-- Project constuction Title -->
+                    <hgroup id="project_constuction Title"
+                        class="gc1s12">
+                        <h2 class="
+                        mb3-00
+                            f3-00
+                            ">
+                            PROJECT CONSTRUCTION
+                        </h2>     
+                    </hgroup>
+                    <!--x-- Project constuction Title --x-->
+
+                    <!-- Project constuction Description -->
+                    <article id="project_constuction_Description" 
+                        class="gr2s1 gc1s12 flex w-100"
+                    >
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                        
+                        <div class="">
+                            <P>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P>
+                            <P>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, labore ab, pariatur adipisci deleniti dignissimos sit sint dolor quae sequi culpa fugit amet laboriosam laborum, omnis ex eligendi aut ipsam!
+                            </P> 
+                        </div> 
+                    </article>    
+                    <!--x-- Project constuction Description --x-->
+
+                    <!-- Project constuction gallery -->
+                    <article id="project_constuction_gallery_1" 
+                        class="gr3s2 gc2s4
+                            flex items-center justify-center
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        constuction Image One
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_constuction_gallery_2" 
+                        class="gr3s3 gc7s6
+                            flex items-center justify-center
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        constuction Image Two
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_constuction_gallery_3" 
+                        class="gr6s3 gc7s6
+                            flex items-center justify-center
+                            min-vh-50
+                            relative
+                            "
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        constuction Image Three
+                            </h3>    
+                            <p class="white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_constuction_gallery_4" 
+                        class="gr5s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        constuction Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="project_constuction_gallery_5" 
+                        class="gr7s2 gc2s4
+                            flex items-center justify-center
+                            h-100
+                            relative">
+                    
+                        <figure class="shadow-5">
+                            <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold bw3
+                                    cover"
+                            /> 
+                        </figure>
+                        <hgroup class="w-75 pa0-50 
+                                bg-gold
+                                absolute
+                                    ">
+                            <h3 class="
+                                    white-90 f">
+                        constuction Image Four
+                            </h3>    
+                            <p class=" white-90">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum perspiciatis labore rem rerum sapiente nobis sunt sed ipsum tempora laboriosam.
+                            </p>    
+                        </hgroup> 
+                    </article>
+                    
+                    <article id="misc_1" 
+                        class="gr6s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+
+                    <article id="misc_2" 
+                        class="gr3s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+
+                    <article id="misc_2" 
+                        class="gr5s1 gc1s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-gold
+                            ">
+                    </article>
+
+                    <article id="misc_2" 
+                        class="gr6s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue1
+                            ">
+                    </article>
+
+                    <article id="misc_2" 
+                        class="gr5s1 gc6s1
+                            flex items-center justify-center
+                            w-100 h-100
+                            bg-blue0
+                            ">
+                    </article>
+                    <!-- Project Construction gallery -->
+                </div>
+                <!-- Projects Construction --> 
+
+                <!-- Project Data -->
+                <div id="project_data"
+                    class="grid gtc12 ggap1-00
+                    ph1-00 mb3-00">
+                    
+                    <!-- Project Data Title -->
+                    <hgroup id="project_data Title"
+                        class="gc1s12">
+                        <h2 class="
+                        mb3-00
+                            f3-00
+                            ">
+                            PROJECT DATA
+                        </h2>     
+                    </hgroup>
+                    <!-- Project Data Title -->
+                    <div class="gc1s12 flex">
+                        <div class="ba w-50 pa0-50">
+                            <div class="mb2-00">
+                                <h2>Awards</h2>
+                                <div >
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="mr2-00">2008</div>
+                                        <div>GIA National Award</div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="mb2-00">
+
+                                <h2>Project Team Members</h2>
+                                <ul class="flex">
+                                    <li><small>Arc. Felix</small></li>
+                                    <li><small>Arc. Felix</small></li>
+                                    <li><small>Arc. Felix</small></li>
+                                    <li><small>Arc. Felix</small></li>
+                                    <li><small>Arc. Felix</small></li>
+                                </ul>
+
+                            </div>
+                            <div class="w-100">
+                                <h2>Data</h2>
+                                <div class="flex w-100 justify-between">
+                                    <div>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                Date
+                                                </h5>
+                                                <p class="mb0-25">June, 2017</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Location
+                                                </h5>
+                                                <p class="mb0-25">Accra, Ghana</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Site Area
+                                                </h5>
+                                                <p class="mb0-25">12,450 sqm</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Gross Floor Area
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+
+                                    </div>
+                                    
+                                    <div>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Lead Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Structural Engineer
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Services Engineer
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Mechanical Enginner
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Quantity Surveyor
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+
+                                    </div>
+                                    
+                                    <div>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                        <article id="project_summary_1" 
+                                            class="">
+                                                <h5 class="mb0-50">
+                                                    Project Consultant
+                                                </h5>
+                                                <p class="mb0-25">Architect Tepayo</p>     
+                                        
+                                        </article>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" grid gtc12 h-100 ggap0-50
+                                    ba w-50 white-90">
+                            <div class="gc1s4 gr1
+                                    w-100 h-100
+                                    bg-black-20">
+                                    <h4>Project Coordinator</h4>
+                                
+                            </div>
+                            <div class="gc1s4 gr2
+                                    w-100 h-100
+                                    bg-blue0">
+                                <h4>Project Leads</h4>
+                            </div>
+                            <div class="gc1s4 gr3
+                                    w-100 h-100
+                                    bg-blue2">
+                                <h4>Job Sheets</h4>
+                            </div>
+                            <div class="gc5s8 gr1s2
+                                    w-100 h-100
+                                    bg-gold">
+                                <h4>Google Map Showing Project Location</h4>
+                            </div>
+                            <div class="gc9s4
+                                    w-100 h-100
+                                    bg-black-90">
+                            
+                            </div>
+                            <div class="gc5s4 gr3s1
+                                    w-100 h-100
+                                    bg-red">
+                                <h4>News</h4>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                
+                
+                </div>
+                <!-- Project Data --> 
+            </div>
+            <!-- Project Details-->
+
+            <!-- Related Projects -->
+            <aside id="relatedPages"
+                class="grid gtc12
+                    min-vh-50 
+                    pa1-00
+                    "
+            >
+                <h2 class="gc1s12 ttu">related pages</h2> 
+
+                <article id="" 
+                class="gr2s4 gc1s4
+                    flex items-center justify-center
+                    ma0-50 pa0-50
+                    relative">
+                    <figure class="
+                        w-100 h-100
+                        "
+                    >
+                        <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                            alt=""
+                            class="w-100 h-100
+                                ba b--gold 
+                                cover">
+                            
+                    </figure> 
+                    <hgroup 
+                        class ="flex justify-around items-start flex-column 
+                            w-100 h-100 bg-black-20
+                            absolute"
+                        >
+                        <h5 class="w-100 h-100 white-90 flex items-center justify-center">
+                            Project One
+                        </h5>
+                        <small></small> 
+                    </hgroup> 
+                </article>
+                
+                <article id="" 
+                    class="gr2s4 gc9s4
+                        flex items-center justify-center
+                        ma0-50 pa0-50
+                        relative
+                        "
+                        >
+                    <figure class="
+                    w-100 h-100
+                    ">
+                        <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                            alt=""
+                            class="w-100 h-100
+                                ba b--gold 
+                                cover">
+                            
+                    </figure> 
+                    <hgroup 
+                        class="flex justify-around items-start flex-column 
+                        w-100 h-100 
+                        bg-black-20
+                        absolute">
+                        <h5 class="flex items-center justify-center
+                            w-100 
+                            tc 
+                            white-90">
+                            Project Two
+                        </h5>     
+                    </hgroup> 
+                </article>
+
+                <article id="" 
+                    class="gr2s4 gc5s4
+                        flex items-center justify-center
+                        ma0-50 pa0-50
+                        relative"
+                >
+                    <figure 
+                        class="
+                            w-100 h-100
+                            "
+                    >
+                        <img src="{% static '_media/images/Regular_Images/fpo_square.png' %}"            
+                            alt=""
+                            class="w-100 h-100
+                                ba b--gold 
+                                cover">
+                            
+                    </figure> 
+                    <hgroup class="flex justify-around items-start flex-column 
+                        w-100 h-100 bg-black-20
+                        absolute">
+                        <h5 class="flex items-center justify-center
+                        w-100 tc 
+                        white-90">
+                            Project Three
+                        </h5>     
+                    </hgroup> 
+                </article>
+            </aside>
+            <!-- Related Projects -->
+            
+        </main>
+        <!-- Page Main -->
+
+        <!-- page Footer -->
+        <footer id="pageFooter"
+            class="">
+            {% include '_partials/main-footer.html' %}
+        </footer>
+        <!-- page Footer -->
+    {% endblock pagecontent %}
+{% endblock content %}
+   

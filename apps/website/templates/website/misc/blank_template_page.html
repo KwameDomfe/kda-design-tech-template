@@ -1,0 +1,79 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %} 
+   Search Home
+{% endblock title %}
+
+{% block content %}
+    <!-- Page_Layout  -->
+    <main id = "l_mainContents"
+        class="flex flex-column flex-row-l 
+            vh-100 w-100"
+    >
+        <!-- 00.00   mainHeader -->
+        <div id="mainHeader" 
+            class="flex items-center justify-between flex-column-l
+                white-90"  
+        >
+            {% include '_partials/_mainHeader.html' %}
+        </div>
+        <!-- 00.00   mainHeader -->
+
+        <!-- 00.00   main Body -->
+        <div id="mainPage"
+            class="w-100 of-y-scroll"
+        >
+            {% block mainbody %}
+            <div id="" 
+            class=""
+            
+            >    
+                <!-- Page Header     -->
+                <header id="page_header" 
+                    class="grid gtc12
+                        flex items-center justify-center
+                        bg-blue0 ">
+                        {% comment %} <h1 id=""
+                            class="w-100 gc1s12 tc"
+                        >
+                            Page Header Here 
+                        </h1> {% endcomment %}
+                       
+                </header>
+                <!-- Page Header     -->
+
+                <!-- Page Contents     -->
+                <main id="page_contents" 
+                    class=" flex items-center justify-center
+                        min-vh-100
+                        ph1-00"
+                >
+                    
+                maincontent here   
+        
+                </main>
+                <!-- Page Contents     -->
+
+                <!-- Page Footer     -->
+                {% comment %} <footer id="page_footer" 
+                    class="pa1-00"
+                >
+                page Footer Here 
+                </footer>  {% endcomment %}
+                <!-- Page Footer     -->
+
+            </div>
+            <footer id="main_footer" 
+                class=""
+            >
+                {% comment %} {% include '_partials/page-footer.html' %} {% endcomment %}
+            </footer>
+        </div>
+           
+            {% endblock mainbody %}
+      
+        <!-- 00.00   main Body -->
+    </main>
+     <!-- Page_Layout  End -->
+{% endblock content %}

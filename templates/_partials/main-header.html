@@ -1,0 +1,304 @@
+{% load static %}
+<header id="o__mainHeader" 
+    class="w-100 vh-100-l
+        pa1-00
+        bg-blue0"
+    >
+    <div id="" 
+            class="flex justify-between flex-column-l h-100"
+        >   
+        <article id="m__aesl"
+            class="flex flex-column-l items-center justify-center"
+            tabindex="0" 
+            title="AESL Logo" 
+            aria-label="AESL Logo"
+        >
+            <a href="{% url 'website:index' %}"
+                class="white-90 mb1-00-l"
+            >
+                <figure id="m_aesl__logo" 
+                    class="flex items-center justify-start flex-column-l "
+                >   
+                    <img src="{% static '_images\_partials\aesl_logo.png' %}" 
+                        alt="AESL Logo" 
+                        class="w3-00 mr0-00-l
+                            "
+                    >
+                    <figcaption class="flex flex-column justify-center items-center">
+                        <h4 class="f1-00 tc mb0-50 ml1-00 ml0-00-l w16-00 ">
+                            Architectural & Engineering Services Limited
+                        </h4>
+                        <h5 class="f0-75 tc">
+                            Consulting Architects, Enginners and Surveyors
+                        </h5>
+                    </figcaption>
+                </figure>   
+            </a>
+            <section id="m_aesl__address" 
+                class="dn mb0-00-m white-90 w-100" 
+                data-use-new="true" 
+                role="tabpanel" 
+                aria-label="GET IN TOUCH" 
+                section-index="1">
+                
+                <div id=""
+                    class=" w-100
+                        mb1-00
+                        f0-75 tc" 
+                    itemtype="">
+                    <div itemprop="name" class ="f1-00 ttu b mb0-50">
+                        AESL Head Office
+                    </div>
+
+                    <div id="Locational_address"
+                        itemprop="address" 
+                        itemscope="" 
+                        itemtype="http://schema.org/PostalAddress">
+                        <span class="dib mb0-50" itemprop="streetAddress">
+                            The Hall of Technology<br>
+                            Opp. The Ministry of Roads and Highways<br>
+                            Ministries, Accra.<br>
+                            Ghana
+                        </span>
+                    </div>
+                    <div class="flex flex-column items-center justify-center w-100 h-100 f0-75 tracked-tight">
+                        <div class="flex justify-between w-100 h-100">
+                            <a  href="" 
+                                title="Get In Touch on WhatsApp" 
+                                target="_blank" 
+                                class="tc"
+                                rel="noopener noreferrer">
+                                
+                                <address class="flex items-center justify-center 
+                               
+                                    pa0-25
+                                    mb0-25 
+                                    ba br5-00 b--white-90"> 
+                                    <img src="{% static '_media/svgs/WhatsApp.svg' %}" 
+                                        alt="WhatsApp" 
+                                        class="w1-00 mr0-25" 
+                                    />(+233) 302 683 871
+                                </address>
+                                
+                            </a>
+                            <a  href="" 
+                                title="Get In Touch on WhatsApp" 
+                                target="_blank" 
+                                class="tc "
+                                rel="noopener noreferrer">
+                                
+                                <address class="flex items-center justify-center ba br5-00 pa0-25
+                                mb0-25 b--white-90"> 
+                                    <img src="{% static '_media/svgs/WhatsApp.svg' %}" 
+                                        alt="WhatsApp" 
+                                        class="w1-00 mr0-25" 
+                                    />(+233) 302 683 871
+                                </address>
+                                
+                            </a>
+                        </div>
+                        <a  href="" 
+                            title="Get In Touch on WhatsApp" 
+                            target="_blank" 
+                            class="tc w-50"
+                            rel="noopener noreferrer">
+                            
+                            <p class="flex items-center justify-center  ba br5-00 pa0-25
+                            mb0-25 b b--white-90"> 
+                                {% comment %} <img src="{% static '_media/svgs/WhatsApp.svg' %}" change to email
+                                    alt="WhatsApp" 
+                                    class="w1-00 pa0-25" 
+                                /> {% endcomment %}info@aesl.com 
+                            </p>
+                        </a>
+                    </div>   
+                </div>
+               
+            </section>
+        </article>
+
+        <article id="m__menuToggle" 
+            class=" flex items-center justify-center dn-l
+                pointer
+        ">
+            <figure id="menuToggle_icon"
+                class="flex items-center justify-center
+                    w2-50 h2-50
+                    
+                    br5-00
+                    ba b--white-90">
+                <img src="{% static 'svgs\menu-icon.svg' %}" 
+                    alt="menuToggleIcon" 
+                    class=" w-90 
+                            pa0-25 white-90
+                " />
+            </figure>
+        </article>
+       
+        <nav id="m__navItems"
+            class="dn flex-l flex-column-l items-center-l justify-center-l 
+            w-100"
+        >
+            <ul class=" dib-m flex-column-m 
+                    mb0-00 
+                    w-100 
+                    ttu
+                    bb bt white-90 pv1-50
+                    ">
+                <li class="mb0-50 
+                    "
+                    tabindex="0" 
+                    title="search" 
+                    aria-label="search">
+                    <a  href="{% url 'website:search' %}" 
+                        class="white-90">
+                        search
+                    </a>
+                </li>
+                <li class="mb0-50"
+                    tabindex="0" 
+                    title="projects" 
+                    aria-label="projects">
+                    <a  href="{% url 'website:projects-home' %}" 
+                        class="white-90">
+                        projects
+                    </a>
+                </li>
+                <li class="mb0-50" 
+                    tabindex="0" 
+                    title="practice" 
+                    aria-label="practice">
+                    <a  href="{% url 'website:practice-home' %}" 
+                        class="white-90">
+                        practice
+                    </a>
+                </li>
+                <li class="mb0-50" 
+                    tabindex="0" 
+                    title="principles" 
+                    aria-label="principles">
+                    <a  href="{% url 'website:principles-home' %}" 
+                        class="white-90">
+                        principles
+                    </a>
+                </li>
+                <li class="mb0-50" 
+                    tabindex="0" 
+                    title="people" 
+                    aria-label="people">
+                    <a  href="{% url 'website:people-home' %}" 
+                        class="white-90">
+                        people
+                    </a>
+                </li>
+                <li class="mb0-50" 
+                    tabindex="0" 
+                    title="news" 
+                    aria-label="news">
+                    <a  href="{% url 'website:news-home' %}" 
+                        class="white-90">
+                        news
+                    </a>
+                </li>
+                <li class="mb0-00"
+                    tabindex="0" 
+                    title="publications" 
+                    aria-label="publications">
+                    <a  href="{% url 'website:publications-home' %}" 
+                        class="white-90">
+                        publications
+                    </a>
+                </li>
+            </ul>
+           
+        </nav>
+        <nav id="nav_social_media"
+            class="dn flex-l w-100-l mv0-50-l" 
+            tabindex="0" 
+            title="connect" 
+            aria-label="connect">
+            <ul id="social_media_list" 
+                class=" flex justify-around items-center w-100">
+                <li class="ba br5-00 pa0-25 b--white-90"> 
+                    <a  href="" 
+                        title="Follow me on Twitter" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img src="{% static 'svgs/twitter.svg' %}" 
+                            alt="" 
+                            class="w0-75">
+                    </a>
+                </li>
+                <li class="ba br5-00 pa0-25 b--white-90"> 
+                    <a  href="" 
+                        title="Follow me on Facebook" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img src="{% static 'svgs/facebook.svg' %}" 
+                            alt="" 
+                            class="w0-75">
+                    </a>
+                </li>
+                <li class="ba br5-00 pa0-25 b--white-90"> 
+                    <a  href="" 
+                        title="Connect with me on LinkedIn" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img src="{% static 'svgs/linkedin.svg' %}" 
+                            alt="" 
+                            class="w0-75">
+                    </a>
+                    
+                </li>
+                <li class="ba br5-00 pa0-25 b--white-90"> 
+                    <a  href="" 
+                        title="Follow me on youtube" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img src="{% static 'svgs/youtube.svg' %}" 
+                            alt="" 
+                            class="w0-75">
+                    </a>
+                </li>
+                <li class="ba br5-00 pa0-25 b--white-90"> 
+                    <a  href="" 
+                        title="Get In Touch on WhatsApp" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img src="{% static 'svgs/WhatsApp.svg' %}" 
+                            alt="" 
+                            class="w0-75">
+                    </a>
+                </li>
+            </ul> 
+        </nav>
+        
+        <footer id="m__" class="dn flex-l flex-column-l">
+            
+            <article id="m__horizontal-list"
+                class="flex items-center justify-center 
+                    pv0-50 mb0-50
+                    bb
+                    f1-00 
+                    white-90"
+            >
+                <small class="mr0-50">Legal</small>
+                <small class="mh0-50">Policies</small>
+                <small class="ml0-50">Privacy</small>
+                <small class="ml0-50">Guidelines</small>
+            </article> 
+
+            <div id = "m__kdadesigntech"
+                class="flex items-center justify-center flex-column 
+                white 
+                f0-75"
+            >
+                <small class="mb0-50">powered by:</small>
+                <div class="flex">
+                    <small class="">kda design technologies</small>
+                    <small class="ml1-00">&copy; 2022</small>
+                </div>
+            </div> 
+        </footer>  
+    </div>
+</header>

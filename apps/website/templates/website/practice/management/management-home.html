@@ -1,0 +1,1560 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block pagetitle %} 
+    Practice - Management Home
+{% endblock pagetitle %}
+
+{% block custom_css %} 
+
+{% endblock custom_css %}
+
+{% block scripts %}   
+
+{% endblock scripts %}
+
+{% block content %}
+    <!-- main Body Start -->
+    {% block pagecontent %}
+        <!-- Page Header -->
+        <header 
+            class="grid gtc12
+            bg-white ">
+            <figure class="gc1s12">
+                <img src="{% static '_images\practice\management\2.jpeg' %}"          
+                    alt=""
+                    class="w-100 vh-50 cover">
+            </figure>
+            <hgroup class="w-100 blue0">
+                <h2 class="w-100 h-100
+                    pa1-00 pb1-00 mb0-00
+                    f3-00
+                    ">
+                    MANAGEMENT
+                </h2>     
+            </hgroup> 
+            <!-- Page Navigation -->
+            {% include 'website/practice\_partials\practice-page-nav.html' %}
+            <!-- Page Navigation -->
+        </header>
+        <!-- Page Header -->
+
+        <!-- Page Main -->
+        <main class="ph1-00">
+
+            <!-- Overview -->
+                <div id="management_overview"
+                    class="grid gtc12 ggap1-00
+                        mb3-00"
+                >
+                    <header id=""
+                        class="gr1s1 gc1s12 
+                            w-100
+                            bg-goldT" 
+                    >
+                        <hgroup id=""
+                            class=""
+                        >
+                            <h2 class="mv1-00 pl1-00
+                                f2-00 ttu"
+                            >
+                                Management Overview
+                            </h2>     
+                        </hgroup> 
+                    </header>
+                    <!-- Overview Description -->
+                    <article id="" 
+                        class="gr2s1 gc1s12 ggap1-00 flex mb2-00"
+                    >   <div>
+                            <p>
+                                AESL offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and private sector clients.
+                            </p>
+                            <P>
+                                100% state-owned limited liability company
+
+                            </P>
+                        </div>
+                        <div>
+                            <p>
+                                AESL offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and private sector clients.
+                            </p>
+                            <P>
+                                100% state-owned limited liability company
+
+                            </P>
+                        </div>
+                    </article>
+                    <!-- Overview Description -->
+                </div>
+            <!-- Overview --> 
+
+            <!--Managing Director -->
+                <header id=""
+                    class="gr1s1 gc1s12 
+                        w-100 h-100
+                        bg-goldT" 
+                >
+                    <hgroup id=""
+                        class=""
+                    >
+                        <h2 class="pv1-00 pl1-00
+                            f2-00 ttu"
+                        >
+                            Managing Director
+                        </h2>     
+                    </hgroup> 
+                </header>
+                <div id="management-managing-director"
+                    class="gr4s1 gc1s12
+                        grid gtc12 ggap1-00
+                        mb3-00
+                        white-90">
+                    
+                    <article id="" 
+                        class="gr1s2 gc1s6
+                            flex flex-column justify-between
+                            pa2-00 ph2-00
+                            bg-black-50"
+                    >
+                        <h2 class = "mb1-00">Arc. Isaac Agyei Marfo</h2>
+                        <h3 class = "mb1-00">Managing Director</h3>
+                        <p>{% lorem 30 w random %}</p>
+                        <p>{% lorem 30 w random %}</p>
+                        <a href="{% url 'website:managing-director' %}"
+                            class="ba pa0-25">Read More</a>
+
+                    </article>
+                    
+                    <article id="" 
+                        class="gr1s2 gc7s6
+                            flex items-end justify-center
+                            relative"
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                alt=""
+                                class="pa0-50"
+                            /> 
+                        </figure>
+                        <hgroup 
+                            class="flex flex-column justify-start 
+                            pa0-50 ma2-00
+                            bg-goldT 
+                            f0-75 ttu fw6
+                            ba
+                            absolute
+                                    ">
+                            <h3>
+                            {% lorem 4 w random %}
+                            </h3>    
+                            <span>
+                                Location, Date.
+                            </span>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="" 
+                        class="gr3s1 gc1s4
+                        flex items-end justify-center
+                        relative">
+                    
+                        <hgroup 
+                            class="flex flex-column justify-start 
+                                pa0-50 ma2-00
+                                bg-goldT 
+                                f0-75 ttu fw6
+                                ba
+                                absolute
+                                    ">
+                            <p>
+                                Md with Director Gen of Ghana Sports Council Prof Twumasi
+                            </p>    
+                            <span>
+                            Accra Sports Stadium, Feb. 2022
+                            </span>       
+                        </hgroup> 
+                        <figure class="shadow-5">
+                            <img src="{% static '_images\practice\management\managing-director\md-02.jpeg' %}"            
+                                alt=""
+                                class="w-100
+                                
+                                    ba b--gold 
+                                "
+                                /> 
+                        </figure>
+                    </article>
+
+                    <article id="" 
+                        class="gr3s1 gc5s4
+                            flex items-end justify-center
+                            relative"
+                    >
+                        <hgroup 
+                            class="flex flex-column justify-start 
+                            pa0-50 ma2-00
+                            bg-goldT 
+                            f0-75 ttu fw6
+                            ba
+                            absolute
+                                    ">
+                                    <h3>
+                                        MD with President, Hon Minister for Local Govt,
+                                        </h3>    
+                                        <span>
+                                            Location, Date.
+                                        </span>    
+                        </hgroup> 
+                        <figure >
+                            <img src="{% static '_images\practice\management\managing-director\md-07.jpeg' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold 
+                                    "
+                                /> 
+                        </figure>
+                    </article>
+                    
+                    <article id="" 
+                        class="gr3s1 gc9s4
+                        flex items-end justify-center
+                        bg-gold relative"
+                    >
+                        <hgroup 
+                            class="flex flex-column justify-start 
+                            pa0-50 ma2-00
+                            bg-goldT 
+                            f0-75 ttu fw6
+                            ba
+                            absolute
+                                    ">
+                                    <h3>
+                                        {% lorem 4 w random %}
+                                        </h3>    
+                                        <span>
+                                       Location, Date.
+                                        </span>
+                        </hgroup> 
+                        <figure >
+                            <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold 
+                                    "
+                                /> 
+                        </figure>
+                    </article>
+                    <!-- Practice -->
+
+                </div>
+            <!--Managing Director -->
+              
+            <!-- Deputy Managing Director I Start-->
+                <header id=""
+                    class="gr1s1 gc1s12 
+                        w-100 h-100
+                        bg-goldT" 
+                >
+                    <hgroup id=""
+                        class=""
+                    >
+                        <h2 class="pv1-00 pl1-00 mb0-00
+                            f2-00 ttu"
+                        >
+                            Deputy Managing Director
+                        </h2>     
+                        <h3 class="mb1-00 pl1-00 
+                            f1-50 ttu"
+                        >
+                            Architecture and Planning
+                        </h3>     
+                    </hgroup> 
+                </header>
+                <div id="management-deputy-anaging-director-architecture-and-planning"
+                    class="gr4s1 gc1s12
+                        grid gtc12 ggap1-00
+                        white-90 mb3-00"
+                >
+                    <article id="tr" 
+                        class="gr1s2 gc1s6
+                            flex flex-column justify-between
+                            relative 
+                            w-100 h-100
+                            pa2-00 ph2-00
+                            bg-black-50"
+                    >
+                        <h2 class = "mb1-00">Arc. Isaac Agyei Marfo</h2>
+                        <h3 class = "mb1-00">Deputy Managing Director </h3>
+                        <h3 class = "mb1-00">Architecture and Planning </h3>
+                        <p>{% lorem 30 w random %}</p>
+                    
+                        <a href="{% url 'website:deputy-managing-director-architecture-planning' %}">Read More</a>
+
+                    </article>
+                    
+                    <article id="" 
+                        class="gr1s2 gc7s6
+                            flex items-center justify-center
+                            relative"
+                    >
+                        <figure class="shadow-5">
+                            <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                alt=""
+                                class="pa0-50"
+                            /> 
+                        </figure>
+                        <hgroup 
+                            class="flex flex-column items-center justify-start
+                                pa0-50
+                                bg-blue0
+                                absolute
+                                    ">
+                            <h3>
+                            Refeurbished Passport Office
+                            </h3>    
+                            <span>
+                            - Accra , Ghana.
+                            </span>    
+                        </hgroup> 
+                    </article>
+
+                    <article id="" 
+                        class="gr3s1 gc1s6
+                        flex items-center justify-center
+                        relative">
+                    
+                        <hgroup 
+                            class="flex flex-column items-center justify-start
+                                pa0-50
+                                bg-blue0
+                                absolute
+                                    ">
+                            <h3>
+                            Proposed Apartment
+                            </h3>    
+                            <span>
+                            - Accra , Ghana.
+                            </span>    
+                        </hgroup> 
+                        <figure class="shadow-5">
+                            <img src="{% static '_images\practice\management\managing-director\md-02.jpeg' %}"            
+                                alt=""
+                                class="w-100
+                                
+                                    ba b--gold 
+                                "
+                                /> 
+                        </figure>
+                    </article>
+
+                    <article id="" 
+                        class="gr3s1 gc7s6
+                            flex items-center justify-center
+                            relative"
+                    >
+                        <hgroup 
+                            class="flex items-center justify-center
+                                bg-blue0
+                                absolute
+                                    ">
+                            <h3 class="
+                                    flex items-center justify-around
+                                    pa0-50
+                                    white-90">
+                                OFFICE BLOCK
+                            </h3>    
+                            <span class="white-90 flex items-center justify-center">
+                                - Techiman, Ghana.
+                            </span>    
+                        </hgroup> 
+                        <figure >
+                            <img src="{% static '_images\practice\management\managing-director\md-07.jpeg' %}"            
+                                alt=""
+                                class="
+                                    ba b--gold 
+                                    "
+                                /> 
+                        </figure>
+                    </article>
+                </div>
+            <!-- Deputy Managing Director I End-->   
+
+            <!-- Deputy Managing Director II Start-->
+            <header id=""
+                class="gr1s1 gc1s12 
+                    w-100 h-100
+                    bg-goldT" 
+            >
+                <hgroup id=""
+                    class=""
+                >
+                    <h2 class="pv1-00 pl1-00 mb0-00
+                        f2-00 ttu"
+                    >
+                        Deputy Managing Director
+                    </h2>     
+                    <h3 class="mb1-00 pl1-00 
+                        f1-50 ttu"
+                    >
+                        Engineering
+                    </h3>     
+                </hgroup> 
+            </header>
+            <div id="management-deputy-anaging-director-engineering"
+                class="gr4s1 gc1s12
+                    grid gtc12 ggap1-00
+                    white-90 mb3-00">
+                
+                <article id="tr" 
+                    class="gr1s2 gc1s6
+                        flex flex-column justify-between
+                        relative 
+                        w-100 h-100
+                        pa2-00 ph2-00
+                        bg-black-50"
+                >
+                    <h2 class = "mb1-00">Arc. Isaac Agyei Marfo</h2>
+                    <h3 class = "mb1-00">Deputy Managing Director </h3>
+                    <h3 class = "mb1-00">Engineering </h3>
+                    <p>{% lorem 30 w random %}</p>
+                
+                    <a href="{% url 'website:deputy-managing-director-engineering' %}">Read More</a>
+
+                </article>
+                
+                <article id="" 
+                    class="gr1s2 gc7s6
+                        flex items-center justify-center
+                        relative"
+                >
+                    <figure class="shadow-5">
+                        <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                            alt=""
+                            class="pa0-50"
+                        /> 
+                    </figure>
+                    <hgroup 
+                        class="flex flex-column items-center justify-start
+                            pa0-50
+                            bg-blue0
+                            absolute
+                                ">
+                        <h3>
+                        Refeurbished Passport Office
+                        </h3>    
+                        <span>
+                        - Accra , Ghana.
+                        </span>    
+                    </hgroup> 
+                </article>
+
+                <article id="" 
+                    class="gr3s1 gc1s6
+                    flex items-center justify-center
+                    relative">
+                
+                    <hgroup 
+                        class="flex flex-column items-center justify-start
+                            pa0-50
+                            bg-blue0
+                            absolute
+                                ">
+                        <h3>
+                        Proposed Apartment
+                        </h3>    
+                        <span>
+                        - Accra , Ghana.
+                        </span>    
+                    </hgroup> 
+                    <figure class="shadow-5">
+                        <img src="{% static '_images\practice\management\managing-director\md-02.jpeg' %}"            
+                            alt=""
+                            class="w-100
+                            
+                                ba b--gold 
+                            "
+                            /> 
+                    </figure>
+                </article>
+
+                <article id="" 
+                    class="gr3s1 gc7s6
+                        flex items-center justify-center
+                        relative"
+                >
+                    <hgroup 
+                        class="flex items-center justify-center
+                            bg-blue0
+                            absolute
+                                ">
+                        <h3 class="
+                                flex items-center justify-around
+                                pa0-50
+                                white-90">
+                            OFFICE BLOCK
+                        </h3>    
+                        <span class="white-90 flex items-center justify-center">
+                            - Techiman, Ghana.
+                        </span>    
+                    </hgroup> 
+                    <figure >
+                        <img src="{% static '_images\practice\management\managing-director\md-07.jpeg' %}"            
+                            alt=""
+                            class="
+                                ba b--gold 
+                                "
+                            /> 
+                    </figure>
+                </article>
+                
+                <!-- Practice -->
+
+            </div>
+            <!-- Deputy Managing Director II End-->
+            
+            <!-- Heads of Departments -->   
+                <header id=""
+                class="gr1s1 gc1s12 
+                    w-100 h-100
+                        bg-goldT mb2-00" 
+                >
+                    <hgroup id=""
+                        class=""
+                    >
+                        <h2 class="pv1-00 pl1-00 mb0-00
+                            f2-00 ttu"
+                        >
+                           Heads of Departments
+                        </h2>       
+                    </hgroup> 
+                </header> 
+                <!-- Architecture and Planning Start-->
+               
+                    <header id=""
+                        class="gc1s12 gr1s1 
+                        pa1-00 
+                        bg-white"
+                    >
+                        <h2 class="ma0-00"> Architecture and Planning</h2>
+                    </header>
+                 <div id="heads-architecture-and-planning" 
+                    class="grid gtc12 mb2-00 bg-black pa2-00"
+                >      
+                    <div id="head-architecture"
+                        class="gr2s1 gc1s6
+                            grid gtc12 
+                            white-90">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac A. Commey</h3>
+                            <p class = "mb0-50">Architecture</p>
+                            <a href="{% url 'website:head-of-department-details' %}">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+
+                    <div id="head-valuation"
+                        class="gr2s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Sylvester Akuoko</h3>
+                            <p class = "mb0-50">Valuation</p>
+                            <a href="{% url 'website:head-of-department-details' %}">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="head-quantity-surveying"
+                        class="gr3s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Paul K. Ansong</h3>
+                            <p class = "mb0-50">Quantity Surveying</p>
+                            <a href="{% url 'website:head-of-department-details' %}">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                   
+                    <div id="head-land-surveying"
+                        class="gr3s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Evans Boateng</h3>
+                            <p class = "mb0-50">Land Surveying</p>
+                            <a href="{% url 'website:head-of-department-details' %}">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                </div>
+                <!--Architecture and Planning End -->
+            
+                <!-- Engineering Start -->   
+                <div id="heads-engineering" 
+                    class="grid gtc12 ggap2-00 mb2-00 bg-blue0"
+                >
+                    <header class="bg-white gc1s12 gr1s1 pa1-00">
+                        <h2 class="ma0-00"> Engineering</h2>
+                    </header>
+                   
+                    <div id="head-civil"
+                        class="gr2s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <div id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Ing. Charles Adigvom</h3>
+                            <p class = "mb0-50">Civil / Structures</p>
+                            <a href="">Read More</a>
+                        </div>
+                        
+                        <div id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </div>
+        
+                    </div>
+                       
+                    <div id="head-installations"
+                        class="gr2s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Ing. Mike Addo</h3>
+                            <p class = "mb0-50">Installations</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                   
+                    <div id="head-water"
+                        class="gr3s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        <article id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Ing. Ebenezer Buertet Mac-Tetteh</h3>
+                            <p class = "mb0-50">Water</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                        </article>
+        
+                    </div>
+                    
+                    <div id="head-geotech"
+                        class="gr3s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Ing. Joseph Kwasi Oddei</h3>
+                            <p class = "mb0-50">Geotechnical</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                </div>
+                <!-- Engineering End --> 
+
+                <!-- Admistratvie Heads - Headquarters Start -->  
+                <div id="heads-administrative" 
+                    class="grid gtc12 ggap2-00 mb2-00 bg-blue2"
+                >
+                    <header class="bg-white gc1s12 gr1s1 pa1-00">
+                        <h2 class="ma0-00">Administrative Heads</h2>
+                    </header>
+                   
+                    <div id="head-finance"
+                        class="gr3s1 gc1s6
+                            grid gtc12
+                            white-90">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Mr. Robert Mbir</h3>
+                            <p class = "mb0-50">Director, Finance</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                   
+                    <div id=""
+                        class="gr3s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Florence B. Kumi-Sakyi (Mrs.)</h3>
+                            <p class = "mb0-50">Director, HRMS</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                   
+                    <div id=""
+                        class="gr4s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. E. Otchere-Darko</h3>
+                            <p class = "mb0-50">Director, Information Techlology</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id=""
+                        class="gr4s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="research-and-development" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Walter Sermodzi</h3>
+                            <p class = "mb0-50">Director, Research and Development</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    <!-- Head of Department End-->   
+                </div>
+                <!-- Admistratvie Heads - Headquarters End --> 
+
+                <!-- Admistratvie Heads - Regional Consultants Start -->  
+                 <header class="bg-white gc1s12 gr1s1 pa1-00">
+                    <h2 class="ma0-00">Regional Consultants</h2>
+                </header>
+                <div id="regional-consultants" 
+                    class="grid gtc12 ggap2-00 mb2-00 bg-blue2"
+                >
+                    <div id="regionalConsultant_1"
+                        class="gr1s1 gc1s6
+                            grid gtc12
+                            white-90">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Naa Kwarley</h3>
+                            <p class = "mb0-50">Greater Accra</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                   
+                    <div id="regionalConsultant_2"
+                        class="gr1s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Betsy Owusu-Antwi (Mrs.)
+                            </h3>
+                            <p class = "mb0-50">Ashanti</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsultant_3"
+                        class="gr2s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Eric Annan</h3>
+                            <p class = "mb0-50">Western / Western North</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsultant_4"
+                        class="gr2s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Isaac Agyei-Mensah</h3>
+                            <p class = "mb0-50">Central</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_5"
+                        class="gr3s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Richard Osei Amanfu</h3>
+                            <p class = "mb0-50">Volta / Oti</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_6"
+                        class="gr3s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Edward Agyemang-Prempeh</h3>
+                            <p class = "mb0-50">Ahafo/ Bono/ Bono-East</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+                    </div>
+                    
+                    <div id="regionalConsuultant_7"
+                        class="gr4s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Salifu Abdul-Gafaru Abdulai</h3>
+                            <p class = "mb0-50">Upper West</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_8"
+                        class="gr4s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Surv. Gordon Tanga</h3>
+                            <p class = "mb0-50">Northern/Savannah/
+                                North-EastT</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_9"
+                        class="gr5s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Amen A. K. Gbeckor-Kove </h3>
+                            <p class = "mb0-50">Eastern North</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_10"
+                        class="gr5s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Nana Kwame Amoateng Mensah</h3>
+                            <p class = "mb0-50">Upper West</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    {% comment %} <div id="regionalConsuultant_11"
+                        class="gr6s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Western North</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_12"
+                        class="gr6s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Central</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_13"
+                        class="gr7s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Western North</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_14"
+                        class="gr7s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Central</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_15"
+                        class="gr8s1 gc1s6
+                            grid gtc12
+                            white-90"
+                    >
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-between
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Western North</p>
+                            <a href="">Read More</a>
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div>
+                    
+                    <div id="regionalConsuultant_16"
+                        class="gr8s1 gc7s6
+                            grid gtc12
+                            white-90 f1-00">
+                        
+                        <article id="tr" 
+                            class="gr1s1 gc5s8
+                                flex flex-column justify-start
+                                relative 
+                                w-100 h-100
+                                pa1-00
+                                bg-black-50"
+                        >
+                            <h3 class = "mb0-50">Arc. Isaac Agyei Marfo</h3>
+                            <p class = "mb0-50">Central</p>
+                            <a href="">Read More</a>
+        
+                        </article>
+                        
+                        <article id="" 
+                            class="gr1s1 gc1s4
+                                flex items-center justify-center
+                                relative"
+                        >
+                            <figure class="shadow-5">
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                    alt=""
+                                    class="pa0-50 h-100"
+                                /> 
+                            </figure>
+                            
+                        </article>
+        
+                    </div> {% endcomment %}
+                    <!-- Head of Department End-->   
+                </div>
+                <!-- Admistratvie Heads - Regional Consultants End --> 
+            <!-- Heads of Departments -->
+        </main>
+        <!-- Page Main --> 
+
+        <!-- Page Footer -->
+        <footer id="pageFooter"
+            class="">
+        </footer>
+        <!-- Page Footer -->
+    {% endblock pagecontent %} 
+{% endblock content %}

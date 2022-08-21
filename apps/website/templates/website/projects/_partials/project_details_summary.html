@@ -1,0 +1,159 @@
+
+
+<div id="project_summary"
+                            class="grid gtc12 ggap1-00
+                            mb3-00"
+                        >
+                            <article id="project_summary_1" 
+                                class="gr1s1 gc1s2
+                                    flex items-center justify-center
+                                    w10-00 h10-00
+                                    white-90
+                                    ">
+                                <ul class=" 
+                                        w-100 h-100
+                                        pa0-50
+                                        bg-blue0
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Project Coordinator
+                                    </h5>
+                                    <li>
+                                        {{project.coordinator}}
+                                    </li>     
+                                </ul> 
+                            </article>
+                            
+                            <article id="project_summary_2" 
+                                class="gr1s1 gc3s2
+                                    flex items-center justify-center
+                                    w10-00 h10-00
+                                    white-90"
+                                >
+                                <ul class=" 
+                                        w-100 h-100
+                                        pa0-50 
+                                        bg-blue1
+                                        white-90"
+                                >
+                                    <h5 class="mb1-00">
+                                        Project Leads
+                                    </h5>
+                                    {% for x in project_qs %}
+                                        <li>
+                                            {{x.project_qs}}
+                                        </li>     
+                                    {% endfor %}
+                                </ul> 
+                            </article>
+
+                            <article id="project_summary_3" 
+                                class="gr1s1 gc5s2
+                                    flex items-center justify-center
+                                    w10-00 h10-00
+                                    "
+                            >
+                                <ul class="
+                                    w-100 h-100 
+                                    pa0-50
+                                    bg-blue2
+                                    white-90"
+                                >
+                                    <h5 class="mb1-00">
+                                        Job Sheets
+                                    </h5>
+                                    <li>English</li>
+                                    <li>French</li>
+                                </ul> 
+                            </article>
+
+                            <article id="project_summary_4" 
+                                class="gr1s1 gc7s2
+                                    w10-00 h10-00
+                                    bg-blue3
+                                ">
+                                <div 
+                                    class="w-100
+                                        pa0-50
+                                        white-90
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Date
+                                    </h5>
+                                    <p>{{project.start_date|date:'Y'}}</p>-<p>{{project.completed_date|date:'Y' }}</p>
+                                </div> 
+                                <div 
+                                    class="
+                                        w-100 
+                                        pa0-50
+                                        white-90
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Client
+                                    </h5>
+                                    <p>{{project.client}}</p>
+                                </div> 
+                            </article>
+                            
+                            <article id="project_summary_5" 
+                                class="gr1s1 gc9s2
+                                    w10-00 h10-00
+                                    pa0-50
+                                    bg-gold
+                                ">
+                                <div 
+                                    class="w-100
+                                    
+                                        white-90
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Location
+                                    </h5>
+                                    <p>{{project.location}}</p>
+                                </div> 
+                                <div 
+                                    class="
+                                        w-100 
+                                    
+                                        white-90
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Total Floor Area
+                                    </h5>
+                                    <p>{{project.total_floor_area}}<sup>2</sup></p>
+                                </div> 
+                            </article>
+                            
+                            <article id="project_summary_6" 
+                                class="gr1s1 gc11s2
+                                    w10-00 h10-00
+                                pa0-50 
+                                bg-black-90 
+                                "
+                            >
+                                <div>
+                                <div 
+                                    class="w-100
+                                        white-90
+                                        ">
+                                        <h5 class="mb1-00">
+                                            Cost
+                                        </h5>
+                                        <p>{{project.cost}}</p>
+                                    </div> 
+                                <div 
+                                    class="
+                                        w-100 
+                                    
+                                        white-90
+                                        ">
+                                    <h5 class="mb1-00">
+                                        Certifications
+                                    </h5>
+                                    <p>
+                                        LEED
+                                    </p>
+                                </div> 
+                                </div>
+                            </article>
+                        </div>
