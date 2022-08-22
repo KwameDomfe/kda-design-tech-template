@@ -4,6 +4,8 @@
 .shadow-1{box-shadow:0 0 4px 2px rgba(0,0,0,.2)}
 .shadow-2{box-shadow:0 0 8px 2px rgba(0,0,0,.2)}
 .shadow-3{box-shadow: 6px 6px 8px 0px rgba(255, 183, 0, 0.75)}
+.shadow-red{box-shadow: 6px 6px 8px 0px rgba(255, 0, 0, 0.75)}
+.shadow-green{box-shadow: 6px 6px 8px 0px rgba(0, 255, 0, 0.75)}
 .shadow-3T{box-shadow: 8px 8px 2px 0px rgba(255, 183, 0, 0.3)}
 .shadow-4{box-shadow:2px 2px 8px 0 rgba(0,0,0,.2)}
 .shadow-5{box-shadow:4px 4px 8px 0 rgba(0,0,0,.2)}

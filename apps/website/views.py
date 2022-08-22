@@ -12,22 +12,34 @@ from .models import (
 
 # Create your views here.
 """ Tests Start """
-def test(request):
-    return HttpResponse('Hellow World')
+    # def test(request):
+    #     return HttpResponse('Hellow World')
 """ Tests End """
 
 """ Home Page start """
 def index(request):
    
-    # ranks = Rank.objects.all()
-    # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    #pageNav querysets
+    rank = Rank.objects.all()
+    staff = Staff.objects.all()
+    senior_ranks = Rank.objects.all()[0:3]
+    junior_ranks_1 = Rank.objects.all()[3:7]
+    junior_ranks_2 = Rank.objects.all()[7:9]
+    alumni_ranks = Rank.objects.all()[9:]
+    projectCategories = Categories.objects.all()
 
+    print(rank)
+
+    #pageNav querysets
     context = {
-            # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
-            # 'ranks':ranks
-        }
+        'ranks' :rank,
+        'staff' :staff,
+        'senior_ranks' :senior_ranks,
+        'junior_ranks_1' :junior_ranks_1,
+        'junior_ranks_2' :junior_ranks_2,
+        'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories,
+    } 
 
     return render(request,'website/index.html', context)
 
@@ -46,17 +58,17 @@ def news(request):
 def people(request):
     #pageNav querysets
     rank = Rank.objects.all()
+    staff = Staff.objects.all()
     senior_ranks = Rank.objects.all()[0:3]
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
     projectCategories = Categories.objects.all()
 
-    print(rank)
-
     #pageNav querysets
     context = {
         'ranks' :rank,
+        'staff' :staff,
         'senior_ranks' :senior_ranks,
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
@@ -67,7 +79,7 @@ def people(request):
     # Render Template
     return render(request,'website/people/people-home.html', context)
 
-# def ranks(request):
+def ranks(request):
 #     #pageNav querysets
 #     rank = Rank.objects.all()
 #     senior_ranks = Rank.objects.all()[0:3]
@@ -79,17 +91,17 @@ def people(request):
 #     print(rank)
 
 #     #pageNav querysets
-#     context = {
+    context = {
 #         'ranks' :rank,
 #         'senior_ranks' :senior_ranks,
 #         'junior_ranks_1' :junior_ranks_1,
 #         'junior_ranks_2' :junior_ranks_2,
 #         'alumni_ranks' :alumni_ranks,
 #         'project_categories_list' :projectCategories,
-#     } 
+     } 
 
 #     # Render Template
-#     return render(request,'website/people/people-home.html', context)
+    return render(request,'website/people/people-home.html', context)
 
 def principalConsultants(request):
     #pageNav querysets
@@ -195,22 +207,22 @@ def consultants(request):
 
 def consultantDetails(request):
   
-    # persons = Person.objects.all() #queryset
-    # positions = Position.objects.all()#queryset 
-    # persons = Person.objects.all()#queryset
-    # depts = Department.objects.all()#queryset
-    # staff = Staff.objects.all()#queryset 
-    # senior_ranks = Rank.objects.all()[0:6]#queryset
-    # junior_ranks = Rank.objects.all()[5:10]#queryset
+    persons = Person.objects.all() #queryset
+    positions = Position.objects.all()#queryset 
+    persons = Person.objects.all()#queryset
+    depts = Department.objects.all()#queryset
+    staff = Staff.objects.all()#queryset 
+    senior_ranks = Rank.objects.all()[0:6]#queryset
+    junior_ranks = Rank.objects.all()[5:10]#queryset
     
     context = {
      
-        # 'staff' : staff,
-        # 'depts' : depts,
-        # 'positions' : positions,
-        # 'senior_ranks' : senior_ranks,
-        # 'junior_ranks' : junior_ranks,
-        # 'persons' : persons
+        'staff' : staff,
+        'depts' : depts,
+        'positions' : positions,
+        'senior_ranks' : senior_ranks,
+        'junior_ranks' : junior_ranks,
+        'persons' : persons
     } 
     return render(request,'website/people/consultants/consultant-details.html', context)
 

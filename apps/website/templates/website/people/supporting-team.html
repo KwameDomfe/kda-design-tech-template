@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Supporting Team {% endblock title %}
+{% block pagetitle %} Supporting Team {% endblock pagetitle %}
 
 {% block others %}   
     
@@ -50,16 +50,27 @@
                     class="grid gtc12 ggap1-00
                         ph0-50
                         mb2-00"
-                >   
+                >    <!-- Principal Consultants Header -->
+                <hgroup id="national_service_peronnel_header"
+                    class="gc1s12 pa1-00 bg-blue0 white-90"
+                >
+                    <h2 class="mb0-00
+                        ttu 
+                        f2-00"
+                    >
+                        Overview 
+                    </h2>     
+                </hgroup> 
+                <!-- Principal Consultants Header -->
                     <!-- Principal Consultants Description -->
-                    <article id="people_principal_consultants_description" 
-                        class="gr2s1 gc2s10 ggap2-00 f1-50 flex tj"
+                    <article id="" 
+                        class="gr2s1 gc2s10 flex ggap2-00"
                     > 
                         <P>
-                            Lorem ipsum,  Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
                         </P>
                         <P>
-                            Lorem ipsum  Dolor incidunt dolorum, veritatis blanditiis obcaecati nesciunt voluptatibus fugit numquam neque ducimus? Alias doloremque quisquam, accusantium laborum vero ea culpa vitae soluta repellendus distinctio sint earum nihil accusamus, ullam nesciunt facere, adipisci non corporis deserunt nemo corrupti ipsum ut dolor enim. Eos!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor incidunt dolorum, veritatis blanditiis obcaecati nesciunt voluptatibus fugit numquam neque ducimus? Alias doloremque quisquam, accusantium laborum vero ea culpa vitae soluta repellendus distinctio sint earum nihil accusamus, ullam nesciunt facere, adipisci non corporis deserunt nemo corrupti ipsum ut dolor enim. Eos!
                         </P>
                     </article>
                     <!-- Principal Consultants Description -->
@@ -292,11 +303,11 @@
             <!-- Page Main --> 
 
             <!-- Page Footer -->
-            <footer id="pageFooter"
+            {% comment %} <footer id="pageFooter"
                 class=""
             >
                 People || Supporting Team
-            </footer>
+            </footer> {% endcomment %}
             <!-- Page Footer -->
         </div>
     {% endblock pagecontent %}

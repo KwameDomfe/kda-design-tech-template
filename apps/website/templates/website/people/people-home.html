@@ -61,7 +61,7 @@
             
                     <!-- Principal Consultants Description -->
                     <article id="people_principal_consultants_description" 
-                        class="gr2s1 gc1s8"
+                        class="gr2s1 gc1s8 flex ggap2-00"
                     > 
                         <P>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
@@ -98,9 +98,9 @@
                                         ">
                                 
                                 <h5 class="mb0-50">
-                                    {{x.person}}
+                                    {{x}}
                                 </h5>
-                                 <h6>
+                                 {% comment %} <h6>
                                     {{ x.profession }}
                                 </h6>   
                                 <h6>
@@ -111,7 +111,7 @@
                                 </h6>   
                                 <h6>
                                     {{ x.office }}
-                                </h6>   
+                                </h6>    {% endcomment %}
                             
             
                             </hgroup> 

@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Assistant Professionals {% endblock title %}
+{% block pagetitle %} Assistant Professionals {% endblock pagetitle %}
 
 {% block others %}   
     
@@ -47,21 +47,21 @@
                     mb2-00"
             >   
                 <!-- Principal Consultants Header -->
-                <hgroup id="people_principal_consultants_header"
-                    class="gc1s12"
+                <hgroup id="national_service_peronnel_header"
+                    class="gc1s12 pa1-00 bg-blue0 white-90"
                 >
                     <h2 class="mb0-00
-                        ttu
+                        ttu 
                         f2-00"
                     >
-                        principal consultants
+                        Overview 
                     </h2>     
                 </hgroup> 
                 <!-- Principal Consultants Header -->
 
                 <!-- Principal Consultants Description -->
                 <article id="people_principal_consultants_description" 
-                    class="gr2s1 gc1s8"
+                    class="gr2s1 gc2s10"
                 > 
                     <P>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quaerat, culpa pariatur, tenetur, necessitatibus nisi minima ipsum libero reprehenderit nemo debitis ex esse. Eos dolores reprehenderit modi omnis vero sint aspernatur provident natus ipsa sequi sed delectus esse porro voluptatem eaque quasi dolore quo voluptas incidunt libero voluptatibus, quod amet!.
@@ -300,11 +300,11 @@
         <!-- Page Main --> 
 
         <!-- Page Footer -->
-        <footer id="pageFooter"
+        {% comment %} <footer id="pageFooter"
             class=""
         >
             peope || Assistant Professionals
-        </footer>
+        </footer> {% endcomment %}
         <!-- Page Footer -->
         
     {% endblock pagecontent %}
