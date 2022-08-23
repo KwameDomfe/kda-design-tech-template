@@ -71,6 +71,7 @@ class Categories(models.Model):
         max_length=512
     )
     thumbnail=models.FileField(
+        blank=True
     )
     is_active=models.IntegerField(
         default=1
@@ -107,6 +108,7 @@ class SubCategories(models.Model):
         max_length=512,
         null=True)
     thumbnail=models.FileField(
+        blank=True
 
     )
     pub_date=models.DateField(
@@ -254,9 +256,7 @@ class Person(models.Model):
         return self.description
 """ Personal Information Ends """
 
-# Staff Lookups
-
-
+# Positions Lookups
 class Position(models.Model):
     id=models.AutoField(
         primary_key=True)

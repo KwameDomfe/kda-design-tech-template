@@ -11,10 +11,6 @@ urlpatterns = [
         include([
         path('', views.people, name='people-home'),
 
-        path('<slug:slug>/', 
-            views.people, 
-            name='people-ranks'),
-
         path('principal-consultants/', 
             views.principalConsultants, 
             name='principal-consultants'),

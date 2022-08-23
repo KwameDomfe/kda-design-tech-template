@@ -57,88 +57,57 @@ def news(request):
 """ People start """
 def people(request):
     #pageNav querysets
-    rank = Rank.objects.all()
-    staff = Staff.objects.all()
-    senior_ranks = Rank.objects.all()[0:3]
-    junior_ranks_1 = Rank.objects.all()[3:7]
-    junior_ranks_2 = Rank.objects.all()[7:9]
-    alumni_ranks = Rank.objects.all()[9:]
-    projectCategories = Categories.objects.all()
+    # rank = Rank.objects.all()
+    # staff = Staff.objects.all()
+    # senior_ranks = Rank.objects.all()[0:3]
+    # junior_ranks_1 = Rank.objects.all()[3:7]
+    # junior_ranks_2 = Rank.objects.all()[7:9]
+    # alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
     #pageNav querysets
     context = {
-        'ranks' :rank,
-        'staff' :staff,
-        'senior_ranks' :senior_ranks,
-        'junior_ranks_1' :junior_ranks_1,
-        'junior_ranks_2' :junior_ranks_2,
-        'alumni_ranks' :alumni_ranks,
-        'project_categories_list' :projectCategories,
+    #     'ranks' :rank,
+    #     'staff' :staff,
+    #     'senior_ranks' :senior_ranks,
+    #     'junior_ranks_1' :junior_ranks_1,
+    #     'junior_ranks_2' :junior_ranks_2,
+    #     'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
     } 
 
     # Render Template
     return render(request,'website/people/people-home.html', context)
 
-def ranks(request):
-#     #pageNav querysets
-#     rank = Rank.objects.all()
-#     senior_ranks = Rank.objects.all()[0:3]
-#     junior_ranks_1 = Rank.objects.all()[3:7]
-#     junior_ranks_2 = Rank.objects.all()[7:9]
-#     alumni_ranks = Rank.objects.all()[9:]
-#     projectCategories = Categories.objects.all()
-
-#     print(rank)
-
-#     #pageNav querysets
-    context = {
-#         'ranks' :rank,
-#         'senior_ranks' :senior_ranks,
-#         'junior_ranks_1' :junior_ranks_1,
-#         'junior_ranks_2' :junior_ranks_2,
-#         'alumni_ranks' :alumni_ranks,
-#         'project_categories_list' :projectCategories,
-     } 
-
-#     # Render Template
-    return render(request,'website/people/people-home.html', context)
-
 def principalConsultants(request):
     #pageNav querysets
-    rank = Rank.objects.all()
-    senior_ranks = Rank.objects.all()[0:3]
-    junior_ranks_1 = Rank.objects.all()[3:7]
-    junior_ranks_2 = Rank.objects.all()[7:9]
-    alumni_ranks = Rank.objects.all()[9:]
-
-    print(rank)
+    
 
     #pageNav querysets
     context = {
-        'ranks' :rank,
-        'senior_ranks' :senior_ranks,
-        'junior_ranks_1' :junior_ranks_1,
-        'junior_ranks_2' :junior_ranks_2,
-        'alumni_ranks' :alumni_ranks,
+        
     }
     return render(request,'website/people/principal-consultants/principal-consultants.html', context)
+    
 
 def principalConsultantsDetails(request):
-    # persons = Person.objects.all() #queryset
-    # positions = Position.objects.all()#queryset 
-    # persons = Person.objects.all()#queryset
-    # depts = Department.objects.all()#queryset
-    # staff = Staff.objects.all()#queryset 
-    # senior_ranks = Rank.objects.all()[0:6]#queryset
-    # junior_ranks = Rank.objects.all()[5:10]#queryset
+    persons = Person.objects.all() #queryset
+    positions = Position.objects.all()#queryset 
+    persons = Person.objects.all()#queryset
+    depts = Department.objects.all()#queryset
+    staff = Staff.objects.all()#queryset 
+    senior_ranks = Rank.objects.all()[0:6]#queryset
+    junior_ranks = Rank.objects.all()[5:10]#queryset
+    projectCategories_qs = Categories.objects.all()
     
     context = {
-        # 'staff' : staff,
-        # 'depts' : depts,
-        # 'positions' : positions,
-        # 'senior_ranks' : senior_ranks,
-        # 'junior_ranks' : junior_ranks,
-        # 'persons' : persons
+        'staff' : staff,
+        'depts' : depts,
+        'positions' : positions,
+        'senior_ranks' : senior_ranks,
+        'junior_ranks' : junior_ranks,
+        'persons' : persons,
+        'project_categories_list' :projectCategories_qs,
     } 
     return render(request,'website/people/principal-consultants/principal-consultant-details.html', context)
 
@@ -150,6 +119,7 @@ def seniorConsultants(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
     print(rank)
 
@@ -160,6 +130,7 @@ def seniorConsultants(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
     }
 
     return render(request,'website/people/senior-consultants/senior-consultants.html', context)
@@ -172,6 +143,7 @@ def seniorConsultantDetails(request):
     # staff = Staff.objects.all()#queryset 
     # senior_ranks = Rank.objects.all()[0:6]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
+    projectCategories_qs = Categories.objects.all()
     
     context = {
         # 'staff' : staff,
@@ -180,6 +152,7 @@ def seniorConsultantDetails(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons
+        'project_categories_list' :projectCategories_qs,
     } 
     return render(request,'website/people/senior-consultants/senior-consultant-details.html', context)
 
@@ -191,6 +164,7 @@ def consultants(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
     print(rank)
 
@@ -201,6 +175,7 @@ def consultants(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
     }
 
     return render(request,'website/people/consultants/consultants.html', context)
@@ -214,6 +189,7 @@ def consultantDetails(request):
     staff = Staff.objects.all()#queryset 
     senior_ranks = Rank.objects.all()[0:6]#queryset
     junior_ranks = Rank.objects.all()[5:10]#queryset
+    projectCategories_qs = Categories.objects.all()
     
     context = {
      
@@ -222,7 +198,8 @@ def consultantDetails(request):
         'positions' : positions,
         'senior_ranks' : senior_ranks,
         'junior_ranks' : junior_ranks,
-        'persons' : persons
+        'persons' : persons,
+        'project_categories_list' :projectCategories,
     } 
     return render(request,'website/people/consultants/consultant-details.html', context)
 
@@ -234,8 +211,8 @@ def seniorProfessionals(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
-    print(rank)
 
     #pageNav querysets
     context = {
@@ -244,6 +221,7 @@ def seniorProfessionals(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
     }
     
     return render(request,'website/people/senior-professionals/senior-professionals.html', context)
@@ -256,6 +234,7 @@ def seniorProfessionalDetails(request):
     # staff = Staff.objects.all()#queryset 
     # senior_ranks = Rank.objects.all()[0:6]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
+    projectCategories_qs = Categories.objects.all()
     
     context = {
         # 'staff' : staff,
@@ -264,6 +243,7 @@ def seniorProfessionalDetails(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons
+        'project_categories_list' :projectCategories_qs,
     } 
     return render(request,'website/people/senior-professionals/senior-professional-details.html', context)
 
@@ -275,6 +255,7 @@ def professionals(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
     print(rank)
 
@@ -284,7 +265,8 @@ def professionals(request):
         'senior_ranks' :senior_ranks,
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
-        'alumni_ranks' :alumni_ranks,
+        'alumni_ranks' :alumni_ranks, 
+        'project_categories_list':projectCategories_qs,
     }
     return render(request,'website/people/professionals/professionals.html', context)
 
@@ -296,8 +278,8 @@ def assistantProfessionals(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories = Categories.objects.all()
 
-    print(rank)
 
     #pageNav querysets
     context = {
@@ -306,6 +288,7 @@ def assistantProfessionals(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories,
     }
 
     return render(request,'website/people/assistant-professionals.html', context)
@@ -318,6 +301,8 @@ def probationers(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories = Categories.objects.all()
+
 
     print(rank)
 
@@ -328,6 +313,7 @@ def probationers(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories,
     }
 
     return render(request,'website/people/probationers.html', context)
@@ -339,6 +325,7 @@ def nationalServicePersonnel(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories = Categories.objects.all()
 
     print(rank)
 
@@ -349,6 +336,8 @@ def nationalServicePersonnel(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories,
+
     }
 
     return render(request,'website/people/service-personnel.html', context)
@@ -360,6 +349,8 @@ def supportingTeam(request):
     junior_ranks_1 = Rank.objects.all()[3:7]
     junior_ranks_2 = Rank.objects.all()[7:9]
     alumni_ranks = Rank.objects.all()[9:]
+    projectCategories = Categories.objects.all()
+
 
     print(rank)
 
@@ -370,6 +361,7 @@ def supportingTeam(request):
         'junior_ranks_1' :junior_ranks_1,
         'junior_ranks_2' :junior_ranks_2,
         'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories,
     }
     return render(request,'website/people/supporting-team.html', context)
 """ People End """
@@ -380,11 +372,11 @@ def practice(request):
 
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
 
@@ -394,11 +386,11 @@ def practice(request):
 def history(request):
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/history.html', context)
@@ -408,11 +400,11 @@ def mandate(request):
     
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/mandate.html', context)
@@ -422,11 +414,11 @@ def functions(request):
     
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/functions.html', context)
@@ -435,11 +427,11 @@ def functions(request):
 def missionVisionAndValues(request):
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/mission-vision-and-values.html', context)
@@ -448,11 +440,11 @@ def missionVisionAndValues(request):
 def sectorMinistry(request):
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/sector-ministry.html', context)
@@ -461,11 +453,11 @@ def sectorMinistry(request):
 def corporateGovernance(request):
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
 
@@ -475,34 +467,44 @@ def corporateGovernance(request):
 def management(request):
     # ranks = Rank.objects.all()
     # projects_qs = Project.objects.all()
-    # projectCategories_qs = Categories.objects.all()
+    projectCategories_qs = Categories.objects.all()
 
     context = {
             # 'projects_list': projects_qs,
-            # 'project_categories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             # 'ranks':ranks
         }
     return render(request, 'website/practice/management/management-home.html', context)
 
 # Practice Corporate Responsibilities
 def corporateResponsibilities(request):
-    context = {
 
+    projectCategories_qs = Categories.objects.all()
+
+    context = {
+        'project_categories_list':projectCategories_qs,
     }
     return render(request, 'website/practice/corporate_responsibilities.html', context)
 
 # Practice Alliances
 def alliances(request):
-    
-    context = {
 
+    projectCategories_qs = Categories.objects.all()
+
+    context = {
+        'project_categories_list':projectCategories_qs,
     }
 
     return render(request, 'website/practice/alliances.html', context)
 
 # Practice Client Speak
 def clientSpeak(request):
+
+    projectCategories_qs = Categories.objects.all()
+
+
     context = {
+        'project_categories_list':projectCategories_qs,
 
     }
     return render(request, 'website/practice/client_speak.html', context)
@@ -520,7 +522,7 @@ def principles(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -532,7 +534,7 @@ def principles(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -548,7 +550,7 @@ def civic(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -560,7 +562,7 @@ def civic(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -578,7 +580,7 @@ def professionalism(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -590,7 +592,7 @@ def professionalism(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -607,7 +609,7 @@ def excellence(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -619,7 +621,7 @@ def excellence(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -635,7 +637,7 @@ def integrityAndHonesty(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -647,7 +649,7 @@ def integrityAndHonesty(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -664,7 +666,7 @@ def timelinessAndCostEffectiveness(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -676,7 +678,7 @@ def timelinessAndCostEffectiveness(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -693,7 +695,7 @@ def sustainability(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -705,7 +707,7 @@ def sustainability(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -722,7 +724,7 @@ def empowerment(request):
     # senior_ranks = Rank.objects.all()[0:5]#queryset
     # junior_ranks = Rank.objects.all()[5:10]#queryset
 
-    # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+    projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
     # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
     # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
         
@@ -734,7 +736,7 @@ def empowerment(request):
         # 'senior_ranks' : senior_ranks,
         # 'junior_ranks' : junior_ranks,
         # 'persons' : persons,
-        # 'project_categories_list':projectCategories_qs,
+        'project_categories_list':projectCategories_qs,
         # 'project_categories_list_1':projectCategories_qs_1,
         # 'project_categories_list_2':projectCategories_qs_2
     } 
@@ -787,7 +789,7 @@ def projectsList(request):
 def projectDetails(request, slug=None):
         
         # projects_qs = Project.objects.all() #print(projects_qs)
-        # projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
+        projectCategories_qs = Categories.objects.all()#print(projectCategories_qs)
         # projectCategories_qs_1 = Categories.objects.all()[:5]#print(projectCategories_qs)
         # projectCategories_qs_2 = Categories.objects.all()[5:]#print(projectCategories_qs)
        
@@ -862,10 +864,9 @@ def projectCategories(request, slug = None):
     
     context = {
             'projects_list': projects_qs,
-            'projectcategories_list':projectCategories_qs,
+            'project_categories_list':projectCategories_qs,
             'projectcategories_list_1':projectCategories_qs_1,
             'projectcategories_list_2':projectCategories_qs_2,
-            'Categories' : projectCategory,
     }
 
     return render(request, 'website/projects/project_categories/project_categories_home_view.html', context)
