@@ -81,11 +81,21 @@ def people(request):
 
 def principalConsultants(request):
     #pageNav querysets
-    
+    rank = Rank.objects.all()
+    senior_ranks = Rank.objects.all()[0:3]
+    junior_ranks_1 = Rank.objects.all()[3:7]
+    junior_ranks_2 = Rank.objects.all()[7:9]
+    alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Categories.objects.all()
 
     #pageNav querysets
     context = {
-        
+        'ranks' :rank,
+        'senior_ranks' :senior_ranks,
+        'junior_ranks_1' :junior_ranks_1,
+        'junior_ranks_2' :junior_ranks_2,
+        'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
     }
     return render(request,'website/people/principal-consultants/principal-consultants.html', context)
     
