@@ -133,7 +133,7 @@ class SubCategories(models.Model):
 
 """ Categories and Sub Categories """
 
-""" Dropdown Tables Starts """
+""" Personal Information Starts """
 # Titles Model
 class Title(models.Model):
     id=models.AutoField(
@@ -143,6 +143,20 @@ class Title(models.Model):
     description=models.CharField(
         max_length=128)
     
+    def __str__(self):
+        return self.name
+
+# Profession
+class Profession(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+    name=models.CharField(
+        max_length=64)
+    description=models.TextField(
+        max_length=512, 
+        blank=False,
+        default='type something here')
+
     def __str__(self):
         return self.name
 
@@ -156,7 +170,7 @@ class Gender(models.Model):
     def __str__(self):
         return self.name
 
-# Marital Status Model
+# Marital Status
 class MaritalStatus(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -166,6 +180,76 @@ class MaritalStatus(models.Model):
     def __str__(self):
         return self.name
 
+# Person Model
+class Person(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+
+    title=models.ForeignKey(
+        Title, 
+        on_delete=models.SET_NULL, 
+        null=True)
+        
+    surName=models.CharField(
+        max_length =128, 
+        null=True)
+
+    lastName=models.CharField(
+        max_length =128, 
+        null=True)
+
+    otherName=models.CharField(
+        max_length =128, 
+        null=False, 
+        blank=True)
+
+    description=models.TextField(
+        max_length=512, 
+        blank=False)
+
+    dateOfBirth=models.DateField(
+        'date of Birth', 
+        blank=True, 
+        null=True)
+
+    gender=models.ForeignKey(
+        Gender, 
+        on_delete=models.SET_NULL, 
+        null=True)
+
+    maritalStatus=models.ForeignKey(
+        MaritalStatus, 
+        on_delete=models.SET_NULL, 
+        null=True)
+
+    profession_id=models.ForeignKey(
+        Profession, 
+        on_delete=models.SET_NULL, 
+        null=True,
+        blank=True)
+
+    mobile_1=models.CharField(
+        max_length= 14, 
+        blank=True )
+
+    mobile_2=models.CharField(
+        max_length= 14, 
+        blank=True )
+
+    email1=models.EmailField(
+        max_length= 64, 
+        blank=True )
+
+    email2=models.EmailField(
+        max_length= 64, 
+        blank=True )
+    
+    def __str__(self):
+        return self.description
+""" Personal Information Ends """
+
+""" Practice """
+# Regions
 class Region(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -175,6 +259,7 @@ class Region(models.Model):
     def __str__(self):
         return self.name
 
+# Towns and Cities
 class TownCity(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -188,6 +273,7 @@ class TownCity(models.Model):
     def __str__(self):
         return self.name
 
+# Offices
 class Office(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -201,76 +287,11 @@ class Office(models.Model):
     def __str__(self):
         return self.name
 
-""" Dropdown Tables Ends """
+""" Practice """
 
-""" Personal Information Starts """
-# Person Model
-class Person(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-    title=models.ForeignKey(
-        Title, 
-        on_delete=models.SET_NULL, 
-        null=True)
-    surName=models.CharField(
-        max_length =128, 
-        null=True)
-    lastName=models.CharField(
-        max_length =128, 
-        null=True)
-    otherName=models.CharField(
-        max_length =128, 
-        null=False, 
-        blank=True)
-    description=models.TextField(
-        max_length=512, 
-        blank=False)
 
-    dateOfBirth=models.DateField(
-        'date of Birth', 
-        blank=True, 
-        null=True)
-    gender=models.ForeignKey(
-        Gender, 
-        on_delete=models.SET_NULL, 
-        null=True)
-    maritalStatus=models.ForeignKey(
-        MaritalStatus, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    mobile_1=models.CharField(
-        max_length= 14, 
-        blank=True )
-    mobile_2=models.CharField(
-        max_length= 14, 
-        blank=True )
-    email1=models.EmailField(
-        max_length= 64, 
-        blank=True )
-    email2=models.EmailField(
-        max_length= 64, 
-        blank=True )
-    
-    def __str__(self):
-        return self.description
-""" Personal Information Ends """
-
-# Positions Lookups
+# Positions
 class Position(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-    name=models.CharField(
-        max_length=64)
-    description=models.TextField(
-        max_length=512, 
-        blank=False,
-        default='type something here')
-
-    def __str__(self):
-        return self.name
-
-class Profession(models.Model):
     id=models.AutoField(
         primary_key=True)
     name=models.CharField(
@@ -306,55 +327,6 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
-# Staff Model
-class Staff(models.Model):
-    id=models.AutoField(primary_key=True)
-
-    staff_number=models.CharField(
-        max_length=32,
-        default='QW23')
-
-    person_id=models.ForeignKey(
-        Person, 
-        on_delete=models.SET_NULL, 
-        null=True)
-    
-    department_id=models.ForeignKey(
-        Department, 
-        on_delete=models.SET_NULL, 
-        null=True)
-    
-    position_id=models.ForeignKey(
-        Position, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    profession_id=models.ForeignKey(
-        Profession, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    rank_id=models.ForeignKey(
-        Rank, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    office_id=models.ForeignKey(
-        Office, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    description=models.TextField(
-        max_length=512)
-
-    dateOfFirstAppointment=models.DateField(
-        'date of First Appointment', 
-        blank= True, 
-        null=True)
-   
-    def __str__(self):
-        return self.description
-
 # Directors Model
 class BoardOfDirectors(models.Model):
     id=models.AutoField(
@@ -373,6 +345,45 @@ class BoardOfDirectors(models.Model):
         'date of First Appointment',
         null=True, 
         blank=True)
+   
+    def __str__(self):
+        return self.description
+
+# Staff Model
+class Staff(models.Model):
+    id=models.AutoField(primary_key=True)
+
+    staff_number=models.CharField(
+        max_length=32,
+        default='QW23')
+
+    person_id=models.ForeignKey(
+        Person, 
+        on_delete=models.SET_NULL, 
+        null=True)
+    
+    description=models.TextField(
+        max_length=512)
+
+    department_id=models.ForeignKey(
+        Department, 
+        on_delete=models.SET_NULL, 
+        null=True)
+
+    rank_id=models.ForeignKey(
+        Rank, 
+        on_delete=models.SET_NULL, 
+        null=True)
+
+    office_id=models.ForeignKey(
+        Office, 
+        on_delete=models.SET_NULL, 
+        null=True)
+
+    dateOfFirstAppointment=models.DateField(
+        'date of First Appointment', 
+        blank= True, 
+        null=True)
    
     def __str__(self):
         return self.description
@@ -398,8 +409,8 @@ class Management(models.Model):
     def __str__(self):
         return self.description
 
-""" Projects Information Starts """
 
+""" Projects Information Starts """
 # Projects Model
 class Project(models.Model): 
     id=models.AutoField(primary_key=True)
@@ -530,36 +541,36 @@ class ProjectTag(models.Model):
 """ Projects Information Ends """
 
 """ Recievers Start """
-# @receiver(post_save, sender=CustomUser)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         if instance.user_type == 1:
-#             AdminUser.objects.create(
-#                 auth_user_id=instance)
+    # @receiver(post_save, sender=CustomUser)
+    # def create_user_profile(sender, instance, created, **kwargs):
+    #     if created:
+    #         if instance.user_type == 1:
+    #             AdminUser.objects.create(
+    #                 auth_user_id=instance)
 
-#         if instance.user_type == 2:
-#             StaffUser.objects.create(
-#                 auth_user_id=instance)
+    #         if instance.user_type == 2:
+    #             StaffUser.objects.create(
+    #                 auth_user_id=instance)
 
-#         if instance.user_type == 3:
-#             MerchantUser.objects.create(
-#                 auth_user_id=instance,
-#                 company_name='', 
-#                 gst_details='',
-#                 address='')
+    #         if instance.user_type == 3:
+    #             MerchantUser.objects.create(
+    #                 auth_user_id=instance,
+    #                 company_name='', 
+    #                 gst_details='',
+    #                 address='')
 
-#         if instance.user_type == 4:
-#             CustomerUser.objects.create(
-#                 auth_user_id=instance)
+    #         if instance.user_type == 4:
+    #             CustomerUser.objects.create(
+    #                 auth_user_id=instance)
 
-# @receiver(post_save, sender=CustomUser)
-# def save_user_profile(sender, instance, **kwargs): 
-#     if instance.user_type == 1:
-#         instance.adminuser.save()
-#     if instance.user_type == 2:
-#         instance.staffuser.save()
-#     if instance.user_type == 3:
-#         instance.merchantuser.save()
-#     if instance.user_type == 4:
-#         instance.customeruser.save()
+    # @receiver(post_save, sender=CustomUser)
+    # def save_user_profile(sender, instance, **kwargs): 
+    #     if instance.user_type == 1:
+    #         instance.adminuser.save()
+    #     if instance.user_type == 2:
+    #         instance.staffuser.save()
+    #     if instance.user_type == 3:
+    #         instance.merchantuser.save()
+    #     if instance.user_type == 4:
+    #         instance.customeruser.save()
 """ Recievers End """

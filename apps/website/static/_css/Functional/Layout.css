@@ -321,6 +321,10 @@
     grid-auto-rows: minmax(min-content, max-content);
 }
 
+.gac{grid-auto-columns: minmax(0, 1fr);}
+.gafc{grid-auto-flow: column;}
+.gafr{grid-auto-flow: row;}
+
 /* ----- Mobo First Media Queries -----*/       
 
 @media(min-width:512px) { 

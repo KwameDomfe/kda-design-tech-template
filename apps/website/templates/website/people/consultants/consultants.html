@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block pagetitle %} 
-   Senior Consultants Home 
+   Consultants Home 
 {% endblock pagetitle %}
 
 {% block custom_css %} 
@@ -18,8 +18,7 @@
             class="min-vh-100 w-100">
             <!-- Page Header -->
             <header id="peope_pageHeader"
-                class="grid gtc12
-                    "
+                class="grid gtc12"
             >
                 <figure class="gc1s12 pa0-25">
                     <img src="{% static '_images\practice\management\management-07.jpeg' %}"          
@@ -34,20 +33,19 @@
                         Consultants
                     </h2>     
                 </hgroup> 
+                <!-- Page Navigation -->
+                    {% include 'website/people/_partials/people-page-nav.html' %}
+                <!-- Page Navigation -->
             </header>
             <!-- Page Header -->
 
             <!-- Page Main -->
             <main id = "senioir-consultant-pagemain"
                 class="bg-white">
-                <!-- Page Navigation -->
-                {% include 'website/people/_partials/people-page-nav.html' %}
-                <!-- Page Navigation -->
-
                 <!-- Principal Consultants -->
                 <div id="people_principal_consultants"
                     class="grid gtc12 ggap1-00
-                        ph1-00
+                        ph0-50
                         mb2-00"
                 >   
                     <!-- Principal Consultants Header -->
@@ -58,7 +56,7 @@
                             ttu
                             f2-00"
                         >
-                           consultants
+                           overview
                         </h2>     
                     </hgroup> 
                     <!-- Principal Consultants Header -->
@@ -330,7 +328,6 @@
                         </article>
                     </div>
                     <!-- Principal Consultants Gallery --> 
-
                 </div>
                 <!-- Principal Consultants -->
             </main>

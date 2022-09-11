@@ -40,8 +40,15 @@
             <!-- Page Navigation -->
         </header>
         <!-- Page Header -->
-
         <!-- Page Main -->
+        <main class="ph1-00">
+            <div class="grid gtc4">
+
+                <div id="pageDetails"
+                    class="gc1s3
+                        mb1-00 min-vh-100"
+                >   
+                    <!-- Page Main -->
         <main class="ph1-00">
             <!-- Mission Start -->
             <div id="mission"
@@ -242,6 +249,36 @@
             <!-- Values End -->
         </main>
         <!-- Page Main --> 
+                </div>
+
+                <div id="pageNav" 
+                    class="gc4s1 
+                        w-100 blue0 relative">
+                    <div class="flex flex-column justify-between
+                        min-vh-100 
+                        ph2-00 pb1-00
+                        pt5-00
+                        sticky top-0"
+                    >
+                    
+                        <ul class="mb1-00 bl bw4 pl2-00">
+                            <h3 >Page Sections</h3>
+                            <li class="mb1-00">Overview</li>
+                            <li class="mb1-00">Sector Minister</li>
+                        </ul> 
+                        <div class="h6-00" >
+                            <small>Previous</small> </br>
+                            <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br>
+                            <small>Next</small> </br>
+                            <a href="{% url 'website:corporate-governance' %}" class="mb1-00 blue0 f0-75 b">AESL Corporate Governance</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        <!-- Page Main -->
+        
     {% endblock pagecontent %}
         <!-- 00.00   main Body -->
     </main> 

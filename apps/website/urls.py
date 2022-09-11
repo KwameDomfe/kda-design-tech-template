@@ -7,13 +7,21 @@ urlpatterns = [
     # Home Page
     path('', views.index, name='index'),
     # People
-    path('people/',
-        include([
+    path('people/',include([
         path('', views.people, name='people-home'),
 
+        path('<slug:slug>/', 
+            views.ranks, 
+            name='ranks'),
         path('principal-consultants/', 
             views.principalConsultants, 
             name='principal-consultants'),
+
+        path('principal-consultants/principal-consultants-details', 
+            views.principalConsultantsDetails, 
+            name='principal-consultants-detail'),
+        
+        
         path('principal-consultants/principal-consultants-details', 
             views.principalConsultantsDetails, 
             name='principal-consultants-detail'),

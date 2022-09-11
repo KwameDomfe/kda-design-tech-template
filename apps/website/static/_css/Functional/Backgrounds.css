@@ -76,11 +76,14 @@
 .bg-blue1t2{background-color:rgb(0, 125, 197, 0.5)}
 .bg-blue1t3{background-color:rgb(0, 125, 197)}
 
-.bg-gradient1{background: linear-gradient(90deg, rgb(0, 78, 124) 40%, transparent )}
-.bg-gradient2{background: linear-gradient(90deg, rgb(128, 0, 0) 40%, transparent )}
-.bg-gradient3{background: linear-gradient(90deg, rgb(255, 174, 0) 40%, transparent )}
-.bg-gradient4{background: linear-gradient(90deg, rgb(0, 255, 0) 40%, transparent )}
-.bg-gradient5{background: linear-gradient(90deg, rgb(0, 0, 0) 40%, transparent )}
+.bg-gradientLR{background: linear-gradient(90deg, rgb(0, 78, 124) 30%, transparent )}
+.bg-gradientRL{background: linear-gradient(270deg, rgb(0, 78, 124) 30%, transparent )}
+.bg-gradient1TB{background: linear-gradient(180deg, rgb(0, 78, 124) 15%, transparent )}
+.bg-gradient1BT{background: linear-gradient(0deg, rgb(0, 78, 124) 15%, transparent )}
+.bg-gradient2{background: linear-gradient(90deg, rgb(128, 0, 0) 30%, transparent )}
+.bg-gradient3{background: linear-gradient(90deg, rgb(1, 6, 255) 30%, transparent )}
+.bg-gradient4{background: linear-gradient(90deg, rgb(0, 255, 0) 30%, transparent )}
+.bg-gradient5{background: linear-gradient(90deg, rgb(0, 0, 0) 30%, transparent )}
 
 .bg-inherit{background-color:inherit}
 

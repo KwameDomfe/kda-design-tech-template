@@ -11,7 +11,7 @@
 {% endblock others %}
 
 
-{% block content %}
+{% block pagecontent %}
     <!-- 00.00   MAIN -->
     <div id=""
         class="min-vh-100 w-100">
@@ -40,7 +40,7 @@
 
         <main class="bg-white ph1-00">
             <!-- Page Navigation -->
-            {% include 'basic/projects/_partials/projects_page_nav.html' %}
+            {% include 'website/projects/_partials/projects_page_nav.html' %}
             <!-- Page Navigation -->
 
             <!-- Projects Category Overview -->
@@ -98,9 +98,9 @@
         <footer id="pageFooter"
             class=""
         >
-            {% include '_partials/page-footer.html' %}
+            {% comment %} {% include '_partials/page-footer.html' %} {% endcomment %}
         </footer>
     </div>
    
-{% endblock content %}
+{% endblock pagecontent %}
    

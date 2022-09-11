@@ -1,14 +1,83 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.contrib.auth import authenticate, login, logout
 
-# Create your views here.
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.urls import reverse
 
-""" Accounts Page start """
-def accounts(request):
-   
+#ADMIN LOGIN
+def login_view(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(username, password)
+        user = authenticate(
+            request, 
+            username = username,
+            password = password
+        )
+        if user is None:
+            context = {
+                'error' : 'Invalid username or password'
+            }
+            return render(request,'account/login.html', context)
+        login(request,user)
+        return redirect('/')
     context = {
-           
-        }
 
-    return render(request,'accounts/accounts-home.html', context)
-""" Accounts Page end """
+    }
+    return render(request,'account/login.html', context)
+
+def logout_view(request):
+    context = {
+
+    }
+    return render(request,'accounts/logout.html', context)
+
+def register_view(request):
+    context = {
+
+    }
+    return render(request,'accounts/register.html', context)
+
+def admin_Login(request):
+    context = {
+
+    }
+    return render(request,'accounts/admin-login.html', context)
+
+def staff_Login(request):
+    context = {
+
+    }
+    return render(request,'accounts/staff-login.html', context)
+
+def admin_Home(request):
+    context = {
+
+    }
+    return render(request,'accounts/admin-home.html', context)
+
+def admin_Login_Process(request):
+
+    username=request.POST.get('username')
+    password=request.POST.get('password')
+    print(username,password)
+
+    user=authenticate(
+        request=request, 
+        username=username, 
+        password=password,
+    )
+    print(user)
+    
+    if user is not None:
+        login(request=request, user=user)
+        return HttpResponseRedirect(reverse('admin-login'))
+    else:
+        messages.error(request, 'Invalid Credentials')
+        return HttpResponseRedirect(reverse('accounts:admin-home'))
+    
 
