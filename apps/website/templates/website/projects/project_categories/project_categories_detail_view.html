@@ -1,9 +1,9 @@
 {% extends 'base_layout.html' %}
 {% load static %}
 
-{% block title %} 
+{% block pagetitle %} 
     Practice  Corporate Responsibilities
-{% endblock title %}
+{% endblock pagetitle %}
 
 {% block custom_css %} 
 
@@ -35,16 +35,13 @@
                 >
                 {{ project_category }}</h2>
             </hgroup>
-           
+            <!-- Page Navigation -->
+                {% include 'website/projects/_partials/projects_page_nav.html' %}
+            <!-- Page Navigation -->
         </header>
         <!-- Page Header -->
 
         <main class=" bg-white ph1-00">
-           
-            <!-- Page Navigation -->
-            {% include 'basic/projects/_partials/projects_page_nav.html' %}
-            <!-- Page Navigation -->
-
             <!-- Projects Category Overview -->
             <div id="project_Overview"
                 class="grid gtc12 ggap1-00
@@ -85,9 +82,7 @@
             <!-- Projects Category Gallery -->
             
         </main>
-        <footer id="pageFooter"
-            class=""
-        >
+        
     {% endblock pagecontent %}
     <!-- main Body End -->
 {% endblock content %}

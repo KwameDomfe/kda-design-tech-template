@@ -21,25 +21,26 @@
             <figure class="gc1s12">
                 <img src="{% static '_images\projects\civic_and_culture\civic\1.png' %}"          
                     alt=""
-                    class="w-100 vh-60 cover mb3-00">
+                    class="w-100 vh-50 cover mb2-00">
             </figure>
             <hgroup class="gc1s12
                     ph1-00 mb3-00">
                 <h2 class="
-                        f3-00
+                        f3-00 ttu
                     "
                 >
-                    {{ project.name }}, <span class="f2-00">{{ project.location }}</span>
-                </h2>     
+                    {{ project.name }}
+                </h2>
+                <span class="f2-00">{{ project.location }}</span>     
             </hgroup> 
+            <!-- Projects summary -->
+            {% include 'website/projects/_partials/project_details_summary.html' %}
+            <!-- Projects summary -->
         </header>
         <!-- Page Header -->
 
         <!-- Page Main -->
         <main class="bg-white">
-            <!-- Projects summary -->
-            {% include 'website/projects/_partials/project_details_summary.html' %}
-            <!-- Projects summary -->
 
             <!-- Page Navigation -->
             <!-- Project Details-->
@@ -1286,16 +1287,8 @@
                 </article>
             </aside>
             <!-- Related Projects -->
-            
         </main>
         <!-- Page Main -->
-
-        <!-- page Footer -->
-        <footer id="pageFooter"
-            class="">
-            {% include '_partials/main-footer.html' %}
-        </footer>
-        <!-- page Footer -->
     {% endblock pagecontent %}
 {% endblock content %}
    

@@ -24,7 +24,7 @@
                 <figure class="gc1s12">   
                     <img src="{% static '_images\practice\history\History-01.JPG' %}"          
                         alt=""
-                        class="w-100 vh-50 cover">
+                        class="w-100 vh-60 cover">
                 </figure>
                 <!-- Page Banner End -->
 
@@ -33,7 +33,7 @@
                     <h2 class="
                         w-100 h-100
                         pa1-00 mb0-00
-                        f3-00 ttu"
+                        f5-00 ttu"
                     >
                         History
                     </h2>     
@@ -48,16 +48,19 @@
             <!-- Page Header -->
 
             <!-- Page Main -->
-            <main class="ph1-00">
-                <div class="grid gtc4">
-                    <div id="pageMain"
+            <main id="pageContent_History" 
+                class="ph1-00"
+            >
+                <div id="l_3:1" 
+                    class="grid gtc4"
+                >
+                    <!-- AESL History Start -->
+                    <div id="lc_gc1s3__pageMain--history"
                         class="gc1s3
-                            mb1-00 min-vh-100"
+                            min-vh-100"
                     >   
-                        <!-- Practice History -->
                         <div id="history"
                             class="grid gtc12 ggap1-00
-                            
                                 mb1-00"
                         >
                             <header id="" 
@@ -122,7 +125,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <!-- Practice -->
+                                
                                 <div id=""
                                     class="gr3s1 gc1s12
                                             grid gtc12 ggap1-00
@@ -280,42 +283,42 @@
                                     <!-- Practice -->
                                 
                                 </div>
-                                <!-- Practice -->
                             </article>
                             <footer class="gr3s1 gc1s12 pa1-00 black-90 bg-goldT w-100 i">
                                 Practice || History
                             </footer>
                         </div>
-                        <!-- Practice History -->
                     </div>
-    
-                    <div id="pageAside" 
+                    <!-- AESL History End -->
+
+                    <!-- AESL History Aside  Start -->
+                    <div id="lc_gc4s1__pageAside--history" 
                         class="gc4s1 
-                            w-100 blue0 relative">
+                            blue0 relative"
+                    >
                         <div class="flex flex-column justify-between
                             min-vh-100 
-                            ph2-00 pb1-00
-                            pt5-00
+                            ph2-00 pt6-00
                             sticky top-0"
                         >
                            
                             <ul class="mb1-00 bl bw4 pl2-00">
                                 <h3 >Page Sections</h3>
-                                <li class="mb1-00">Overview</li>
-                                <li class="mb1-00">Sector Minister</li>
-                            </ul> 
-                            <div class="h6-00" >
-                                <small>Previous</small> </br>
-                                <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br>
+                                <li class="mb1-00">Brief History</li>
+                                <li class="mb1-00">History Gallery</li>
+                            </ul>
+
+                            <div class="mb1-00" >
+                                 {% comment %} <small>Previous</small> </br>
+                               <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br> {% endcomment %}
                                 <small>Next</small> </br>
                                 <a href="{% url 'website:corporate-governance' %}" class="mb1-00 blue0 f0-75 b">AESL Corporate Governance</a>
                             </div>
                         </div>
-                        
                     </div>
+                    <!-- AESL History Aside  End -->
                 </div>
             </main>
-            
             <!-- Page Main --> 
            
             

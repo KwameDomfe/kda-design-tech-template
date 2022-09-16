@@ -34,16 +34,23 @@
                         Professionals
                     </h2>     
                 </hgroup> 
+                <!-- Page Navigation -->
+                {% include 'website/people/_partials/people-page-nav.html' %}
+                <!-- Page Navigation -->
             </header>
             <!-- Page Header -->
 
             <!-- Page Main -->
             <main id = "senioir-consultant-pagemain"
                 class="bg-white">
-                <!-- Page Navigation -->
-                {% include 'website/people/_partials/people-page-nav.html' %}
-                <!-- Page Navigation -->
-
+                <div id="l_3:1" 
+            class="grid gtc4"
+        >
+            <!-- AESL History Start -->
+            <div id="lc_gc1s3__pageMain--history"
+                class="gc1s3
+                    min-vh-100"
+            >   
                 <!-- Principal Professionals -->
                 <div id="people_principal_Professionals"
                     class="grid gtc12 ggap1-00
@@ -323,16 +330,39 @@
 
                 </div>
                 <!-- Principal Professionals -->
+            </div>
+            <!-- AESL History End -->
+
+            <!-- AESL History Aside  Start -->
+            <div id="lc_gc4s1__pageAside--history" 
+                class="gc4s1 
+                    blue0 relative"
+            >
+                <div class="flex flex-column justify-between
+                    min-vh-100 
+                    ph2-00 pt6-00
+                    sticky top-0"
+                >
+                    
+                    <ul class="mb1-00 bl bw4 pl2-00">
+                        <h3 >Page Sections</h3>
+                        <li class="mb1-00">Brief History</li>
+                        <li class="mb1-00">History Gallery</li>
+                    </ul>
+
+                    <div class="mb1-00" >
+                            {% comment %} <small>Previous</small> </br>
+                        <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br> {% endcomment %}
+                        <small>Next</small> </br>
+                        <a href="{% url 'website:corporate-governance' %}" class="mb1-00 blue0 f0-75 b">AESL Corporate Governance</a>
+                    </div>
+                </div>
+            </div>
+            <!-- AESL History Aside  End -->
+        </div>
+                
             </main>
             <!-- Page Main --> 
-
-            <!-- Page Footer -->
-            <footer id="pageFooter"
-                class=""
-            >
-            
-            </footer>
-            <!-- Page Footer -->
         </div>
     {% endblock pagecontent %}
     <!-- main Body Start -->

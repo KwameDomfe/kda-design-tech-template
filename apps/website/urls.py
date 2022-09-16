@@ -7,65 +7,68 @@ urlpatterns = [
     # Home Page
     path('', views.index, name='index'),
     # People
-    path('people/',include([
-        path('', views.people, name='people-home'),
+    path('people/',include
+        (
+            [
+                path('', views.people, name='people-home'),
 
-        path('<slug:slug>/', 
-            views.ranks, 
-            name='ranks'),
-        path('principal-consultants/', 
-            views.principalConsultants, 
-            name='principal-consultants'),
+                path('<slug:slug>/', 
+                    views.ranks, 
+                    name='ranks'),
 
-        path('principal-consultants/principal-consultants-details', 
-            views.principalConsultantsDetails, 
-            name='principal-consultants-detail'),
-        
-        
-        path('principal-consultants/principal-consultants-details', 
-            views.principalConsultantsDetails, 
-            name='principal-consultants-detail'),
-        
-        path('senior-consultants/', 
-            views.seniorConsultants, 
-            name='senior-consultants'),
-        path('senior-consultants/senior-consultant-details', 
-            views.seniorConsultantDetails, 
-            name='senior-consultant-details'),
-        
-        path('consultants/', 
-            views.consultants, 
-            name='consultants'),
-        path('consultants/consultant-details', 
-            views.consultantDetails, 
-            name='consultant-details'),
-        
-        path('senior-professionals', 
-            views.seniorProfessionals, 
-            name='senior-professionals'),
-        path('senior-professionals/senior-professional-details', 
-            views.seniorProfessionalDetails, 
-            name='senior-professional-details'),
-        
-        path('professionals', 
-            views.professionals, 
-            name='professionals'),
+                path('principal-consultants/', 
+                    views.principalConsultants, 
+                    name='principal-consultants'),
 
-        path('assistant-professionals', 
-            views.assistantProfessionals, 
-            name='assistant-professionals'),
+                path('principal-consultants/principal-consultants-details', 
+                    views.principalConsultantsDetails, 
+                    name='principal-consultants-detail'),
+                
+                path('senior-consultants/', 
+                    views.seniorConsultants, 
+                    name='senior-consultants'),
 
-        path('probationers', 
-            views.probationers, 
-            name='probationers'),
+                path('senior-consultants/senior-consultant-details', 
+                    views.seniorConsultantDetails, 
+                    name='senior-consultant-details'),
+                
+                path('consultants/', 
+                    views.consultants, 
+                    name='consultants'),
+                    
+                path('consultants/consultant-details', 
+                    views.consultantDetails, 
+                    name='consultant-details'),
+                
+                path('senior-professionals', 
+                    views.seniorProfessionals, 
+                    name='senior-professionals'),
 
-        path('supporting-team', 
-            views.supportingTeam, 
-            name='supporting-team'),
+                path('senior-professionals/senior-professional-details', 
+                    views.seniorProfessionalDetails, 
+                    name='senior-professional-details'),
+                
+                path('professionals', 
+                    views.professionals, 
+                    name='professionals'),
 
-        path('service-personnel', 
-            views.nationalServicePersonnel, 
-            name='national-service-personnels')])
+                path('assistant-professionals', 
+                    views.assistantProfessionals, 
+                    name='assistant-professionals'),
+
+                path('probationers', 
+                    views.probationers, 
+                    name='probationers'),
+
+                path('supporting-team', 
+                    views.supportingTeam, 
+                    name='supporting-team'),
+
+                path('service-personnel', 
+                    views.nationalServicePersonnel, 
+                    name='national-service-personnels'),
+            ]
+        )
     ),
         
     # Practice
@@ -84,10 +87,10 @@ urlpatterns = [
         path('corporate-governance/board-chairman', 
             views.corporateGovernance, 
             name = 'corporate-governance-board-chairman'),
-        path('corporate-governance/board-members', 
+        path('corporate-governance/board-members/', 
             views.corporateGovernance, 
             name = 'corporate-governance-board-member'),
-        path('corporate-governance/board-members/board_member_detail', 
+        path('corporate-governance/board-members/board-member-details', 
             views.corporateGovernance, 
             name = 'corporate-governance-board-member'),
         path('corporate-responsibilities', 
@@ -111,21 +114,21 @@ urlpatterns = [
             views.management, 
             name = 'management'),
         path('management/managing-director', 
-            views.corporateGovernance, 
+            views.managingDirectorDetails, 
             name = 'managing-director'),
         path('management/deputy-managing-director-engineering', 
-            views.corporateGovernance, 
+            views.deputyManagingDirectorDetails, 
             name = 'deputy-managing-director-engineering'),
         path('management/deputy-managing-director-architecture-and-planning', 
-            views.corporateGovernance, 
+            views.deputyManagingDirectorDetails, 
             name = 'deputy-managing-director-architecture-planning'),
         path('management/departments/', 
             views.corporateGovernance, 
             name = 'heads-of-departments'),
         path('management/departments/heads-of-departments/', 
-            views.corporateGovernance, 
+            views.headOfDepartmentDetails, 
             name = 'heads-of-departments'),
-        path('management/departments/head-of-department/head-of-department-details', 
+        path('management/departments/heads-of-departments/head-of-department-details', 
             views.corporateGovernance, 
             name = 'head-of-department-details'),
         path('management/regional-consultants', 
@@ -175,37 +178,46 @@ urlpatterns = [
             path('', 
                 views.projects, 
                 name = 'projects-home'),
+
             path('projects-list/', 
                 views.projectsList, 
                 name='projects-list'),
+
             path('projects-map-home/', 
                 views.projectsMap, 
                 name='projects-maps-home'),
+
             path('projects-films-home/', 
                 views.projectsFilms, 
                 name='project-films-home'),
+
             path('project-category/project-family/project-type/<slug:slug>/', 
                 views.projectDetails, 
                 name='project-details'),
+
             path('project-categories-home/', 
                 views.projectCategories, 
                 name='project-categories-home'),
+
             path('project-categories-list/', 
                 views.projectCategories, 
                 name='project-categories-list'),
+
             path('<slug:slug>/', 
-                views.projectCategories, 
+                views.projectCategoryDetails, 
                 name='project-category-details'),
 
             path('project-families-home/', 
                 views.projectSubCategories, 
                 name='project-families-home'),
+
             path('project-families-list/', 
                 views.projectSubCategories, 
                 name='project-families-list'),
-            path('<slug:slug>/', 
-                views.projectSubCategories, 
-                name='project-family-details'),
+
+            # path('<slug:slug>/', 
+            #     views.projectSubCategories, 
+            #     name='project-family-details'),
 
             # path('project-types-home/', 
             #   views.project_Types_Home, 

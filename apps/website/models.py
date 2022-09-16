@@ -317,6 +317,11 @@ class Rank(models.Model):
     def __str__(self):
         return self.name
 
+    def save(self, *arg, **kwarg):
+        if self.slug is None:
+            self.slug=slugify(self.name)
+        super().save(*arg, **kwarg)
+
 class Department(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -357,7 +362,7 @@ class Staff(models.Model):
         max_length=32,
         default='QW23')
 
-    person_id=models.ForeignKey(
+    person=models.ForeignKey(
         Person, 
         on_delete=models.SET_NULL, 
         null=True)
@@ -365,17 +370,17 @@ class Staff(models.Model):
     description=models.TextField(
         max_length=512)
 
-    department_id=models.ForeignKey(
+    department=models.ForeignKey(
         Department, 
         on_delete=models.SET_NULL, 
         null=True)
 
-    rank_id=models.ForeignKey(
+    rank=models.ForeignKey(
         Rank, 
         on_delete=models.SET_NULL, 
         null=True)
 
-    office_id=models.ForeignKey(
+    office=models.ForeignKey(
         Office, 
         on_delete=models.SET_NULL, 
         null=True)
@@ -463,10 +468,13 @@ class Project(models.Model):
 
 class ProjectLead(models.Model):
     id=models.AutoField(primary_key=True)
-    project_id=models.ForeignKey(
+    project=models.ForeignKey(
         Project, on_delete=models.SET_NULL,
         null=True)
-    staff_id=models.ForeignKey(
+    slug=models.SlugField(
+        blank=True,
+        null=True)
+    staff=models.ForeignKey(
         Staff, on_delete=models.SET_NULL,
         null=True)
 
@@ -521,10 +529,16 @@ class ProjectOverview(models.Model):
         Project, on_delete=models.SET_NULL,
         null=True
     )
-    title=models.CharField(
-        max_length=256)
+    description=models.TextField(
+        max_length=256,
+        default='Project Overview')
     created_at=models.DateTimeField(
         auto_now_add=True)
+    
+    def save(self, *arg, **kwarg):
+        if self.slug is None:
+            self.slug=slugify(self.name)
+        super().save(*arg, **kwarg)
     
 class ProjectTag(models.Model):
     id=models.AutoField(primary_key=True)
