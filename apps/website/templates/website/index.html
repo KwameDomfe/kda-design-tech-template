@@ -15,76 +15,76 @@
    
     {% block pagecontent %}
 
-        <div id="homePage"
+        <div id="HomePage"
             class=""
         >
             <!-- Page Header Start -->
-            <header id ="homePage__Header"
+            <header id ="HomePageHeader"
                 class="mb4-00" 
             >   
-                <figure id="main-banner"
-                    class="gr1s gc1s12"
+                <figure id="HomePageHeader--mainBanner"
+                    class=""
                 >
                     <img src="{% static '_images\index\index-01.jpg' %}"            
                         alt=""
                         class="w-100 vh-75
                             cover"
-                    > 
-                </figure>
-                <div id="aesl-core" 
-                    class="grid gtc12 ggap1-00 
-                        mb0-50 ph4-00
-                        "     
-                >
-                    <figure id="main-banner"
-                        class="gr1s gc1s12 mb2-00"
                     >
-                       
-                        <figcaption class = "ttu  blue0">
-                            <h1 class = "mv0-50 f5-00">The new aesl......</h1> 
-                            <h3 class = "mv0-50 f3-00">Positioned to build the nation......</h3> 
-                        </figcaption>
-                    </figure>
-                    
+                    <figcaption class = "ttu ph4-00 blue0">
+                        <h1 class = "mv0-50 f5-00">The new aesl...</h1> 
+                        <h3 class = "mv0-50 f3-00">Positioned to build the nation...</h3> 
+                    </figcaption> 
+                </figure>
+                
+                <div id="HomepageHeader--introduction"  
+                    class="grid gtc12 ggap1-00 
+                        ph4-00"
+                >  
                     <article id="aesl-brief" 
                         class="gr3s1 gc1s12 
                             gr3s2-s gc1s8-s
-                            gr3s2-s 
-                            w-100 
-                            blue0 f1-50 tj"     
+                            grid justify-between
+                            w-100 h-100
+                            blue0 f1-25 tj"     
                     >
                         <hgroup 
-                            class="
-                                w-100 
-                                "
+                            class="w-100
+                                lh-copy "
                         >
-                            <p>The Architectural & Engineering Services Limited (AES Ltd) is a practicing professional group of Consulting Architects, Civil, Structural, Electrical and Mechanical Engineers ,Land and Quantity Surveyors.
+                            <p>Architectural and Engineering Services Limited (AESL) offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and sector clients. 
                             </P>
     
-                            <P>To meet the needs of a broad range of clients, our practice has developed a multi-disciplinary approach to Building and Engineering Consultancy and to provide effective nation-wide coverage, we are located in all the ten regions of Ghana. 
+                            <P>Its operations were restructured by an act of parliament, Act 461 Statutory Corporation (Conversion to Companies), in 1993 to transform it from a government corporation since the birth of the first republic into 100% state owned limited liability company. 
                             </p>   
                             
-                            <P>To meet the needs of a broad range of clients, our practice has developed a multi-disciplinary approach to Building and Engineering Consultancy and to provide effective nation-wide coverage, we are located in all the ten regions of Ghana. 
+                            <P>With unmatched experience and long history as agency for development consultancy for the state, AESL has been the primus inter paris for the construction industry in Ghana. 
+
+                            </p>   
+                            <P>The reputation of the company is wide spread beyond the shores of Ghana with successful project executions in West Africa including countries La Cote D’ivoire, Sierra Leone, Liberia etc. 
                             </p>   
                             
+                            
+                        </hgroup>
+                        <div class="grid justify-start items-end">
                             <a  href="{% url 'website:practice-home' %}"
                                 class="blue0 ba br0-25 dib pa0-50 mt2-00 f1-00"
                             >Read More</a> 
-                        </hgroup> 
+                        </div> 
+                            
                     </article>
                             
                     <article id="architecture-and-planning" 
                         class= "gr4s1 gc1s12 gr3s1-s gc9s4-s gc9s4-m
-                            grid gtc1 justify-center items-center 
+                            grid gtc1  
                             f1-25
                             "
                     >
-                        <figure class="gr1s1 gc1s1 w-100">
+                        <figure class="gr1s1 gc1s1 ">
                             <img src="{% static '_images\projects\residential\4.jpeg' %}"            
                                 alt=""
-                                class="br0-50 w-100
-                                ba b--gold br0-50
-                                cover 
+                                class="w-100 h-100
+                                br0-50 ba b--gold
+                                cover
                                 ">
                         </figure>
                         <hgroup 
@@ -101,7 +101,7 @@
                             >
                                 Architecture & Planning
                             </h3>
-                            <ul class="grid  mv1-00 w-100">
+                            <ul class="grid justify-start h-80 pv1-00 w-100">
                                 <li>
                                     <a href="javascript:void()">Architecture</a>
                                 </li>
@@ -129,13 +129,14 @@
                         <figure class="gc1s1 gr1s1">
                             <img src="{% static '_images\projects\infrastructure-and-survey\1_1.jpg' %}"            
                                 alt=""
-                                class="br0-50 ba b--gold bg-blue0 w-100 h-100
-                                    cover br0-50"
+                                class="w-100 h-100
+                                    br0-50 ba b--gold
+                                    cover"
                             >
                         </figure>
                         <hgroup 
                             class="gc1s1 gr1s1 flex flex-column justify-start
-                                w-100
+                                w-100 h-100
                                 pa1-00 br0-50
                                 white-90 
                                 bg-black-50  ttu"
@@ -145,7 +146,7 @@
                                 ">
                                 Engineering
                             </h3> 
-                            <ul class="grid">
+                            <ul class="grid justify-start h-80 pv1-00 w-100">
                                 <li>
                                     <a href="javascript:void()">Civil / Structural</a>
                                 </li>
@@ -166,36 +167,35 @@
             <!-- Page Header End -->
 
             <!-- Page Main Start -->
-            <main class="">
+            <main class="HomePageMain">
                 <!-- Project Categories Start -->
-                <section id="projectCategories"
+                <section id="HomePageMain--ProjectCategories"
                     class="bg-black-20 mb3-00"            
                 >
                     <header id="projectCategories__header"
-                        class="grid
-                            h-100 w-100
-                            blue0"
+                        class="grid"
                     >
                         <img src="{% static '_images\_partials\01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 "
+                            class="gc1s1 gr1s1 h12-00 cover"
                         /> 
-                        <hgroup class="gc1s1 gr1s1 ph4-00  bg-gradientLR">
-                            <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
+                        <hgroup class="gc1s1 gr1s1 ph4-00 bg-gradientLR">
+                            <h3 class="pt1-00 white-90 f3-00 ttu">
                                 aesl projects
                             </h3>     
-                            <h4 class="gold pv0-00 mb0-00 f1-50 w-50 tj">
-                                {% lorem 20 w random %}.
+                            <h4 class="gold pv0-00 mb0-00 f1-50 w-60 tj tracked-tight lh-title">
+                                The diversity of our projects cuts across the socio-economic sectors of the Ghanaian economy.
+
                             </h4>     
                         </hgroup>
                     </header>
-                    <div id="projectCategories__content"
+                    <article id="projectCategories__content"
                         class="pa4-00">
-                        <div id="4x4_Grid"
+                        <div id="4x4_Grid_projectCategories__content"
                             class="grid gtc12 ggap1-00 bg-blue0 pa1-00
                                 "
                         >
-                            <article id="projectCategories__civicAndCulture"
+                            <div id="projectCategories__civicAndCulture"
                                 class="gr1s3 gc1s3 
                                    
                                     grid items-center justify-center
@@ -205,23 +205,23 @@
                                     class = ""  
                                 >
                                     <figure id=""
-                                        class="grid items-center justify-center
-                                            shadow-5 h-100"
+                                        class="grid
+                                            shadow-5"
                                     >
                                         <img src="{% static '_images\projects\civic_and_culture\civic\civic.jpeg' %}"            
                                             alt=""
-                                            class="gc1s1 gr1s1 
-                                                br0-50 h-100"
+                                            class="gc1s1 gr1s1 h-100 w-100
+                                                br0-50 cover"
                                         /> 
                                         <hgroup id =""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                h-100 w-100
+                                            class="gr1s1 gc1s1
+                                                
                                                 pa1-00
-                                                bg-blue0-50
+                                                
                                                 f0-75
                                                 white-90 tc"
                                         >
-                                            <h3 class="dib 
+                                            <h3 class="
                                                 pa0-50 mb0-00 
                                                 blue0 bg-white 
                                                 ba 
@@ -232,9 +232,9 @@
                                         </hgroup>
                                     </figure> 
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__education"
+                            <div id="projectCategories__education"
                                 class="gr1s3 gc4s3 
                                    
                                     grid items-center justify-center
@@ -248,7 +248,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -261,12 +261,12 @@
                                                 Education
                                             </h3>    
                                             
-                                        </hgroup>
+                                        </figcaption>
                                     </figure>
                                 </a> 
-                            </article>
+                            </div>
 
-                            <article id="projectCategories__health" 
+                            <div id="projectCategories__health" 
                                 class="gr1s3 gc7s3
                                    
                                     grid items-center justify-center"
@@ -279,7 +279,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -292,16 +292,14 @@
                                             Health
                                             </h3>    
                                             
-                                        </hgroup>
+                                        </figcaption>
                                     </figure>
                                 </a>
-                            </article> 
+                            </div> 
                                 
-                            <article id="projectCategories__officeAndMixedUse" 
+                            <div id="projectCategories__officeAndMixedUse" 
                                 class="gr1s3 gc10s3
-                                    grid items-center justify-center
-                                    
-                                    "
+                                    grid items-center justify-center"
                             >
                                 <a href="javascript:void()"
                                 class = ""  
@@ -325,9 +323,9 @@
                                         </hgroup>
                                     </figure>
                                 </a>        
-                            </article>
+                            </div>
             
-                            <article id="projectCategories__industrialAndRetail" 
+                            <div id="projectCategories__industrialAndRetail" 
                                 class="gr4s3 gc1s3
                                 grid items-center justify-center
                                 
@@ -357,9 +355,9 @@
                                         </hgroup> 
                                     </figure>
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__hospitality" 
+                            <div id="projectCategories__hospitality" 
                                 class="gr4s3 gc10s3
                                 grid items-center justify-center
                                 "
@@ -369,7 +367,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -381,12 +379,12 @@
                                             <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
                                                 Hospitality
                                             </h3>       
-                                        </hgroup> 
+                                        </figcaption> 
                                     </figure>
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__infrastructureAndSurvey" 
+                            <div id="projectCategories__infrastructureAndSurvey" 
                                 class="gr7s3 gc4s3
                                     grid items-center justify-center
                                     "
@@ -398,7 +396,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -410,12 +408,12 @@
                                             <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
                                                 Infrastructure and Survey
                                             </h3>       
-                                        </hgroup> 
+                                        </figcaption> 
                                     </figure>
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__residential" 
+                            <div id="projectCategories__residential" 
                                 class="gr7s3 gc10s3
                                     grid items-center justify-center
                                     "
@@ -426,7 +424,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -438,12 +436,12 @@
                                             <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
                                                 Residential
                                             </h3>    
-                                        </hgroup> 
+                                        </figcaption> 
                                     </figure>
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__landscapeAndMmasterplanning" 
+                            <div id="projectCategories__landscapeAndMmasterplanning" 
                                 class="gr7s3 gc7s3
                                     grid items-center justify-center
                                     "
@@ -454,7 +452,7 @@
                                             alt=""
                                             class="br0-50 gc1s1 gr1s1 "
                                         /> 
-                                        <hgroup id = ""
+                                        <figcaption id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
                                                 h-100 w-100
                                                 pa1-00
@@ -466,12 +464,12 @@
                                             <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
                                                 Landscape and Master planning
                                             </h3>     
-                                        </hgroup>
+                                        </figcaption>
                                     </figure> 
                                 </a>
-                            </article>
+                            </div>
                             
-                            <article id="projectCategories__sportsAndLeisure" 
+                            <div id="projectCategories__sportsAndLeisure" 
                                 class="gr7s3 gc1s3
                                     grid items-center justify-center
                                     "
@@ -497,9 +495,9 @@
                                         </hgroup>
                                     </figure>
                                 </a>
-                            </article>
+                            </div>
                         
-                            <article id="projectCategories__projects" 
+                            <div id="projectCategories__brief" 
                                 class="gr4s3 gc4s6
                                     grid
                                     "
@@ -525,12 +523,12 @@
                                         </hgroup> 
                                     </figure>
                             
-                            </article>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                     <footer id="projectCategories__footer">
                         <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 ">
-                            <div>
+                            <div class="gold">
                                 AESL || Projects
                             </div>
                             <div>
@@ -542,7 +540,7 @@
                 <!-- Project Categories End -->
 
                 <!-- Services Start -->
-                <section id="services"
+                <section id="HomePageMain--Services"
                     class="bg-black-90"   
                 >
                     <header id="services__header"
@@ -553,466 +551,472 @@
                     >
                         <img src="{% static '_images\_partials\01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 "
+                            class="gc1s1 gr1s1 h12-00 "
                         /> 
                         <hgroup class="gc1s1 gr1s1 ph4-00 pr8-00  bg-gradientLR">
                             <h3 class="mb0-00 pv1-00 white-90 f3-00 ttu">
                                 aesl services
                             </h3>     
-                            <h4 class="gold mb0-00 f1-50 w-50 tj">
-                                {% lorem 20 w random %}
+                            <h4 class="gold mb0-00 f1-50 w-60 tj">
+                                Our services encapsulate all of the AEC industry meeting the diversity in the construction sector to the approval of our clients.
+
                             </h4>     
                         </hgroup>
                     </header>
-                    
-                    <div id="services__architecture" 
-                        class="ma4-00 bg-white pa4-00">
-                        <div id="4x4_Grid_services"
-                            class="grid gtc12 ggap1-00"
-                        >
-                            <article id="services__urbanPlanning"
-                                class="gr1s1 gc1s3
-                                    grid items-center justify-center
-                                    white-90"
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >
-                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
-                                            alt=""
-                                            class="br0-50 br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                h-100 w-100
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Urban Planning
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure> 
-                                </a>
-                            </article>
-                            
-                            <article id="service__buildingDesign"
-                                class="gr1s1 gc4s3
-                                grid items-center justify-center
-                                white-90"      
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >    
-                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                               
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
-                                                Building Design
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure>
-                                </a> 
-                            </article>
+                    <article>
 
-                            <article id="landscapeDesign" 
-                                class="gr2s1 gc4s3
-                                grid items-center justify-center
-                               "
+                        <div id="services__architecture" 
+                            class="ma4-00 bg-white pa4-00">
+                            <div id="4x4_Grid_services"
+                                class="grid gtc12 ggap1-00"
                             >
-                                <a href="javascript:void()"
+                                <article id="services__urbanPlanning"
+                                    class="gr1s1 gc1s3
+                                        grid items-center justify-center
+                                        white-90"
+                                >
+                                    <a href="javascript:void()"
                                         class = ""  
                                     >
-                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                        <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                                alt=""
+                                                class="br0-50 br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <figcaption id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    h-100 w-100
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Urban Planning
+                                                </h3>    
                                                 
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Landscape Design
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure>
-                                </a>
-                            </article> 
+                                            </figcaption>
+                                        </figure> 
+                                    </a>
+                                </article>
                                 
-                            <article id="interiorDesign" 
-                                class="gr2s1 gc1s3
+                                <article id="service__buildingDesign"
+                                    class="gr1s1 gc4s3
                                     grid items-center justify-center
-                                    
-                                    "
-                            >
-                                <a href="javascript:void()"
-                                class = ""  
+                                    white-90"      
                                 >
-                                    <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc"
-                                        >
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                interior Design
-                                            </h3>    
-                                        </hgroup>
-                                    </figure>
-                                </a>        
-                            </article>
-            
-                            <article id="" 
-                                class="gr1s2 gc7s6
-                                    grid
-                                    "
-                            >
-                                <figure class="shadow-5  grid  items-center justify-center">
-                                    <hgroup id = ""
-                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                            
-                                            ph4-00
-                                            blue0
-                                            f1-25
-                                            tc
-                                            
-                                                ">
-                                        <h1 class = "blue0 f2-00 mv1-00">
-                                            Architectural Services
-                                        </h1>
-                                        <p>{% lorem 30 w random %}  </p>  
-                                        <a  href="{% url 'website:projects-home' %}"
-                                            class="blue0 ba br0-25 dib pa0-50 mb0-50"
-                                        >
-                                            EXPLORE 
-                                        </a>   
-                                    </hgroup> 
-                                </figure>
-                            </article>
-                        </div>
-                    </div>
-                    
-                    <div id="services__engineering" 
-                        class="ma4-00 bg-white pa4-00">
-                        <div id="4x4_Grid_services"
-                            class="grid gtc12 ggap1-00"
-                        >
-                            <article id="services__urbanPlanning"
-                                class="gr1s1 gc7s3
-                                    grid items-center justify-center
-                                    white-90"
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >
-                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
-                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
-                                            alt=""
-                                            class="br0-50 br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                h-100 w-100
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Civil/Structural Design
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure> 
-                                </a>
-                            </article>
-                            
-                            <article id="service__buildingDesign"
-                                class="gr1s1 gc10s3
-                                grid items-center justify-center
-                                white-90"      
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >    
-                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
-                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                               
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
-                                                Installations
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure>
-                                </a> 
-                            </article>
-
-                            <article id="landscapeDesign" 
-                                class="gr2s1 gc10s3
-                                grid items-center justify-center
-                               "
-                            >
-                                <a href="javascript:void()"
+                                    <a href="javascript:void()"
                                         class = ""  
-                                    >
-                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
-                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                    >    
+                                        <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                   
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                    Building Design
+                                                </h3>    
                                                 
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
+                                            </hgroup>
+                                        </figure>
+                                    </a> 
+                                </article>
+    
+                                <article id="landscapeDesign" 
+                                    class="gr2s1 gc4s3
+                                    grid items-center justify-center
+                                   "
+                                >
+                                    <a href="javascript:void()"
+                                            class = ""  
+                                        >
+                                        <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Landscape Design
+                                                </h3>    
+                                                
+                                            </hgroup>
+                                        </figure>
+                                    </a>
+                                </article> 
+                                    
+                                <article id="interiorDesign" 
+                                    class="gr2s1 gc1s3
+                                        grid items-center justify-center
+                                        
+                                        "
+                                >
+                                    <a href="javascript:void()"
+                                    class = ""  
+                                    >
+                                        <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc"
+                                            >
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    interior Design
+                                                </h3>    
+                                            </hgroup>
+                                        </figure>
+                                    </a>        
+                                </article>
+                
+                                <article id="" 
+                                    class="gr1s2 gc7s6
+                                        grid
+                                        "
+                                >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-between
+                                                
+                                                ph4-00 pv4-00
+                                                blue0
+                                                f1-25
                                                 tc
                                                 
                                                     ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Water
-                                            </h3>    
-                                            
-                                        </hgroup>
+                                            <h1 class = "blue0 f2-00 mv1-00">
+                                                Architectural Services
+                                            </h1>
+                                            <p class="lh-copy mb2-00">Our Architectural designs promotes ideas that fosters unity between the client’s project needs and budget. It’s the philosophy of our architecture to define space that not only satisfies the shelter needs for habitation and business but also meets sustainable design goals in the context of the cityscape.
+                                                </p>  
+                                            <a  href="{% url 'website:projects-home' %}"
+                                                class="blue0 ba br0-25 dib pa0-50 f1-00"
+                                            >
+                                                EXPLORE 
+                                            </a>   
+                                        </hgroup> 
                                     </figure>
-                                </a>
-                            </article> 
+                                </article>
+                            </div>
+                        </div>
+                        
+                        <div id="services__engineering" 
+                            class="ma4-00 bg-white pa4-00">
+                            <div id="4x4_Grid_services"
+                                class="grid gtc12 ggap1-00"
+                            >
+                                <article id="services__urbanPlanning"
+                                    class="gr1s1 gc7s3
+                                        grid items-center justify-center
+                                        white-90"
+                                >
+                                    <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                        <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                            <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                                alt=""
+                                                class="br0-50 br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <figcaption id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    h-100 w-100
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Civil/Structural Design
+                                                </h3>    
+                                                
+                                            </figcaption>
+                                        </figure> 
+                                    </a>
+                                </article>
                                 
-                            <article id="interiorDesign" 
-                                class="gr2s1 gc7s3
+                                <article id="service__buildingDesign"
+                                    class="gr1s1 gc10s3
                                     grid items-center justify-center
-                                    
-                                    "
-                            >
-                                <a href="javascript:void()"
-                                class = ""  
+                                    white-90"      
                                 >
-                                    <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
-                                        <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc"
-                                        >
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Geo-Technical
-                                            </h3>    
-                                        </hgroup>
-                                    </figure>
-                                </a>        
-                            </article>
-            
-                            <article id="" 
-                                class="gr1s2 gc1s6
-                                    grid
-                                    "
-                            >
-                                <figure class="shadow-5  grid  items-center justify-center">
-                                    <hgroup id = ""
-                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                            
-                                            ph4-00
-                                            blue0
-                                            f1-25
-                                            tc
-                                            
-                                                ">
-                                        <h1 class = "blue0 f2-00 mv1-00">
-                                            Engineering Services
-                                        </h1>
-                                        <p>{% lorem 30 w random %}  </p>  
-                                        <a  href="{% url 'website:projects-home' %}"
-                                            class="blue0 ba br0-25 dib pa0-50 mb0-50 f1-00"
-                                        >
-                                            EXPLORE 
-                                        </a>   
-                                    </hgroup> 
-                                </figure>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div id="services__surveying" 
-                        class="ma4-00 bg-white pa4-00">
-                        <div id="4x4_Grid_services"
-                            class="grid gtc12 ggap1-00"
-                        >
-                            <article id="services__urbanPlanning"
-                                class="gr1s1 gc1s6
-                                    grid items-center justify-center
-                                    white-90"
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >
-                                    <figure class="shadow-5 bg-red grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\landscape_Images\landscape_01.png' %}"            
-                                            alt=""
-                                            class="br0-50 br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                h-100 w-100
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Quantities
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure> 
-                                </a>
-                            </article>
-                            
-                            <article id="service__buildingDesign"
-                                class="gr2s1 gc1s3
-                                grid items-center justify-center
-                                white-90"      
-                            >
-                                <a href="javascript:void()"
-                                    class = ""  
-                                >    
-                                    <figure class="shadow-5 bg-gold grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 "
-                                        /> 
-                                        <hgroup id = ""
-                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                               
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
-                                                white-90 tc
-                                                
-                                                    ">
-                                            <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
-                                                Valuations
-                                            </h3>    
-                                            
-                                        </hgroup>
-                                    </figure>
-                                </a> 
-                            </article>
-
-                            <article id="landscapeDesign" 
-                                class="gr2s1 gc4s3
-                                grid items-center justify-center
-                               "
-                            >
-                                <a href="javascript:void()"
+                                    <a href="javascript:void()"
                                         class = ""  
+                                    >    
+                                        <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                            <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                   
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                    Installations
+                                                </h3>    
+                                                
+                                            </hgroup>
+                                        </figure>
+                                    </a> 
+                                </article>
+    
+                                <article id="landscapeDesign" 
+                                    class="gr2s1 gc10s3
+                                    grid items-center justify-center
+                                   "
+                                >
+                                    <a href="javascript:void()"
+                                            class = ""  
+                                        >
+                                        <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                            <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Water
+                                                </h3>    
+                                                
+                                            </hgroup>
+                                        </figure>
+                                    </a>
+                                </article> 
+                                    
+                                <article id="interiorDesign" 
+                                    class="gr2s1 gc7s3
+                                        grid items-center justify-center
+                                        
+                                        "
+                                >
+                                    <a href="javascript:void()"
+                                    class = ""  
                                     >
-                                    <figure class="shadow-5 bg-black grid  items-center justify-center">
-                                        <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
-                                            alt=""
-                                            class="br0-50 gc1s1 gr1s1 h-100"
-                                        /> 
+                                        <figure class="shadow-5 bg-blue0 grid  items-center justify-center">
+                                            <img src="{% static '_images/placeholders/regular_images/square-01.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc"
+                                            >
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Geo-Technical
+                                                </h3>    
+                                            </hgroup>
+                                        </figure>
+                                    </a>        
+                                </article>
+                
+                                <article id="" 
+                                    class="gr1s2 gc1s6
+                                        grid
+                                        "
+                                >
+                                    <figure class="shadow-5  grid  items-center justify-center">
                                         <hgroup id = ""
                                             class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                                
-                                                pa1-00
-                                                bg-blue0-50
-                                                f0-75
+                                                mv4-00
+                                                ph4-00
+                                                blue0
+                                                f1-25
                                                 tc
                                                 
                                                     ">
-                                            <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
-                                                Land (Geomatics)
-                                            </h3>    
-                                            
-                                        </hgroup>
+                                            <h1 class = "blue0 f2-00 mv1-00">
+                                                Engineering Services
+                                            </h1>
+                                            <p class="lh-copy mb2-00">AESL has a highly qualified and experienced team of engineers that can provide a wide range of capabilities including general infrastructure, heavy civil engineering and building structure design. </p>  
+                                            <a  href="{% url 'website:projects-home' %}"
+                                                class="blue0 ba br0-25 pa0-50 f1-00"
+                                            >
+                                                EXPLORE 
+                                            </a>   
+                                        </hgroup> 
                                     </figure>
-                                </a>
-                            </article> 
-                            
-            
-                            <article id="" 
-                                class="gr1s2 gc7s6
-                                    grid
-                                    "
-                            >
-                                <figure class="shadow-5  grid  items-center justify-center">
-                                    <hgroup id = ""
-                                        class="gr1s1 gc1s1 flex flex-column items-center justify-center
-                                            
-                                            ph4-00
-                                            blue0
-                                            f1-25
-                                            tc
-                                            
-                                                ">
-                                        <h1 class = "blue0 f2-00 mv1-00">
-                                           Surveying Services
-                                        </h1>
-                                        <p>{% lorem 30 w random %}  </p>  
-                                        <a  href="{% url 'website:projects-home' %}"
-                                            class="blue0 ba br0-25 dib pa0-50 mb0-50 f1-00"
-                                        >
-                                            EXPLORE 
-                                        </a>   
-                                    </hgroup> 
-                                </figure>
-                            </article>
+                                </article>
+                            </div>
                         </div>
-                    </div>
+    
+                        <div id="services__surveying" 
+                            class="ma4-00 bg-white pa4-00"
+                        >
+                            <div id="4x4_Grid_services"
+                                class="grid gtc12 ggap1-00"
+                            >
+                                <article id="services__urbanPlanning"
+                                    class="gr1s1 gc1s6
+                                        grid items-center justify-center
+                                        white-90"
+                                >
+                                    <a href="javascript:void()"
+                                        class = ""  
+                                    >
+                                        <figure class="shadow-5 bg-red grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\landscape_Images\landscape_01.png' %}"            
+                                                alt=""
+                                                class="br0-50 br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <figcaption id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    h-100 w-100
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Quantities
+                                                </h3>    
+                                                
+                                            </figcaption>
+                                        </figure> 
+                                    </a>
+                                </article>
+                                
+                                <article id="service__buildingDesign"
+                                    class="gr2s1 gc1s3
+                                    grid items-center justify-center
+                                    white-90"      
+                                >
+                                    <a href="javascript:void()"
+                                        class = ""  
+                                    >    
+                                        <figure class="shadow-5 bg-gold grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 "
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                   
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    white-90 tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba pa0-50 mb0-00 f1-00">
+                                                    Valuations
+                                                </h3>    
+                                                
+                                            </hgroup>
+                                        </figure>
+                                    </a> 
+                                </article>
+    
+                                <article id="landscapeDesign" 
+                                    class="gr2s1 gc4s3
+                                    grid items-center justify-center
+                                   "
+                                >
+                                    <a href="javascript:void()"
+                                            class = ""  
+                                        >
+                                        <figure class="shadow-5 bg-black grid  items-center justify-center">
+                                            <img src="{% static '_images\placeholders\portrait\portrait-1.png' %}"            
+                                                alt=""
+                                                class="br0-50 gc1s1 gr1s1 h-100"
+                                            /> 
+                                            <hgroup id = ""
+                                                class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                    
+                                                    pa1-00
+                                                    bg-blue0-50
+                                                    f0-75
+                                                    tc
+                                                    
+                                                        ">
+                                                <h3 class="blue0 bg-white ba dib pa0-50 mb0-00 f1-00">
+                                                    Land (Geomatics)
+                                                </h3>    
+                                                
+                                            </hgroup>
+                                        </figure>
+                                    </a>
+                                </article> 
+                                
+                
+                                <article id="" 
+                                    class="gr1s2 gc7s6
+                                        grid
+                                        "
+                                >
+                                    <figure class="shadow-5  grid  items-center justify-center">
+                                        <hgroup id = ""
+                                            class="gr1s1 gc1s1 flex flex-column items-center justify-center
+                                                mv2-00
+                                                ph4-00
+                                                blue0
+                                                f1-25
+                                                tc
+                                                
+                                                    ">
+                                            <h1 class = "blue0 f2-00 mv1-00">
+                                               Surveying Services
+                                            </h1>
+                                            <p class="lh-copy">We provide a range of Professional Quantity Surveying, Land Surveying and Valuation services tailored to meet our clients requirements. We always take challenges and bring them to a conclusion.</p>  
+                                            <a  href="{% url 'website:projects-home' %}"
+                                                class="blue0 ba br0-25 dib pa0-50 mb0-50 f1-00"
+                                            >
+                                                EXPLORE 
+                                            </a>   
+                                        </hgroup> 
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+
+                    </article>
 
                     <footer id="services__footer">
                         <div class="flex justify-between bg-blue0 ph4-00 pa2-00 white-90 mb4-00">
-                            <div>
+                            <div class="gold">
                                 AESL || Services
                             </div>
                             <div>
@@ -1024,37 +1028,39 @@
                 <!-- Services End -->
         
                 <!-- Practice Start -->
-                <section id="practice">
-                    <header>
-                        <div id="practice__header"
-                            class="grid
-                                h-100 w-100
-                                mb2-00
-                                blue0"
-                        >
-                            <img src="{% static '_images\_partials\01.jpg' %}"            
-                                alt=""
-                                class="gc1s1 gr1s1 "
-                            /> 
-                            <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00  bg-gradientLR">
-                                <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
-                                    aesl Practice
-                                </h3>     
-                                <h4 class="gold mb0-00 f1-50 w-50 tj">
-                                    {% lorem 20 w random %}
-                                </h4>     
-                            </hgroup>
-                        </div>
+                <section id="HomePageMain--Practice">
+                    
+                    <header id="HomePageMain__practice--header"
+                        class="grid
+                            h12-00 w-100
+                            
+                            blue0"
+                    >
+                        <img src="{% static '_images\_partials\01.jpg' %}"            
+                            alt=""
+                            class="gc1s1 gr1s1 h12-00 cover"
+                        /> 
+                        <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00 bg-gradientLR">
+                            <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
+                                aesl Practice
+                            </h3>     
+                            <h4 class="gold mb0-00 f1-50 w-60 tj">
+                                {% lorem 15 w random %}
+                            </h4>     
+                        </hgroup>
                     </header>
+                    
                     <div id="practice__content">
                         <div id="6x6_Grid_People" 
                             class="grid gac gafc ggap0-25 ttu pa2-00 f0-75"
                         >
                             
                             <article id="practice_overview" 
-                                    class="gr1s2 gc1s2 grid justify-betweenshadow-5"       
-                                > 
-                                <div class="grid items-center justify-between">
+                                class="gr1s2 gc1s2 
+                                    grid justify-between
+                                    shadow-5"       
+                            > 
+                                <header class="grid items-center justify-between">
                                     <figure 
                                         class="gc1s1 gr1s1 h-100"
                                     >
@@ -1075,8 +1081,7 @@
                                         </h5>
                                        
                                     </hgroup> 
-   
-                                </div>
+                                </header>
                                 <div>
                                     <p>
                                         {% lorem 8 w random %}
@@ -1098,7 +1103,7 @@
                                         EXPLORE 
                                     </a> 
                                 </div>   
-                                <div class="grid items-end">
+                                <footer class="grid items-end">
                                     <figure 
                                         class="gc1s1 gr1s1"
                                     >
@@ -1118,13 +1123,17 @@
                                             Overview
                                         </h5>
                                     </hgroup> 
-                                </div>       
+                                </footer>       
                             </article>
 
                             <article id="practice_history" 
                                 class="gr1s1 gc3s2"
                             >
-                                <div class="grid items-end justify-between bg-blue0 h-100 h-100">
+                                <div id=""
+                                    class="grid items-end justify-between 
+                                    h-100
+                                    bg-blue0 "
+                                >
                                     <figure 
                                         class="gc1s1 gr1s1"
                                     >
@@ -1133,21 +1142,18 @@
                                             class="">
                                     </figure> 
                                     <hgroup 
-                                        class="gc1s1 gr1s1
-                                        
-                                        bg-gradientRL
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
                                         white-90 
                                         pa0-50
-                                        ">
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            History
-                                        </h5>
-                                        <p>
+                                            class="
+                                                f1-00 mb0-00"
+                                        >History</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1155,7 +1161,7 @@
                             <article id="practice_mandate" 
                                 class="gr1s1 gc5s2"      
                             >
-                                <div class="grid items-start justify-center bg-blue0">
+                                <div class="grid items-end justify-between bg-blue0 h-100">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100 "
                                     >
@@ -1164,20 +1170,18 @@
                                             class="">
                                     </figure> 
                                     <hgroup 
-                                        class="gc1s1 gr1s1
-                                    
-                                        bg-blue0 white-90 
-                                        pa1-00
-                                        ">
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Mandate
-                                        </h5>
-                                        <p>
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Mandate</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1185,7 +1189,7 @@
                             <article id="practice_functions" 
                                 class="gr1s1 gc7s2"
                             >
-                                <div class="grid items-center justify-center h-100">
+                                <div class="grid items-end justify-center h-100">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100 h-100"
                                     >
@@ -1194,20 +1198,18 @@
                                             class="h-100">
                                     </figure> 
                                     <hgroup 
-                                        class="gc1s1 gr1s1
-                                        
-                                        bg-blue0 white-90 
-                                        pa1-00
-                                        ">
+                                        class="gc1s1 gr1s1 grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Functions
-                                        </h5>
-                                        <p>
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Functions</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1215,7 +1217,7 @@
                             <article id="practice_mission_vision_values" 
                                 class="gr1s1 gc9s2"      
                             >
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-end ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1225,19 +1227,19 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        h-100
-                                        bg-gradient1TB white-90 
-                                        pa1-00
-                                        ">
+                                           grid items-center justify-center
+                                            bg-gradient1TB
+                                            white-90 
+                                            pa0-50
+                                            h4-00"
+                                    >
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Mission, Vision and Values
-                                        </h5>
-                                        <p>
+                                            class="w-100
+                                                f1-00 mb0-00 tc"
+                                        >Mission, Vision, and Values</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1245,7 +1247,7 @@
                             <article id="practice_sector_ministry" 
                                 class="gr1s1 gc11s2"       
                             > 
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1255,19 +1257,25 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
-                                        pa1-00
+                                        flex flex-column justify-between
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h-100
                                         ">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Sector Ministry
-                                        </h5>
-                                        <p>
-                                            {% lorem 8 w random %}
-                                        </p>    
+                                            class="
+                                                f1-00 mb1-00"
+                                        >Sector Ministry</h5>
+                                        <p class="">
+                                            {% lorem 18 w random %}
+                                        </p>
+                                        
+                                        <div class="grid justify-start items-end">
+                                            <a  href="{% url 'website:sector-ministry' %}"
+                                                class="blue0 ba br0-25 dib pa0-50 mt2-00"
+                                            >Read More</a> 
+                                        </div> 
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1275,7 +1283,7 @@
                             <article id="practice_corporate_governance" 
                                 class="gr2s1 gc3s2"
                             >
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1285,19 +1293,18 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
-                                        pa1-00
-                                        ">
+                                        grid items-center justify-center
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                           Corporate Governance
-                                        </h5>
-                                        <p>
+                                            class="
+                                                f1-00 mb0-00"
+                                        >Corporate Governance</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1305,7 +1312,7 @@
                             <article id="practice_management" 
                                 class="gr2s1 gc5s2"      
                             >
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1315,19 +1322,17 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
-                                        pa1-00
-                                        ">
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Management
-                                        </h5>
-                                        <p>
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Management</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1335,7 +1340,7 @@
                             <article id="practice_alliances" 
                                 class="gr2s1 gc7s2"
                             >
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1345,19 +1350,17 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
-                                        pa1-00
-                                        ">
+                                        bg-gradient1TB
+                                        white-90 
+                                        pa0-50
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Alliances
-                                        </h5>
-                                        <p>
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Alliances</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1365,7 +1368,7 @@
                             <article id="practice_client_speak" 
                                 class="gr2s1 gc9s2"      
                             >
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1375,19 +1378,17 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
+                                        bg-gradient1TB
+                                        white-90 
                                         pa0-50
-                                        ">
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Client Speak
-                                        </h5>
-                                        <p>
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Client Speak</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
@@ -1395,7 +1396,7 @@
                             <article id="practice_corporate_responsilities" 
                                 class="gr2s1 gc11s2"       
                             > 
-                                <div class="grid items-center justify-center ">
+                                <div class="grid items-end justify-center ">
                                     <figure 
                                         class="gc1s1 gr1s1 w-100"
                                     >
@@ -1405,28 +1406,27 @@
                                     </figure> 
                                     <hgroup 
                                         class="gc1s1 gr1s1
-                                        
-                                        bg-blue0T white-90 
+                                        bg-gradient1TB
+                                        white-90 
                                         pa0-50
-                                        ">
+                                        h4-00">
                                         <h5 
-                                            class="flex items-center
-                                            
-                                        f1-00 mb0-50">
-                                            Corporate Responsilities
-                                        </h5>
-                                        <p>
+                                            class="flex items-center justify-center
+                                                f1-00 mb0-00"
+                                        >Corporate Responsibilities</h5>
+                                        <p class="dn">
                                             {% lorem 8 w random %}
-                                        </p>    
+                                        </p>
                                     </hgroup> 
                                 </div>
                             </article>
 
                         </div> 
                     </div>
+
                     <footer id="practice__footer">
                         <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
-                            <div>
+                            <div class="gold">
                                 AESL || Practice
                             </div>
                             <div>
@@ -1434,11 +1434,12 @@
                             </div>
                         </div> 
                     </footer>
+
                 </section>
                 <!-- Practice End-->
         
                 <!-- Principles Start -->
-                 <section id = "principles"
+                <section id="HomePageMain--Principles"
                     class=""
                 >
                     <header id="principles__header"
@@ -1448,14 +1449,14 @@
                     >
                         <img src="{% static '_images\_partials\01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 "
+                            class="gc1s1 gr1s1 h12-00"
                         /> 
                         <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00 white-90 bg-gradientLR">
                             <h3 class="pv1-00 mb0-00 f3-00 ttu">
                                 aesl principles
                             </h3>     
-                            <h4 class="gold mb0-00 f1-50 w-50 tj">
-                                {% lorem 20 w random %}
+                            <h4 class="gold mb0-00 f1-50 w-60 tj">
+                                The AESL is guided by principes in all our deliverables 
                             </h4>     
                         </hgroup>
                     </header>
@@ -1651,7 +1652,7 @@
                     </section>
                     <footer id="principles__footer">
                         <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
-                            <div>
+                            <div class="gold">
                                 AESL || Principles
                             </div>
                             <div>
@@ -1663,24 +1664,24 @@
                 <!-- Principles End -->
         
                 <!-- People Start -->
-                 <section id="people"
+                <section id="HomePageMain--People"
                     class=""
                 >   
                     <header id="services__header"
                         class="grid
-                            h-100 w-100
+                             w-100
                             blue0"
                     >
                         <img src="{% static '_images\_partials\01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 "
+                            class="gc1s1 gr1s1 h12-00"
                         /> 
-                        <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00 bg-gradientLR">
+                        <hgroup class="gc1s1 gr1s1 pl4-00 bg-gradientLR">
                             <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
                                 aesl People
                             </h3>     
                             <h4 class="dn flex-m gold mb0-00 f1-50 w-50 tj">
-                                {% lorem 20 w random %}
+                                The AESL is a practicing professional group of Consulting Architects, Civil, Installations Engineers ,Land and Quantity Surveyors.
                             </h4>     
                         </hgroup>
                     </header>
@@ -1696,7 +1697,7 @@
                                     <figure 
                                         class="w-50 pa0-50 "
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\architect_01.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1726,7 +1727,7 @@
                                     <figure 
                                         class="w-50 pa0-50 "
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\civil_engineers.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1756,7 +1757,7 @@
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\qs_01.jpg' %}"            
                                             alt=""
                                             class="w-100">
                                     </figure> 
@@ -1786,7 +1787,7 @@
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\valuers.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1816,7 +1817,7 @@
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\water_engineers_01.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1846,7 +1847,7 @@
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\geomatic_01.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1876,7 +1877,7 @@
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\mech_engineer.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1899,14 +1900,14 @@
                                 </div>
                             </article>
                         
-                            <article id="people_09" 
+                            <article id="people_finance" 
                                 class="gr3s1 gc1s4"      
                             >
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\finance.jpg' %}"            
                                             alt=""
                                             class="w-100">
                                     </figure> 
@@ -1929,14 +1930,14 @@
                                 </div>
                             </article>
 
-                            <article id="people_04" 
+                            <article id="people_humanResources" 
                                 class="gr4s1 gc3s4"       
                             > 
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\HR-Management.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1959,14 +1960,14 @@
                                 </div>
                             </article>
                             
-                            <article id="people_05" 
+                            <article id="people_electricalEngineers" 
                                 class="gr4s1 gc7s4"
                             >
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\06.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -1989,14 +1990,14 @@
                                 </div>
                             </article>
 
-                            <article id="people_07" 
+                            <article id="people_legalAdvisors" 
                                 class="gr5s1 gc1s4"       
                             > 
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\corporate-legal-advisor-500x500.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -2019,14 +2020,14 @@
                                 </div>
                             </article>
                             
-                            <article id="people_08" 
+                            <article id="people_projectManagers" 
                                 class="gr5s1 gc5s4"
                             >
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\pm_01.jpg' %}"            
                                             alt=""
                                             class="w-100 h-100">
                                     </figure> 
@@ -2049,14 +2050,14 @@
                                 </div>
                             </article>
                         
-                            <article id="people_09" 
+                            <article id="people_geotechEngineers" 
                                 class="gr5s1 gc9s4"      
                             >
                                 <div class="flex items-center justify-center h-100 w-100 bg-black-50">
                                     <figure 
                                         class="w-50 pa0-50"
                                     >
-                                        <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}"            
+                                        <img src="{% static '_images\index\AESL_People\geomatic_02.jpg' %}"            
                                             alt=""
                                             class="w-100">
                                     </figure> 
@@ -2083,7 +2084,7 @@
 
                     <footer id="people__footer">
                         <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
-                            <div>
+                            <div class="gold">
                                 AESL || People
                             </div>
                             <div>
@@ -2095,25 +2096,25 @@
                 <!-- People End -->
                 
                 <!-- Regional Offices Start -->
-                 <section id="regionalOffices"
+                <section id="HomePageMain--RegionalOffices"
                     class=""
                 >    
                     <header id="services__header"
                         class="grid
-                            h-100 w-100
+                             w-100
                             
                             blue0"
                     >
                         <img src="{% static '_images\_partials\01.jpg' %}"            
                             alt=""
-                            class="gc1s1 gr1s1 "
+                            class="gc1s1 gr1s1 h12-00"
                         /> 
                         <hgroup class="gc1s1 gr1s1 pl4-00 pr8-00  bg-gradientLR">
                             <h3 class="pv1-00 mb0-00 white-90 f3-00 ttu">
                                 aesl Offices
                             </h3>     
                             <h4 class="gold mb0-00 f1-50 w-50 tj">
-                                {% lorem 20 w random %}
+                                {% lorem 12 w random %}
                             </h4>     
                         </hgroup>
                     </header>
@@ -2149,7 +2150,7 @@
                     </div>
                     <footer id="regionalOffices__footer">
                         <div class="flex justify-between bg-blue0 pa2-00 ph4-00 white-90 mb4-00">
-                            <div>
+                            <div class="gold">
                                 AESL || Offices
                             </div>
                             <div>
@@ -2163,7 +2164,7 @@
             <!-- Page Main End -->
 
             <!-- Page Footer Start -->
-            <footer id = "home-page-footer"
+            <footer id = "HomePageFooter"
                 class="w-100"
             >
                 <div class="flex justify-between bg-blue0 pv4-00 ph2-00 white-90 mb1-00">

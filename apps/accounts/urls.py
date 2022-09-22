@@ -15,30 +15,48 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from apps.website import views
-from . import views
+
+from . views import (
+    # admin_Login,
+    # admin_Home,
+    # staff_Login,
+    # admin_Login_Process,
+    userlogin_view,
+    userlogout_view,
+    userRegister_view, 
+)
 from django.conf import settings
 
 app_name = 'accounts'
 
 urlpatterns = [
-    path(
-        'admin-login/', 
-        views.admin_Login, 
-        name='admin-login'
-    ), 
-    path('admin-home/', 
-        views.admin_Home, 
-        name='admin-home'
-    ),
+    path("user-login", 
+        userlogin_view, 
+        name="user-login"),
+    path("user-logout", 
+        userlogout_view, 
+        name="user-logout"),
+    path("register", 
+        userRegister_view, 
+        name="register"),
+
+    # path(
+    #     'admin-login/', 
+    #     admin_Login, 
+    #     name='admin-login'
+    # ), 
+    # path('admin-home/', 
+    #     admin_Home, 
+    #     name='admin-home'
+    # ),
    
-    path('admin-login-process/', 
-        views.admin_Login_Process, 
-        name='admin-login-process'
-    ),
-    path('staff-login/', 
-        views.staff_Login, 
-        name='staff-login'), 
+    # path('admin-login-process/', 
+    #     admin_Login_Process, 
+    #     name='admin-login-process'
+    # ),
+    # path('staff-login/', 
+    #     staff_Login, 
+    #     name='staff-login'), 
 
    
 ]

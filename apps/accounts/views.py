@@ -7,77 +7,78 @@ from django.contrib import messages
 from django.urls import reverse
 
 #ADMIN LOGIN
-def login_view(request):
+def userlogin_view(request):
 
-    if request.method == 'POST':
+    if request.method == 'POST': 
         username = request.POST.get('username')
-        password = request.POST.get('password')
-        print(username, password)
+        password = request.POST.get('password')#print(username, password)
         user = authenticate(
             request, 
-            username = username,
-            password = password
-        )
+            username=username,
+            password=password)
         if user is None:
-            context = {
-                'error' : 'Invalid username or password'
+            context ={'error': 'Invalid Username or Password'
             }
-            return render(request,'account/login.html', context)
-        login(request,user)
-        return redirect('/')
+            return render(request,'accounts/user-login.html', context
+            )
+        login(request, user)
+        return redirect('/admin')
     context = {
 
     }
-    return render(request,'account/login.html', context)
+    return render(request,'accounts/user-login.html', context)
 
-def logout_view(request):
+def userlogout_view(request):
+    if request.method =='POST':
+        logout(request)
+        return redirect('/accounts/user-login')
     context = {
 
     }
-    return render(request,'accounts/logout.html', context)
+    return render(request,'accounts/user-logout.html', context)
 
-def register_view(request):
+def userRegister_view(request):
     context = {
 
     }
     return render(request,'accounts/register.html', context)
 
-def admin_Login(request):
-    context = {
+# def admin_Login(request):
+#     context = {
 
-    }
-    return render(request,'accounts/admin-login.html', context)
+#     }
+#     return render(request,'accounts/admin-login.html', context)
 
-def staff_Login(request):
-    context = {
+# def staff_Login(request):
+#     context = {
 
-    }
-    return render(request,'accounts/staff-login.html', context)
+#     }
+#     return render(request,'accounts/staff-login.html', context)
 
-def admin_Home(request):
-    context = {
+# def admin_Home(request):
+#     context = {
 
-    }
-    return render(request,'accounts/admin-home.html', context)
+#     }
+#     return render(request,'accounts/admin-home.html', context)
 
-def admin_Login_Process(request):
+# def admin_Login_Process(request):
 
-    username=request.POST.get('username')
-    password=request.POST.get('password')
-    print(username,password)
+#     username=request.POST.get('username')
+#     password=request.POST.get('password')
+#     print(username,password)
 
-    user=authenticate(
-        request=request, 
-        username=username, 
-        password=password,
-    )
-    print(user)
+#     user=authenticate(
+#         request=request, 
+#         username=username, 
+#         password=password,
+#     )
+#     print(user)
     
-    if user is not None:
-        login(request=request, user=user)
-        return HttpResponseRedirect(reverse('admin-login'))
-    else:
-        messages.error(request, 'Invalid Credentials')
-        return HttpResponseRedirect(reverse('accounts:admin-home'))
+#     if user is not None:
+#         login(request=request, user=user)
+#         return HttpResponseRedirect(reverse('admin-login'))
+#     else:
+#         messages.error(request, 'Invalid Credentials')
+#         return HttpResponseRedirect(reverse('accounts:admin-home'))
     
 

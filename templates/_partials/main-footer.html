@@ -14,9 +14,9 @@
         aria-label=""
     >
         <section id="description"
-            class="gr2s1 gc1s12 gc1s9-m ggap1-00
+            class="gr1s1 gr2s1-m gc1s12 gc1s9-m ggap1-00
                 flex 
-                w-100  pb2-00
+                w-100
                 f1-00 tj"
         >   
             <section id="m_aesl__address" 
@@ -29,7 +29,7 @@
                 <div id=""
                     class=" w-100 h-100
                         mb1-00 flex  flex-column justify-center items-center
-                        f0-75 tc" 
+                        f1-25 tc" 
                     itemtype="">
                     <div itemprop="name" class ="f1-00 ttu b mb1-50">
                         AESL Head Office
@@ -41,10 +41,18 @@
                         itemscope="" 
                         itemtype="http://schema.org/PostalAddress">
                         <span class="dib mb0-50" itemprop="streetAddress">
-                            The Hall of Technology<br>
-                            Opposite The Ministry of Roads and Highways<br>
-                            Ministries, Accra.<br>
-                            Ghana
+                            <div class="mb0-25">
+                                The Hall of Technology
+                            </div> 
+                            <div class="mb0-25">
+                                Opposite The Ministry of Roads and Highways
+                            </div> 
+                            <div class="mb0-25">
+                                Ministries, Accra.
+                            </div> 
+                            <div class="mb0-25">
+                                Ghana
+                            </div> 
                         </span>
                     </div>
                     <div class="flex flex-column items-center justify-center w-100 f0-75 tracked-tight">
@@ -57,7 +65,7 @@
                                 
                                 <address class="flex items-center justify-center 
                             
-                                    pa0-25
+                                    pa0-50
                                     mb0-25 
                                     ba br5-00 b--white-90"> 
                                     <img src="{% static 'svgs/WhatsApp.svg' %}" 
@@ -73,7 +81,7 @@
                                 class="tc "
                                 rel="noopener noreferrer">
                                 
-                                <address class="flex items-center justify-center ba br5-00 pa0-25
+                                <address class="flex items-center justify-center ba br5-00 pa0-50
                                 mb0-25 b--white-90"> 
                                     <img src="{% static 'svgs/WhatsApp.svg' %}" 
                                         alt="WhatsApp" 
@@ -89,7 +97,7 @@
                             class="tc w-50"
                             rel="noopener noreferrer">
                             
-                            <p class="flex items-center justify-center  ba br5-00 pa0-25
+                            <p class="flex items-center justify-center  ba br5-00 pa0-50
                             mb0-25 b b--white-90"> 
                                 {% comment %} <img src="{% static '_media/svgs/WhatsApp.svg' %}" change to email
                                     alt="WhatsApp" 
@@ -120,7 +128,7 @@
             class="gr2s1 gr1s1-m gc1s12 
                 w-100 gc10s3-m ba pb2-00"
         >
-            <form class="" action="">
+            <form class="ma0-50" action="">
                 <fieldset class="flex flex-column justify-between pv1-00 h-100">
                     <legend class="ph0-50">
                         AESL NEWSLETTER
@@ -130,7 +138,7 @@
                         class="dib mb1-00 w-100">Email:
                         <input class="w-100 pa0-50 mt1-00" 
                             type="text"
-                            placeholder="Please Enter Your Email Here"
+                            placeholder="Enter Your Email"
                         />
                     </label>
                     <label for=""
@@ -162,7 +170,8 @@
                 
                 <header>
                     <h2 class="">
-                        <a class="white-90" href=""
+                        <a class="white-90" 
+                            href="#projects"
                             role="button" 
                             aria-expanded="false"
                         >PROJECTS</a>
@@ -404,8 +413,8 @@
                         <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}" 
                             alt=""
                             class="w-100 br0-50 gc1s1 gr1s1">
-                        <figcaption class="gc1s1 gr1s1 tc">
-                            label one
+                        <figcaption class="gc1s1 gr1s1 tc bg-gradient1TB h-100 gold">
+                            Recent Projects
                         </figcaption>
                     </figure> 
 
@@ -419,8 +428,8 @@
                         <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}" 
                             alt=""
                             class="br0-50 gc1s1 gr1s1">
-                        <figcaption class="gc1s1 gr1s1 tc">
-                            label one
+                        <figcaption class="gc1s1 gr1s1 tc bg-gradient1TB h-100 gold">
+                            Recent News
                         </figcaption>
                     </figure>     
                 </div>
@@ -429,12 +438,12 @@
                     class=" br1-00 gr3s1 gc1s2 gr2s1-s gc1s1-s"  
                     data-use-new="true"
                 >
-                    <figure class="grid items-center justify-center">
+                    <figure class="grid items-end justify-center">
                         <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}" 
                             alt=""
                             class="w-100 br0-50 gc1s1 gr1s1">
-                        <figcaption class="gc1s1 gr1s1 tc">
-                            label one
+                        <figcaption class="gc1s1 gr1s1 tc bg-gradient1TB h-100 gold">
+                            Recent Publication
                         </figcaption>
                     </figure> 
                 </div>
@@ -447,8 +456,8 @@
                         <img src="{% static '_images\placeholders\regular_images\sky.jpg' %}" 
                             alt=""
                             class="w-100 br0-50 gc1s1 gr1s1">
-                        <figcaption class="gc1s1 gr1s1 tc">
-                            label one
+                        <figcaption class="gc1s1 gr1s1 tc bg-gradient1TB h-100 gold">
+                            Recent social feeds
                         </figcaption>
                     </figure>  
                 </div>

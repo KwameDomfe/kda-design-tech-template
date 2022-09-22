@@ -85,6 +85,8 @@ img{
 
 a:hover{
     opacity: 0.75;
+    color: gold;
+    font-weight: 600;
 }
 
 /* --x-- 01 TAGS --x-- */

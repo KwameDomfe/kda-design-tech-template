@@ -535,11 +535,6 @@ class ProjectOverview(models.Model):
     created_at=models.DateTimeField(
         auto_now_add=True)
     
-    def save(self, *arg, **kwarg):
-        if self.slug is None:
-            self.slug=slugify(self.name)
-        super().save(*arg, **kwarg)
-    
 class ProjectTag(models.Model):
     id=models.AutoField(primary_key=True)
     project_id=models.ForeignKey(
