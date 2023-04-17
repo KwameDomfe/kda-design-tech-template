@@ -26,10 +26,8 @@
                     class="w-100 vh-60 cover">
             </figure>
             <hgroup class="w-100 blue0 gc1s12">
-                <h2 class="
-                   
-                    pa1-00 mb0-00
-                    f5-00 ttu
+                <h2 class=" ph1-00 pb0-50 mb0-00
+                f5-00 ttu
                     ">
                     Mission Vision and Values
                 </h2>
@@ -47,7 +45,28 @@
                 <div id="pageDetails"
                     class="gc1s3
                         mb1-00 min-vh-100"
-                >   
+                >       <div id="mandate" class="grid gtc12 ggap1-00">
+                            <article id="mvv--overview" 
+                                class="gr2s1 gc1s12"
+                            >
+                                <div class="flex ggap1-00 
+                                    pv4-00 mh4-00
+                                    tj blue0 lh-copy f1-25"
+                                >
+                                    <div>
+                                        <p>
+                                            The Mission Vision and Values of AESL established by the British was used for all state works over decades post-colonial.
+                                        </p>
+                                        <p>
+                                            The institutions like State Construction Corporation (SCC), State Housing Corporation (SHC), Highways.
+                                        </p>
+                                        <p>
+                                            No privates businesses were allowed to handle state/ public works except the PWD.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                         <!-- Mission Start -->
                         <div id="mvv--mission"
                             class="grid gtc12 ggap1-00
@@ -55,7 +74,7 @@
                                 mb3-00"
                         >
                             <header id="mission_header"
-                                class="gr1s1 gc1s12 bg-goldT w-100">
+                                class="gr1s1 gc1s12 bg-gray w-100">
                                 <hgroup id=""
                                     class=""
                                 >
@@ -99,7 +118,7 @@
                                 </div>
                             
                             </article>
-                            {% comment %} <footer id="mission_footer" class="gr3s1 gc1s12 pa1-00 bg-goldT w-100">
+                            {% comment %} <footer id="mission_footer" class="gr3s1 gc1s12 pa1-00 bg-gray w-100">
                                 Practice || Mission Vision and Values 
                             </footer> {% endcomment %}
                         </div>
@@ -111,7 +130,7 @@
                                 
                                 mb3-00"
                         >
-                            <header class="gr1s1 gc1s12 bg-goldT w-100">
+                            <header class="gr1s1 gc1s12 bg-gray w-100">
                                 <hgroup id=""
                                     class=""
                                 >
@@ -169,7 +188,7 @@
                                 </div>
                                 <!-- Practice -->
                             </article>
-                            {% comment %} <footer class="gr3s1 gc1s12 pa1-00 bg-goldT w-100">
+                            {% comment %} <footer class="gr3s1 gc1s12 pa1-00 bg-gray w-100">
                                 Practice || Mission Vision and Values 
                             </footer> {% endcomment %}
                         </div>
@@ -182,7 +201,7 @@
                                 "
                         >
                             <header id="values_header"
-                                class="gr1s1 gc1s12 bg-goldT w-100">
+                                class="gr1s1 gc1s12 bg-gray w-100">
                                 <hgroup id=""
                                     class=""
                                 >
@@ -193,7 +212,7 @@
                                     </h2>     
                                 </hgroup> 
                             </header>
-                            <article id="values_" 
+                            <article id="values_main" 
                                 class="gr2s1 gc1s12 grid gtc12"
                             >   
                                 <div class="gc1s5 gr1s1 f1-25 grid items-center justify-center">
@@ -240,7 +259,7 @@
                                 <!-- Practice -->
                             </article>
                             <footer id="page_footer"
-                                class="gr3s1 gc1s12 pa1-00 bg-goldT w-100">
+                                class="gr3s1 gc1s12 pa1-00 bg-gray w-100">
                                 Practice || Mission Vision and Values 
                             </footer>
                         </div>
@@ -259,6 +278,12 @@
                     
                         <ul class="mb1-00 bl bw4 pl2-00">
                             <h3 >Page Sections</h3>
+                            <li class="mb1-00">
+                                <a href="#mvv--overview"
+                                    class="blue0"
+                                >
+                                Overview</a> 
+                            </li>
                             <li class="mb1-00">
                                 <a href="#mvv--mission"
                                     class="blue0"
@@ -280,9 +305,17 @@
                         </ul> 
                         <div class="h6-00" >
                             <small>Previous</small> </br>
-                            <a href="{% url 'website:functions' %}" class="mb1-00 blue0 f0-75 b">AESL Functions</a> <br><br>
+                            <a href="{% url 'website:functions' %}" 
+                                class="mb1-00 blue0 f0-75 b"
+                            >
+                                AESL Functions
+                            </a> <br><br>
                             <small>Next</small> </br>
-                            <a href="{% url 'website:sector-ministry' %}" class="mb1-00 blue0 f0-75 b">AESL Sector Ministry</a>
+                            <a href="{% url 'website:sector-ministry' %}" 
+                                class="mb1-00 blue0 f0-75 b"
+                            >
+                                AESL Sector Ministry
+                            </a>
                         </div>
                     </div>
                     

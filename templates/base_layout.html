@@ -24,7 +24,7 @@
 
         <!-- Favicon & title start -->
         <link 
-            href="{% static '_images\_partials\aesl_logo.png' %}" 
+            href="{% static '_images\_partials\logos\aesl_logo.png' %}" 
             rel="shortcut icon" 
             type="image/gif" 
         />
@@ -36,18 +36,15 @@
         <!-- Favicon & title end -->
 
         <!-- CSS Start-->
-        <link 
-            href="{% static '_css/gdb_normalize.css' %}" 
+        <link href="{% static '_css/gdb_normalize.css' %}" 
             rel="stylesheet" 
             type="text/css" 
         />
-        <link 
-            href="{% static '_css/Utilities.css' %}" 
+        <link href="{% static '_css/Utilities.css' %}" 
             rel="stylesheet"  
             type="text/css" 
         />
-        <link 
-            href="{% static '_css/style.css' %}" 
+        <link href="{% static '_css/style.css' %}" 
             rel="stylesheet" 
             type="text/css" 
         />
@@ -68,19 +65,19 @@
 
     <body class="pa0-00 ma0-00 ">
         <!-- page Layout Start -->
-        <main id="l__Contents" 
+        <div id="l__Contents" 
             class="flex flex-column flex-row-l vh-100 w-100"
         >   
-            <!-- Main Header -->
-                <div id="l__MainHeader" 
+            <!-- Main Aside Start -->
+                <aside id="l__mainAside" 
                     class=""  
                 >  
-                    {% include '_partials/main-header.html' %} 
-                </div>
-            <!-- Main Header --> 
+                    {% include '_partials/mainHeader.html' %} 
+                </aside>
+            <!-- Main Aside End --> 
             
             <!-- Main Content Start -->
-                <div id="l__MainContent"
+                <main id="l__MainContent"
                     class="w-100 vh-100 of-y-scroll"
                 >   
                     <!-- Page Content Start -->
@@ -93,12 +90,12 @@
                     <footer id="main__footer"
                         class=""
                     >
-                        {% include '_partials/main-footer.html' %}
+                        {% include '_partials/mainFooter.html' %}
                     </footer>
                     <!-- Main Footer End -->
-                </div>
+                </main>
             <!-- Main Content End -->
-        </main>
+        </div>
         <!-- page Layout End -->
     </body>
 </html>

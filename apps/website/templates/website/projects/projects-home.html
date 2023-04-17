@@ -29,14 +29,14 @@
                         class="grid gtc12
                         bg-white">
                         <figure class="gc1s12">
-                            <img src="{% static '_images\projects\residential\1.jpeg' %}"          
+                            <img src="{% static '_images\projects\residential\5_0.jpeg' %}"          
                                 alt=""
                                 class="w-100 vh-50 vh-60-l cover">
                         </figure>
                         <hgroup class="w-100 blue0 gc1s12">
                             <h2 class="
                                 w-100 h-100
-                                pa1-00 mb0-00
+                                pa1-00 pt0-00 mb0-00
                                 f5-00
                                 ">
                                 PROJECTS
@@ -50,73 +50,111 @@
                 
                     <!-- Page Main -->
                     <main class="bg-white">
-                       
+                        <!-- Overview -->
+                        <div id="overview"
+                            class="grid gtc12 ggap1-00"
+                        >
+                            <!-- Overview Description --> 
+                            <header 
+                                class="gr1s1 gc2s10 
+                                    w-100
+                                    blue0 bb"
+                            >
+                                <hgroup id="Project_Overview_1"
+                                    class="f1-50"
+                                >
+                                    <p class="mb0-00 pv4-00 lh-copy tracked tj">
+                                        {% lorem 50 w random %}.
+                                    </p>   
+                                </hgroup> 
+                            </header>
+                            <!-- Overview Description -->
+                        </div>
+                        <!-- Overview -->
                         <!-- Projects -->
                         <div id="projects"
-                            class = "
-                                ph0-25 
+                            class = "w-100 
+                                mv4-00
                                 white-90">
-                            <ul class="flex flex-wrap ggap1-00 dib   w-100">
+                            <ul class="flex justify-center flex-wrap w-100 ggap1-00">
                                 {% for project in projects_list %}
-                                    <li class="dib h18-00">
-                                        <a href="{% url 'website:project-details' project.slug %}">
+                                    <li class="grid
+                                        w-100 w-45-s w-29-m
+                                        mh0-50"
+                                    >
+                                        
                                             <article id="card" 
-                                                class="h16-00 w-100
-                                                    bg-blue0 pa0-50"
+                                                class="flex flex-column justify-start items-start
+                                                    h-100 w-100
+                                                    bg-blue0 pa0-50
+                                                    br0-50"
                                             >
                                                 <hgroup 
-                                                    class=" flex justify-between
-                                                        w-100"
+                                                    class="w-100"
                                                 >
-                                                    <div class="flex 
-                                                            w-100
-                                                            f1-50 mb2-00 bb">
-                                                        <span class="">{{ project.name }} <span class="pa1-00">-</span></span>
-                                                        <span class="">{{ project.location }}</span>  
+                                                    <div class="flex flex-column
+                                                        mv1-00
+                                                        bb"
+                                                    >
+                                                        <span class="mb0-50 b">{{ project.name }}</span> 
+                                                        <span class="f0-75 tr">{{ project.location }}</span>  
                                                     </div>
                                                 </hgroup>
 
+                                                <div class="flex flex-column justify-start
+                                                     mb2-00 w-100"
+                                                >
+                                                    <figure class="h12-00 w-100">
+                                                        <img src="{{ project.thumbnail.url }}" 
+                                                        alt="" 
+                                                        class="h-100 cover"
+                                                        />
+                                                    </figure>
+
+                                                    <figcaption class="h12-00
+                                                        w-100
+                                                        mt2-00 
+                                                        f1-00 lh-copy tj"
+                                                    >
+                                                        <p class=""
+                                                        >
+                                                            {{ project.description }} . . .
+                                                            {% comment %} <a href="{% url 'website:project-details' project.slug %}"> {% endcomment %}
+                                                           
+                                                       
+                                                        </p> 
+                                                        <div>
+                                                            <a href="{{ project.get_absolute_url }}"
+                                                                class="dib pv0-25 ph0-50 br0-25 bg-gold"
+                                                            >read more</a>
+                                                        </div>
+                                                          
+                                                    </figcaption>
+                                                </div>
+
                                                 <footer 
-                                                    class="flex justify-between
-                                                    w-100 bg-gold  pa0-50"> 
-                                                    <h5>{{ project.description }}</h5>  
-                                                    <h5>{{ project }}</h5>
+                                                    class="w-100"
+                                                > 
+                                                    <div class="flex justify-between w-100">
+                                                        <h5 class="pa0-50 ba br0-25">{{ project.sub_category }}</h5>
+                                                        <small class="pa0-50 ba br0-25">{{ project.sub_category.category }}</small>
+                                                    </div>
                                                 </footer>
                                             </article>
-                                        </a>
+                                        
                                     </li>
                                 {% endfor %}
                             </ul>
-                            <article id="misc_gold" 
-                                class="gr3s2 gc1s3
-                                    flex items-center justify-center
-                                    bg-gold
-                                    ">
-                            </article>
-
-                            <article id="misc_blue" 
-                                class="gr3s2 gc10s3
-                                    flex items-center justify-center
-                                    bg-black-90
-                                    ">
-                            </article>
                         </div>
                         <!-- Projects -->
                     </main>
                     <!-- Page Main -->
 
-                    <!-- page Footer -->
-                    <footer id = "home-page-footer">
-                        <div class="flex justify-between bg-blue0 pv4-00 ph1-00 white-90 mb1-00">
-                            <div>
-                                AESL
-                            </div>
-                            <div>
-                                Consulting Architects, Engineers and Surveyors
-                            </div>
-                        </div> 
+                    <!--Projects page Footer -->
+                    <footer id = "projectsPage__Footer">
+                        {% include 'website/_partials/page_footer.html' %} 
                     </footer>
-                    <!-- page Footer -->
+                    <!--Projects page Footer -->
                
             </div>
             {% endblock pagecontent %}   

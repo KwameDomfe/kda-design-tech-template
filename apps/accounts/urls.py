@@ -17,13 +17,15 @@ Including another URLconf
 from django.urls import path
 
 from . views import (
-    # admin_Login,
-    # admin_Home,
-    # staff_Login,
-    # admin_Login_Process,
     userlogin_view,
     userlogout_view,
     userRegister_view, 
+)
+from . adminViews import (
+    admin_Home,
+    admin_Login,
+    admin_logout,
+    
 )
 from django.conf import settings
 
@@ -38,17 +40,17 @@ urlpatterns = [
         name="user-logout"),
     path("register", 
         userRegister_view, 
-        name="register"),
+        name="user-register"),
 
-    # path(
-    #     'admin-login/', 
-    #     admin_Login, 
-    #     name='admin-login'
-    # ), 
-    # path('admin-home/', 
-    #     admin_Home, 
-    #     name='admin-home'
-    # ),
+    path(
+        'admin-login/', 
+        admin_Login, 
+        name='admin-login'
+    ), 
+    path('admin-home/', 
+        admin_Home, 
+        name='admin-home'
+    ),
    
     # path('admin-login-process/', 
     #     admin_Login_Process, 

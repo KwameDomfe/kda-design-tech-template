@@ -1,4 +1,3 @@
-
 {% extends 'base_layout.html' %}
 
 {% load static %}
@@ -29,56 +28,57 @@
 
 {% block pagecontent %}
     <div id="UserLognInPage"
-        class="vh-75 flex items-center justify-center
-            ma2-00">
+        class="vh-100 flex items-center justify-center
+            pa2-00">
         <div id="UserLognIn--Content"
-            class="flex flex-column items-center justify-between
+            class="flex flex-column items-center justify-around
             h-100 w-60-s">
 
             <header id = "UserLognIn--Header"
                 class="w-100 
-                pa1-00 mb1-00  
+                pa0-50  
                 bg-blue0
                 white-90">
                 <figure id = ""
-                    class="flex justify-between items-center 
-                        w12-00">
-                    <img src="{% static '_media/images/Regular_Images/fpo_avatar.png' %}" 
+                    class="flex justify-start items-center 
+                       ">
+                    <img src="{% static 'images\avatar-01.png' %}" 
                         alt=""
-                        class="w2-00 br-100">
+                        class="w2-50 br-100 mr1-00">
                     <figcaption class="f1-25 ttc">
                         User Login
                     </figcaption>
                 </figure>
             </header>
 
-            {% if not request.user.is_authenticated %}
-                <main id = "UserLognIn--Main"
-                    class="bg-white">
+            <main id = "UserLognIn--Main"
+                class="">
+                {% if not request.user.is_authenticated %}
                     <!-- login details -->
                     <form id=""
                         class="flex flex-column justify-between items-center 
-                            w-100 h-100 ph1-00" 
+                            w-100 h-100" 
                         method="POST"
                         action="">
                         {% csrf_token %}
-                        {% if error %}
-                            <p class="red">{{error}}</p>
-                        {% endif %}
+                       
                         <fieldset id = "admin-primary-credentials"
                             class="ph1-00  mb1-00 w-100">
                             <legend class="ph0-50">
-                            Login Credentials
+                                Login Credentials
                             </legend>
+                            
                             <label for="username" 
-                                class="dib mb1-00 w-100">Username:
-                                <input id="username"
-                                    name="username"
-                                    class="w-100 pa0-50 mt0-25" 
+                                class="dib mb1-00 w-100">
+                                Username:
+                                <input id="username" 
                                     type="text"
+                                    name="username"
+                                    class="w-100 pa0-50 mt0-25"
                                     placeholder="Please Enter Your Username"
                                     tabindex="1" />
                             </label>
+
                             <label for="password"
                                 class="dib mb1-00 w-100">Password:
                                 <input id="password"
@@ -87,26 +87,35 @@
                                     type="password"
                                     placeholder="Please Enter Your Password"
                                 />
-                                <!-- <a class="blue0 f0-75" href="">Forgot Password?</a> -->
+                                <a class="blue0 f0-75" href="">
+                                    Forgot Password?
+                                </a>
                             </label>
-                            
-                            <label for="logInSubmit"
-                                class="dib 
-                                    w-100">
-                                <button type = "submit"
-                                    class = "blue0
-                                        
+
+                            <div class="flex justify-between ">
+                                <label for="logInSubmit"
+                                    class="dib 
+                                        w-100">
+                                    <button type = "submit"
+                                        class = "bg-blue0
+                                        white-90
                                         pa0-50
-                                        "    
-                                >
-                                    Submit
-                                </button>
-                            </label> 
+                                        br0-25
+                                        b--none ttu"
+                                    >
+                                        Submit
+                                    </button>
+                                </label> 
+                            </div>
                         </fieldset>
-                    
+                            {% if error %}
+                                <p class="red">{{error}}</p>
+                                <p class="blue0">If you've forgotten your username or password...</p>
+                                <p class="red">{{suggestion}}</p>
+                            {% endif %}
                         <fieldset id ="admin-alternate-credentials" 
-                            class="ph1-00  mb1-00 w-100">
-                            <legend class="ph0-50">Secondary Login</legend>
+                            class="ph1-00 br0-25 mb1-00 w-100">
+                            <legend class="ph0-50 ">Secondary Login</legend>
                             <nav id="nav_social_media"
                                 class="w-100 mb1-00" 
                                 tabindex="0" 
@@ -122,7 +131,7 @@
                                                 title="Follow me on Twitter" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer">
-                                                <img src="{% static '_media/svgs/twitter.svg' %}" 
+                                                <img src="{% static 'svgs\twitter.svg' %}" 
                                                     alt="" 
                                                     class="w1-00 mr1-00 "
                                                 >
@@ -135,7 +144,7 @@
                                                 title="Follow me on Facebook" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer">
-                                                <img src="{% static '_media/svgs/facebook.svg' %}" 
+                                                <img src="{% static 'svgs/facebook.svg' %}" 
                                                     alt="" 
                                                     class="w1-00 mr0-25">
                                                     facebook
@@ -147,7 +156,7 @@
                                                 title="Connect with me on LinkedIn" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer">
-                                                <img src="{% static '_media/svgs/linkedin.svg' %}" 
+                                                <img src="{% static 'svgs/linkedin.svg' %}" 
                                                     alt="" 
                                                     class="w1-00 mr0-25">
                                                 linkedIn
@@ -158,13 +167,16 @@
                             </nav>
                         </fieldset>
                     </form>
+                    <p>Need an account? Please <a class="pa0-25 blue0 ba br0-25 f1-00 ttu" 
+                        href="{% url 'accounts:user-register' %}">Register</a></p>
                     <!-- Log In with Social Media -->
-                </main>
-            {% else %}
-                <p class=" tc">
-                    You are already logged in. <br><br><br> Would you like to <a class="blue0 ba br0-25 pa0-25 f1-00 ttu" href="{% url 'accounts:user-logout' %}">logout?</a> 
-                </p>
-            {% endif %}
+                {% else %}
+                    <p class=" tc">
+                        You are already logged in. Would you like to <a class="pa0-25 blue0 ba br0-25 f1-00 ttu" 
+                        href="{% url 'accounts:user-logout' %}">logout?</a> 
+                    </p>
+                {% endif %}
+            </main>
 
             <footer id="UserLognIn--Footer"
                 class="flex justify-between items-center

@@ -30,8 +30,8 @@
                 </figure>
                 <hgroup class="gc1s12 w-100 blue0">
                     <h2 class="w-100 h-100
-                        pa1-00 pb1-00 mb0-00
-                        f3-00
+                        pa1-00 ph4-00 mb0-00
+                        f3-00 ttu
                         ">
                         Manging Director
                     </h2>     
@@ -67,7 +67,7 @@
                                     white-90 bg-blue1"
                         >
                             <figure class="shadow-5 bg-blue2 mb0-50">
-                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"            
+                                <img src="{% static '_images\practice\management\managing-director\md-01.jpg' %}"
                                     alt=""
                                     class="pa0-50 w-75 bg-blue0"
                                 /> 
@@ -83,9 +83,9 @@
                                 </h5> 
                                 <h6>
                                     architect
-                                </h6>   
+                                </h6>
 
-                            </hgroup> 
+                            </hgroup>
                         </article>
                         
                         <article id="people_principal_consultant_gallery_4" 
@@ -244,17 +244,18 @@
                                     ">
                                     News 1
                                 </h5> 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate unde eius, est fugiat rerum possimus, modi eos officiis, architecto saepe cupidita</p>    
-                                    
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate unde eius, est fugiat rerum possimus, modi eos officiis, architecto saepe cupidita
+                                </p>
                             </hgroup> 
                         </article>
                         
                         <article id="news_2" 
                             class="gr1s1 gc4s3 w-100
                                 flex
-                                    h0-00 
-                                    pb-100 
-                                    white-90 bg-blue0"
+                                h0-00 
+                                pb-100 
+                                white-90 bg-blue0"
                         >
                             <hgroup class="flex  flex-column 
                                         w-100 h-100
@@ -307,18 +308,16 @@
                                     pa0-50
                                     bg-blue0"
                             >   
-                                {% for x in junior_ranks %}
+                                {% for x in junior_ranks_1 %}
                                     <li class="">
                                         
-                                        <a  href=""
-                                            class="white-90" 
-                                        >{{ x }}</a>
+                                       {{ x }}
                                     </li>
                                 {% endfor %}          
                             </ul> 
                         </article>
                                                         
-                        <article id="people_rank_2" 
+                        <article id="junior_ranks_2" 
                             class="gr2s1 gc10s3 shadow-5
                             flex
                                     h0-00 
@@ -367,7 +366,7 @@
                 <!-- Principal Consultants Gallery --> 
                 <hgroup class="gc1s12 w-100 blue0">
                     <h2 class="w-100 h-100
-                        pa1-00 pb1-00 mb0-00
+                        pv1-00 mb0-00
                         f3-00 ttu
                         ">
                         Managing Director Alumni
@@ -390,19 +389,18 @@
                                 alt=""
                                 class="w-100 h-100
                                     ba b--gold 
-                                    cover">
+                                    cover"
+                        >
                         </figure>
-                            <hgroup 
-                            class="flex 
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
                             w-100 h-100 
-                            bg-black-90
-                            z-5
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 
-                                class="flex items-center justify-center 
-                                w-100 h-100 
-                                white-90 ">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 
@@ -419,19 +417,21 @@
                                 alt=""
                                 class="w-100 h-100
                                     ba b--gold 
-                                    cover">
-                                
+                                    cover"
+                            />
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
-                            w-100 h-100 bg-black-20
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
+                            w-100 h-100 
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc 
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
-                        </hgroup> 
+                        </hgroup>  
                     </article>
 
                     <article id="principalConsultants_03" 
@@ -448,14 +448,15 @@
                                     cover">
                                 
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
                             w-100 h-100 
-                            bg-goldT
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc white-50
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 
@@ -468,16 +469,14 @@
                             relative"
                     >
                         <hgroup 
-                            class="flex 
+                            class="flex flex-column items-center justify-center 
                             w-100 h-100 
-                            bg-blue1t3
-                            z-5
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 
-                                class="flex items-center justify-center 
-                                w-100 h-100 
-                                white-90 ">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 
@@ -506,13 +505,15 @@
                                     cover">
                                 
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
-                            w-100 h-100 bg-black-80
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
+                            w-100 h-100 
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc 
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 
@@ -532,14 +533,15 @@
                                     cover">
                                 
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
                             w-100 h-100 
-                            bg-gold
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc 
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 
@@ -551,20 +553,18 @@
                             pa0-50 
                             relative"
                     >
-                        <hgroup 
-                            class="flex 
-                            w-100 h-100 
-                            bg-blue1t3
-                            z-5
-                            absolute">
-                            <h5 
-                                class="flex items-center justify-center 
-                                w-100 h-100 
-                                white-90 ">
-                                Managing Director Alumni Details
-                            </h5>
-                            <h4>Start Date - End Date</h4>     
-                        </hgroup> 
+                    <hgroup 
+                        class="flex flex-column items-center justify-center 
+                        w-100 h-100 
+                        bg-black-40
+                        white-90 z-5
+                        absolute">
+                        <h5 class="
+                            ">
+                           Managing Director Alumni Details
+                        </h5>
+                        <h4>Start Date - End Date</h4>     
+                    </hgroup> 
                         <figure 
                             class=""
                         >
@@ -590,16 +590,18 @@
                                     cover">
                                 
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
-                            w-100 h-100 bg-black-80
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
+                            w-100 h-100 
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc 
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
-                        </hgroup> 
+                        </hgroup>  
                     </article>
 
                     <article id="principalConsultants_09" 
@@ -616,14 +618,15 @@
                                     cover">
                                 
                         </figure> 
-                        <hgroup class="flex justify-around items-start flex-column 
+                        <hgroup 
+                            class="flex flex-column items-center justify-center 
                             w-100 h-100 
-                            bg-gold
+                            bg-black-40
+                            white-90 z-5
                             absolute">
-                            <h5 class="flex items-center justify-center
-                                w-100 tc 
-                                white-90">
-                                Managing Director Alumni Details
+                            <h5 class="
+                                ">
+                               Managing Director Alumni Details
                             </h5>
                             <h4>Start Date - End Date</h4>     
                         </hgroup> 

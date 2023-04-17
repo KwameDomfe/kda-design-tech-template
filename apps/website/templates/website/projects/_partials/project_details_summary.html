@@ -10,13 +10,14 @@
             flex items-center justify-center
             h11-00
             white-90
-            ">
+            "
+    >
         <ul class=" 
                 w-100 h-100
                 pa0-50
                 bg-blue0
-                ">
-            <h5 class="mb1-00">
+                br0-50">
+            <h5 class="mb0-50">
                 Project Coordinator
             </h5>
             <li>
@@ -29,38 +30,42 @@
         class="gr1s1 gc3s2
             flex items-center justify-center
             h11-00
-            white-90"
-        >
+            white-90
+           "
+    >
         <ul class=" 
                 w-100 h-100
                 pa0-50 
                 bg-blue1
-                white-90"
+                white-90 
+                br0-50"
         >
-            <h5 class="mb1-00">
+            <h5 class="mb0-50">
                 Project Leads
             </h5>
-          
-                <li>
-                    
-                </li>     
             
+            {% for x in projectLead %}
+                <li>
+                   {{ x }} 
+                </li>     
+            {% endfor %}
+           
         </ul> 
     </article>
 
     <article id="project_summary_3" 
         class="gr1s1 gc5s2
             flex items-center justify-center
-            h11-00
-            "
+            h11-00"
     >
         <ul class="
             w-100 h-100 
             pa0-50
             bg-blue2
-            white-90"
+            white-90
+            br0-50"
         >
-            <h5 class="mb1-00">
+            <h5 class="mb0-50">
                 Job Sheets
             </h5>
             <li>English</li>
@@ -72,32 +77,34 @@
         class="gr1s1 gc7s2
             h11-00
             bg-blue3
-        ">
-        <div 
-            class="w-100
-                pa0-50
-                white-90
-                ">
-            <h5 class="mb0-25">
-                Sart Date
-            </h5>
-            <p class="mb0-25">{{project.start_date}}</p>
-            <h5 class="mb0-25">
-                Competed Date
-            </h5>
-            <p class="mb0-25">{{project.completed_date }}</p>
-        </div> 
+            br0-50"
+    >
         <div 
             class="
                 w-100 
                 pa0-50
-                white-90
-                ">
-            <h5 class="mb0-25">
+                white-90"
+        >
+            <h5 class="mb0-50">
                 Client
             </h5>
             <p class="mb0-25">{{project.client}}</p>
         </div> 
+
+        <div 
+            class="w-100
+                pa0-50
+                white-90"
+        >
+            <h5 class="mb0-50">
+                Sart Date
+            </h5>
+            <p class="mb0-25">{{ project.start_date|date:'F, Y' }}</p>
+            <h5 class="mb0-50">
+                Competed Date
+            </h5>
+            <p class="mb0-25">{{ project.completed_date|date:'F, Y' }}</p>
+        </div>  
     </article>
 
     <article id="project_summary_5" 
@@ -105,13 +112,14 @@
             h11-00
             pa0-50
             bg-gold
-        ">
+            br0-50"
+    >
         <div 
             class="w-100
             
                 white-90
                 ">
-            <h5 class="mb1-00">
+            <h5 class="mb0-50">
                 Location
             </h5>
             <p>{{project.location}}</p>
@@ -122,26 +130,26 @@
             
                 white-90
                 ">
-            <h5 class="mb1-00">
+            <h5 class="mb0-50">
                 Total Floor Area
             </h5>
-            <p>{{project.total_floor_area}}<sup>2</sup></p>
+            <p>{{project.total_floor_area}} m<sup>2</sup></p>
         </div> 
     </article>
 
     <article id="project_summary_6" 
         class="gr1s1 gc11s2
             h11-00
-        pa0-50 
-        bg-black-90 
-        "
+            pa0-50 
+            bg-black-90 
+            br0-50"
     >
         <div>
         <div 
             class="w-100
                 white-90
                 ">
-                <h5 class="mb1-00">
+                <h5 class="mb0-50">
                     Cost
                 </h5>
                 <p>{{project.cost}}</p>
@@ -152,7 +160,7 @@
             
                 white-90
                 ">
-            <h5 class="mb1-00">
+            <h5 class="mb0-50">
                 Certifications
             </h5>
             <p>

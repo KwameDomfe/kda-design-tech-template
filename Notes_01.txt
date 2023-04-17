@@ -10,3 +10,6 @@ Naming Conventions
 
 3. Javascript 
     
+
+    <a href="{% url 'website:project-details' project.slug %}"> 
+    <a href="{{project.get_absolute_url}}">

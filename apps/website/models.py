@@ -1,128 +1,114 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from django.utils.text import slugify
+from django.urls import reverse
 
 
-""" Custom User Start """
-# class CustomUser(AbstractUser):
-#     user_type_choices=(
-#         (1, 'Admin'),
-#         (2, 'Staff'),
-#         (2, 'Merchant'),
-#         (4, 'Customer'))
-#     user_type=models.CharField(   
-#         max_length=256, 
-#         choices=user_type_choices,
-#         default=1)
-""" Custom User End """   
-
-""" Users Types """
-# class AdminUser(models.Model):
-#     profile_picture=models.FileField(default='')
-#     auth_user_id=models.OneToOneField(
-#         CustomUser,
-#         on_delete=models.CASCADE
-#     )
-#     created_at=models.DateTimeField(auto_now_add=True)
-
-# class StaffUser(models.Model):
-#     profile_picture=models.FileField(default='')
-#     auth_user_id=models.OneToOneField(
-#         CustomUser,
-#         on_delete=models.CASCADE
-#     )
-#     created_at=models.DateTimeField(auto_now_add=True)
-
-# class MerchantUser(models.Model):
-#     profile_picture=models.FileField(default='')
-#     auth_user_id=models.OneToOneField(
-#         CustomUser,
-#         on_delete=models.CASCADE
-#     )
-#     company_name=models.CharField(max_length=256)
-#     gst_details=models.CharField(max_length=256)
-#     address=models.TextField()
-#     created_at=models.DateTimeField(auto_now_add=True)
-
-# class CustomerUser(models.Model):
-#   profile_picture=models.FileField(default='')
-#   auth_user_id=models.OneToOneField(
-#   CustomUser,
-#   on_delete=models.CASCADE)
-# created_at=models.DateTimeField(auto_now_add=True)
-""" Users Types """
-
-""" Categories and Sub Categories """
+""" Categories and Sub Categories Start"""
 # Categories Model
-class Categories(models.Model):
+class Category(models.Model):
     id=models.AutoField(
-        primary_key=True
-    )
+        primary_key=True)
+
     name=models.CharField(
-        max_length =128
-    )
+        max_length =128)
+
     slug=models.SlugField(
         blank=True,
-        null=True 
-    )
-    description=models.TextField(
-        max_length=512
-    )
-    thumbnail=models.FileField(
-        blank=True
-    )
-    is_active=models.IntegerField(
-        default=1
-    )
-    created_at=models.DateTimeField(
-        auto_now_add=True
-    )
+        null=True )
 
+    description=models.TextField(
+        max_length=512,
+        blank=True,
+        null=True )
+
+    thumbnail=models.FileField(
+        blank=True,
+        )
+
+    is_active=models.BooleanField(
+        default=True)
+
+    created=models.DateTimeField(
+        auto_now_add=True)
+
+    updated=models.DateTimeField(
+        auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'Project Categories'
+        ordering = ['-created','-updated','name',]
+        
     def __str__(self):
         return self.name
     
-    def save(self, *arg, **kwarg):
-        if self.slug is None:
-            self.slug=slugify(self.name)
-        super().save(*arg, **kwarg)
+    def save(self, *args, **kwargs):
+        # if self.slug is None:
+        #     self.slug=slugify(self.name)
+        super().save(*args, **kwargs)
+
+def category_pre_save(sender, instance, *args, **kwargs):
+    print('pre_save')
+    if instance.slug is None:
+        instance.slug = slugify(instance.name)
+
+pre_save.connect(category_pre_save, sender = Category)
+
+def category_post_save(sender, instance, created, *args, **kwargs):
+    print('post_save')
+    if created:
+        instance.slug = slugify(instance.name)
+        instance.save()
+
+post_save.connect(category_post_save, sender = Category)
 
 # Sub Categories Model
-class SubCategories(models.Model):
+class SubCategory(models.Model):
     id=models.AutoField(
         primary_key=True)
-    category_id=models.ForeignKey(
-        Categories, 
+
+    category=models.ForeignKey(
+        Category, 
         on_delete=models.SET_NULL, 
-        null=True
-    )
+        null=True)
+
     name=models.CharField(
-        max_length=128
-    )
+        'Sub Category Name',
+        max_length=128)
+
     slug=models.SlugField(
         blank=True,
-        null=True 
-    )
+        null=True )
+
     description=models.TextField(
+        'Sub Category Description',
         max_length=512,
         null=True)
-    thumbnail=models.FileField(
-        blank=True
 
-    )
+    thumbnail=models.FileField(
+        blank=True)
+
     pub_date=models.DateField(
-        'date published', 
+        'Date Published', 
+        auto_now=True,
         blank= True, 
         null=True)
-    is_active=models.IntegerField(
-        default=1
-    )
+
+    is_active=models.BooleanField(
+        default=True)
+
     created_at=models.DateTimeField(
+        'Date Created',
         auto_now_add=True,
         blank= True, 
         null=True)
 
+    class Meta:
+        verbose_name_plural = 'Sub Categories'
+        ordering = ['id']
+
     def __str__(self):
         return self.name
 
@@ -131,15 +117,17 @@ class SubCategories(models.Model):
             self.slug=slugify(self.name)
         super().save(*arg, **kwarg)
 
-""" Categories and Sub Categories """
+""" Categories and Sub Categories End"""
 
 """ Personal Information Starts """
-# Titles Model
+# Title Model
 class Title(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length=128)
+
     description=models.CharField(
         max_length=128)
     
@@ -150,12 +138,14 @@ class Title(models.Model):
 class Profession(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length=64)
+
     description=models.TextField(
         max_length=512, 
         blank=False,
-        default='type something here')
+        default='Give a brief description of Profession here')
 
     def __str__(self):
         return self.name
@@ -164,18 +154,12 @@ class Profession(models.Model):
 class Gender(models.Model):
     id=models.AutoField(
         primary_key=True)
-    name=models.CharField(
-        max_length=16)
-    
-    def __str__(self):
-        return self.name
 
-# Marital Status
-class MaritalStatus(models.Model):
-    id=models.AutoField(
-        primary_key=True)
     name=models.CharField(
         max_length=16)
+
+    class Meta:
+        verbose_name_plural = 'Gender'
     
     def __str__(self):
         return self.name
@@ -190,15 +174,18 @@ class Person(models.Model):
         on_delete=models.SET_NULL, 
         null=True)
         
-    surName=models.CharField(
+    surname=models.CharField(
+        'Surname',
         max_length =128, 
         null=True)
 
-    lastName=models.CharField(
+    lastname=models.CharField(
+        'Lastname',
         max_length =128, 
         null=True)
 
-    otherName=models.CharField(
+    othername=models.CharField(
+        'Other Names',
         max_length =128, 
         null=False, 
         blank=True)
@@ -207,18 +194,13 @@ class Person(models.Model):
         max_length=512, 
         blank=False)
 
-    dateOfBirth=models.DateField(
-        'date of Birth', 
+    dob=models.DateField(
+        'Date of Birth', 
         blank=True, 
         null=True)
 
     gender=models.ForeignKey(
         Gender, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    maritalStatus=models.ForeignKey(
-        MaritalStatus, 
         on_delete=models.SET_NULL, 
         null=True)
 
@@ -246,25 +228,87 @@ class Person(models.Model):
     
     def __str__(self):
         return self.description
+
 """ Personal Information Ends """
 
 """ Practice """
+
 # Regions
-class Region(models.Model):
+class Section(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length =128)
+
+    description=models.TextField(
+        max_length=512, 
+        blank=False,
+        default='Give a brief description of Section here')
+
+    def __str__(self):
+        return self.name
+
+# Regions
+class Department(models.Model):
+    section = models.ForeignKey(
+        Section,
+        on_delete=models.SET_NULL, 
+        null=True,
+        blank = True)
+
+    id=models.AutoField(
+        primary_key=True)
+
+    name=models.CharField(
+        max_length =128)
+
+    description=models.TextField(
+        max_length=512, 
+        blank=False,
+        default='Give a brief description of Department here')
+
+    def __str__(self):
+        return self.name
+
+class Service(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+
+    department=models.ForeignKey(
+        Department,
+        on_delete=models.SET_NULL,
+        null=True)
     
+    name=models.CharField(
+        max_length=64)
+
+    description=models.TextField(
+        max_length=512, 
+        blank=False,
+        default='Give a brief description of Services here')
+
     def __str__(self):
         return self.name
 
 # Towns and Cities
-class TownCity(models.Model):
+class Region(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length =128)
+
+    def __str__(self):
+        return self.name
+
+class Office(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+
+    name=models.CharField(
+        max_length =128)
+
     region=models.ForeignKey(
         Region,
         on_delete=models.SET_NULL,
@@ -273,29 +317,16 @@ class TownCity(models.Model):
     def __str__(self):
         return self.name
 
-# Offices
-class Office(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-    name=models.CharField(
-        max_length =128)
-    town_city=models.ForeignKey(
-        TownCity,
-        on_delete=models.SET_NULL,
-        null=True)
-    
-    def __str__(self):
-        return self.name
-
 """ Practice """
-
 
 # Positions
 class Position(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length=64)
+
     description=models.TextField(
         max_length=512, 
         blank=False,
@@ -307,8 +338,14 @@ class Position(models.Model):
 class Rank(models.Model):
     id=models.AutoField(
         primary_key=True)
+
     name=models.CharField(
         max_length=64)
+
+    slug=models.SlugField(
+        blank=True,
+        null=True)
+
     description=models.TextField(
         max_length=512, 
         blank=False,
@@ -322,18 +359,8 @@ class Rank(models.Model):
             self.slug=slugify(self.name)
         super().save(*arg, **kwarg)
 
-class Department(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-    name=models.CharField(
-        max_length =128
-    )
-
-    def __str__(self):
-        return self.name
-
 # Directors Model
-class BoardOfDirectors(models.Model):
+class BoardOfDirector(models.Model):
     id=models.AutoField(
         primary_key=True)
     person=models.ForeignKey(
@@ -358,30 +385,20 @@ class BoardOfDirectors(models.Model):
 class Staff(models.Model):
     id=models.AutoField(primary_key=True)
 
-    staff_number=models.CharField(
-        max_length=32,
-        default='QW23')
-
     person=models.ForeignKey(
         Person, 
         on_delete=models.SET_NULL, 
         null=True)
+
+    staff_number=models.CharField(
+        max_length=32,
+        default='QW23')
     
     description=models.TextField(
         max_length=512)
-
-    department=models.ForeignKey(
-        Department, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
+    
     rank=models.ForeignKey(
         Rank, 
-        on_delete=models.SET_NULL, 
-        null=True)
-
-    office=models.ForeignKey(
-        Office, 
         on_delete=models.SET_NULL, 
         null=True)
 
@@ -395,32 +412,57 @@ class Staff(models.Model):
 
 # Management Model
 class Management(models.Model):
-    id=models.AutoField(primary_key=True)
-    staff_id=models.ForeignKey(
+    id = models.AutoField(primary_key=True)
+    staff=models.ForeignKey(
         Staff, 
         on_delete=models.SET_NULL, 
         null=True)
-    position_id=models.ForeignKey(
+    position=models.ForeignKey(
         Position, 
         on_delete=models.SET_NULL, 
         null=True)
+    department=models.ForeignKey(
+        Department, 
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True)
+    office = models.ForeignKey(
+        Office,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True
+    )
+    slug=models.SlugField(
+        blank=True,
+        null=True 
+    )
     description=models.TextField(
         max_length=512)
-    dateOfFirstAppointment=models.DateField(
+    date_of_first_appointment=models.DateField(
         'date of First Appointment', 
         blank= True, 
         null=True)
-   
+    
+    class Meta:
+        verbose_name_plural = 'Management'
+        ordering = ['description']
+        
     def __str__(self):
         return self.description
-
+    
+    def save(self, *arg, **kwarg):
+        if self.slug is None:
+            self.slug=slugify(self.description)
+        super().save(*arg, **kwarg)
 
 """ Projects Information Starts """
+
 # Projects Model
 class Project(models.Model): 
     id=models.AutoField(primary_key=True)
+    
     sub_category=models.ForeignKey(
-        SubCategories, 
+        SubCategory, 
         on_delete=models.SET_NULL, 
         null=True)
     name=models.CharField(
@@ -428,8 +470,10 @@ class Project(models.Model):
     slug=models.SlugField(
         blank=True,
         null=True)
-    description=models.TextField(
-        )
+    description=models.TextField()
+    thumbnail= models.ImageField(
+        upload_to='images/projects/',
+        default = '_images/placeholders/regular_images/square-01.png') 
     location= models.CharField(
         max_length=128, 
         null=True)
@@ -440,14 +484,16 @@ class Project(models.Model):
     client=models.CharField(
         max_length=128, 
         null=True)
-    total_floor_area=models.CharField(
-        max_length=128, 
+    total_floor_area=models.DecimalField(
+        max_digits=9,
+        decimal_places=2, 
         null=True)
     coordinator=models.ForeignKey(
         Staff,
         on_delete=models.SET_NULL,
         null=True)
     jobsheet=models.FileField( 
+        blank=True,
         null=True)
     start_date=models.DateField(
         blank=True, 
@@ -456,8 +502,20 @@ class Project(models.Model):
     completed_date=models.DateField(
         blank=True, 
         null=True,
-        auto_now=True)   
-
+        auto_now_add=True)  
+    
+    class Meta:
+        verbose_name='Project'
+        verbose_name_plural = 'Projects'
+        ordering = ['name','-start_date',]
+    
+    def get_absolute_url(self):
+        return reverse(
+            "website:project-details", 
+            kwargs={"slug": self.slug}
+            # args=[self.slug]
+            ) 
+        
     def __str__(self):
         return self.name
 
@@ -468,12 +526,16 @@ class Project(models.Model):
 
 class ProjectLead(models.Model):
     id=models.AutoField(primary_key=True)
-    project=models.ForeignKey(
-        Project, on_delete=models.SET_NULL,
-        null=True)
+    project = models.ForeignKey(
+        Project,
+        on_delete= models.CASCADE,
+        null = True,
+        blank = True)
+
     slug=models.SlugField(
         blank=True,
         null=True)
+
     staff=models.ForeignKey(
         Staff, on_delete=models.SET_NULL,
         null=True)
@@ -492,15 +554,19 @@ class ProjectLead(models.Model):
 
 class ProjectDetail(models.Model):
     id=models.AutoField(primary_key=True)
-    project_id=models.ForeignKey(
-        Project, on_delete=models.SET_NULL,
-        null=True
-    )
+    
+    project = models.OneToOneField(
+        Project,
+        parent_link= Project,
+        on_delete= models.CASCADE,
+        default= 'true')
+
     title=models.CharField(
         max_length=256)
+    
     title_details=models.CharField(
-        max_length=256
-    )
+        max_length=256)
+    
     created_date=models.DateField(
         blank=True, 
         null=True,
@@ -508,78 +574,40 @@ class ProjectDetail(models.Model):
 
 class ProjectMedia(models.Model):
     id=models.AutoField(primary_key=True)
-    project_id=models.ForeignKey(
+    project=models.ForeignKey(
         Project, 
         on_delete=models.CASCADE,
-        null=True
-    )
+        null=True)
     media_type_choice = (
         (1, 'Image'),
-        (2,'Video'),
-        )
+        (2,'Video'),)
+        
     media_type = models.CharField(
-        max_length=256,
-    )
-    media_content = models.FileField(
-    )
-
+        max_length=256,)
+    
+    media_content = models.FileField()
+    
 class ProjectOverview(models.Model):
     id=models.AutoField(primary_key=True)
-    project_id=models.ForeignKey(
-        Project, on_delete=models.SET_NULL,
-        null=True
-    )
+    project= models.ForeignKey(
+        Project,
+        on_delete= models.CASCADE,
+        null = True,
+        blank = True)   
     description=models.TextField(
         max_length=256,
         default='Project Overview')
     created_at=models.DateTimeField(
         auto_now_add=True)
-    
+
 class ProjectTag(models.Model):
     id=models.AutoField(primary_key=True)
-    project_id=models.ForeignKey(
+    project=models.ForeignKey(
         Project, 
         on_delete=models.SET_NULL,
-        null=True
-    )
+        null=True)
     title=models.CharField(
         max_length=256)
     created_at=models.DateTimeField(
         auto_now_add=True)
- 
 """ Projects Information Ends """
-
-""" Recievers Start """
-    # @receiver(post_save, sender=CustomUser)
-    # def create_user_profile(sender, instance, created, **kwargs):
-    #     if created:
-    #         if instance.user_type == 1:
-    #             AdminUser.objects.create(
-    #                 auth_user_id=instance)
-
-    #         if instance.user_type == 2:
-    #             StaffUser.objects.create(
-    #                 auth_user_id=instance)
-
-    #         if instance.user_type == 3:
-    #             MerchantUser.objects.create(
-    #                 auth_user_id=instance,
-    #                 company_name='', 
-    #                 gst_details='',
-    #                 address='')
-
-    #         if instance.user_type == 4:
-    #             CustomerUser.objects.create(
-    #                 auth_user_id=instance)
-
-    # @receiver(post_save, sender=CustomUser)
-    # def save_user_profile(sender, instance, **kwargs): 
-    #     if instance.user_type == 1:
-    #         instance.adminuser.save()
-    #     if instance.user_type == 2:
-    #         instance.staffuser.save()
-    #     if instance.user_type == 3:
-    #         instance.merchantuser.save()
-    #     if instance.user_type == 4:
-    #         instance.customeruser.save()
-""" Recievers End """

@@ -14,14 +14,15 @@
             <figure class="gc1s12">
                 <img src="{% static '_images\principles\_partials\principles_1.png' %}"          
                     alt=""
-                    class="w-100 vh-50 vh-60-l cover">
+                    class="w-100  vh-50 vh-60-l
+                       cover"
+                />
             </figure>
             <hgroup class="w-100 blue0 gc1s12">
-                <h2 class="
-                    w-100 h-100
-                    pa1-00 mb0-00
-                    f5-00 ttu
-                    ">
+                <h2 class="ph1-00 pb1-00 mb0-00
+                    f5-00 ttu"
+                >
+                    
                     Civic
                 </h2>     
             </hgroup>
@@ -45,21 +46,10 @@
                         ph1-00
                         mb1-00"
                 >
-                    <header id="civic--overview"
-                        class="gr1s1 gc1s12 bg-red w-100 white-90">
-                        <hgroup 
-                            class=""
-                        >
-                            <h2 class="pa1-00 mb0-00
-                                f2-00 ttu"
-                            >
-                                Overview
-                            </h2>     
-                        </hgroup> 
-                    </header>
+                    
                     <!-- Overview Description -->
                     <article id="Project_Overview_1" 
-                        class="gr2s1 gc1s8"
+                        class="gr1s1 gc2s10 tj lh-copy"
                     > 
                         <p>
                             AESL offers consultancy services in the infrastructure and building construction industry offering architectural and engineering services to public and private sector clients.
@@ -80,12 +70,12 @@
 
                     <!-- Overview Gallery -->
                     <div id="overview_gallery"
-                        class="gr3s1 gc1s12
+                        class="gr2s1 gc1s12
                             grid gtc12 ggap1-00
                             ph0-25 white-90">
                         
                         <article id="" 
-                            class="gr1s1 gc1s3
+                            class="gr1s1 gc1s4
                             flex items-center justify-center
                             relative">
                             <hgroup 
@@ -112,7 +102,7 @@
                         </article>
                         
                         <article id="passport_office" 
-                            class="gr1s1 gc6s5
+                            class="gr1s1 gc7s6
                                 flex items-center justify-center
                                 relative"
                         >
@@ -215,7 +205,7 @@
                     </div>
                     <!-- Overview Gallery --> 
                     <!-- Page Footer -->
-                    <footer class="gr4s1 gc1s12 pa1-00 bg-red white-90">
+                    <footer class="gr3s1 gc1s12 pa1-00 bg-red white-90">
                         Principles || Civic
                     </footer>
                     <!-- Page Footer -->
@@ -234,30 +224,6 @@
                     ph2-00 pt6-00
                     sticky top-0"
                 >
-                    
-                    <ul class="mb1-00 bl bw4 pl2-00">
-                        <h3 >Page Sections</h3>
-                        <li class="mb1-00">
-                            <a href="#civic--overview"
-                                class="blue0"
-                            >
-                                Oveview</a> 
-                        </li>
-                        <li class="mb1-00">
-                            <a href="#overview_gallery"
-                                class="blue0"
-                            >
-                                Civic Gallery
-                            </a> 
-                        </li>
-                    </ul>
-
-                    <div class="mb1-00" >
-                            {% comment %} <small>Previous</small> </br>
-                        <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br> {% endcomment %}
-                        <small>Next</small> </br>
-                        <a href="{% url 'website:principles-professionalism' %}" class="mb1-00 blue0 f0-75 b">AESL Professionalism</a>
-                    </div>
                 </div>
             </div>
             <!-- AESL History Aside  End -->

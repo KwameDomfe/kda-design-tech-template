@@ -54,6 +54,7 @@
 .b--gold{border-color:#ffb700}
 .b--gold-10{border-color:rgb(255, 183, 0,0.2)}
 .b--yellow{border-color:gold}
+.b--green{border-color:rgb(0 255 0 / 75%);}
 
 .b--transparent{border-color:transparent}
 .b--inherit{border-color:inherit}

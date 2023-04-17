@@ -2,14 +2,11 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import (
-    path, 
-    include
-    )
+from django.urls import (path, include)
 
 # core urls
 urlpatterns = [
-    # 1. Admin
+    # 1. Default Admin
     path('admin/', admin.site.urls),
     #1. Website
     path('', include('apps.website.urls', namespace='website')),
@@ -24,3 +21,4 @@ if settings.DEBUG:
     urlpatterns += static(
         settings.STATIC_URL, 
         document_root = settings.STATIC_ROOT)
+        

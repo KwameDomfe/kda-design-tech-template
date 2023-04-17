@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block pagetitle %} 
-    Practice  Corporate Responsibilities
+Projects || {{ projectCategory }}
 {% endblock pagetitle %}
 
 {% block custom_css %} 
@@ -23,7 +23,7 @@
                 bg-white"
         >
             <figure class="gc1s12">
-                <img src="{% static './_media/images/Landscape_Images/fpo_hero.png' %}"          
+                <img src="{{ projectCategory.thumbnail }}"          
                     alt=""
                     class="w-100 vh-60 cover">
             </figure>
@@ -33,7 +33,7 @@
                         f3-00
                     "
                 >
-                {{ project_category }}</h2>
+                {{ projectCategory }}</h2>
             </hgroup>
             <!-- Page Navigation -->
                 {% include 'website/projects/_partials/projects_page_nav.html' %}
@@ -53,22 +53,18 @@
                        
                     "
                 > 
-                <P>
-                    {{ project_category}}
-                </P>
-                <P class="b mh2-00">
-                    {{ project_category}}
-                </P>
-                <P>
-                    {{ project_category}}
-                </P>
+                <ul>
+                    {% for category in Categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
                 </article>
 
             </div>
             <!-- Projects Category Overview -->
 
             <!-- Projects Category Gallery -->
-            <div id="project_category_Gallery"
+            <div id="Categories_Gallery"
                 class="grid gtc12 ggap1-00
                     mb3-00"
             >
