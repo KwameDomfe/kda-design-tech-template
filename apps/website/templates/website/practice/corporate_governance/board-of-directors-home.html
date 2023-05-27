@@ -153,7 +153,7 @@
                             
                             </div>
                         </article>
-                        <footer class="gr3s1 gc1s12 pa1-00 bg-gray i w-100">
+                        <footer class="gr3s1 gc1s12 pa1-00 bg-gray white-90 i w-100">
                             Practice || Corporate Governance || Overview
                         </footer>
                     </div>
@@ -167,7 +167,7 @@
                                 class=""
                             >
                                 <h2 class="mv1-00 pl1-00
-                                    f2-00 ttu"
+                                    f2-00 ttu white-90"
                                 >
                                     Board Chairman
                                 </h2>     
@@ -211,7 +211,7 @@
                                 </figure>
                             </article>
                         </div>
-                        <footer class="gr3s1 gc1s12 pa1-00 bg-gray w-100 i">
+                        <footer class="gr3s1 gc1s12 pa1-00 bg-gray white-90 w-100 i">
                             Practice || Corporate Governance || Board Chairman
                         </footer>
                     </div>
@@ -224,7 +224,7 @@
                                 class=""
                             >
                                 <h2 class="mv1-00 pl1-00
-                                    f2-00 ttu"
+                                    f2-00 ttu white-90"
                                 >
                                     Board Members
                                 </h2>     
@@ -452,7 +452,7 @@
                             </article>
                         </div> 
 
-                        <footer class="gr4s1 gc1s12 pa1-00 bg-gray w-100 i">
+                        <footer class="gr4s1 gc1s12 pa1-00 bg-gray white-90 w-100 i">
                             Practice || Corporate Governance || Board Members
                         </footer>
                     </div>
@@ -469,34 +469,50 @@
                         pt5-00
                         sticky top-0"
                     >
-                        <ul class="mb1-00 bl bw4 pl2-00 f0-75"
-                        >
-                            <h3 >Page Sections</h3>
-                            <li class="mb1-00 i">
-                                <a href="#cg--overview"
-                                    class="blue0"
-                                >
-                                Overview</a> 
-                            </li>
-                            <li class="mb1-00 i">
-                                <a href="#cg--boardChairman"
-                                    class="blue0"
-                                >
-                                Board Chairman</a> 
-                            </li>
-                            <li class="mb1-00 i">
-                                <a href="#cg--boardMembers"
-                                    class="blue0"
-                                >
-                                Board Members</a> 
-                            </li>
-                        </ul> 
-                       
-                        <div class="h6-00" >
-                            <small>Previous</small> </br>
-                            <a href="{% url 'website:sector-ministry' %}" class="mb1-00 blue0 f0-75 b">Sector Ministry</a> <br><br>
-                            <small>Next</small> </br>
-                            <a href="{% url 'website:management' %}" class="mb1-00 blue0 f0-75 b">AESL Management</a>
+                        <div>
+                            <a href= {% url 'website:practice-home' %}
+                                class="dib mb1-00 
+                                    f1-25 blue0 ttu fw6">Back to Practice
+                            </a>
+                            <ul class="mb1-00 bl bw4 pa1-00 b--gray gray f0-75">
+                                <h3 >Corporate Governance</h3>
+                                <li class="mb1-00 i">
+                                    <a href="#cg--overview"
+                                        class="gray"
+                                    >
+                                        AESL Corporate Governance
+                                    </a>
+                                </li>
+                                <li class="mb1-00 i">
+                                    <a href="#cg--boardChairman"
+                                        class="gray"
+                                    >
+                                        AESL Board Chairman
+                                    </a>
+                                </li>
+                                <li class="mb1-00 i">
+                                    <a href="#cg--boardMembers"
+                                        class="gray"
+                                    >
+                                        AESL Board Members
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+
+                        <div class="h6-00 gray">
+                            <small>Previous</small></br>
+                            <a href="{% url 'website:sector-ministry' %}" 
+                                class="mb1-00 f0-75 gray b"
+                            >
+                                AESL Sector Ministry
+                            </a> <br><br>
+                            <small>Next</small></br>
+                            <a href="{% url 'website:management' %}" 
+                                class="mb1-00 f0-75 gray b"
+                            >
+                                AESL Management
+                            </a>
                         </div>
                     </div>
                     

@@ -61,12 +61,11 @@
                 >
                     {% for project in projects_list %}
                         <li class="flex items-center justify-between
-                            w-100"
+                            w-100 f1-00"
                         >
                             <a href="{% url 'website:project-details' project.slug %}"
                                 class="dib w-100"
                             >
-                            
                                 <article id="" 
                                     class="flex items-center justify-center"
                                 >
@@ -103,7 +102,9 @@
                 </article>
 
             </div>
-            <footer id = "projectsListPage__Footer">
+            <footer id = "projectsListPage__Footer"
+                class="mb1-00"
+            >
                 {% include 'website/_partials/page_footer.html' %} 
             </footer>
             <!-- Projects List -->

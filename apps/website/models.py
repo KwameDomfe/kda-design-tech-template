@@ -45,8 +45,8 @@ class Category(models.Model):
         return self.name
     
     def save(self, *args, **kwargs):
-        # if self.slug is None:
-        #     self.slug=slugify(self.name)
+        if self.slug is None:
+            self.slug=slugify(self.name)
         super().save(*args, **kwargs)
 
 def category_pre_save(sender, instance, *args, **kwargs):
@@ -164,6 +164,44 @@ class Gender(models.Model):
     def __str__(self):
         return self.name
 
+class Region(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+
+    name=models.CharField(
+        max_length =128)
+
+    def __str__(self):
+        return self.name
+
+class Office(models.Model):
+    id=models.AutoField(
+        primary_key=True)
+
+    name=models.CharField(
+        max_length =128)
+
+    location=models.CharField(
+        max_length=128,
+        blank=True,
+        null=True)
+    phone=models.CharField(
+        max_length=128,
+        blank=True,
+        null=True)
+    email=models.EmailField(
+        max_length=128,
+        blank=True,
+        null=True)
+
+    region=models.ForeignKey(
+        Region,
+        on_delete=models.SET_NULL,
+        null=True)
+    
+    def __str__(self):
+        return self.name
+
 # Person Model
 class Person(models.Model):
     id=models.AutoField(
@@ -190,25 +228,26 @@ class Person(models.Model):
         null=False, 
         blank=True)
 
-    description=models.TextField(
-        max_length=512, 
-        blank=False)
-
-    dob=models.DateField(
-        'Date of Birth', 
-        blank=True, 
-        null=True)
-
     gender=models.ForeignKey(
         Gender, 
         on_delete=models.SET_NULL, 
         null=True)
 
-    profession_id=models.ForeignKey(
+    profession=models.ForeignKey(
         Profession, 
         on_delete=models.SET_NULL, 
         null=True,
         blank=True)
+
+    description=models.TextField(
+        'Description',
+        max_length=512, 
+        blank=True)
+
+    dob=models.DateField(
+        'Date of Birth', 
+        blank=True, 
+        null=True)
 
     mobile_1=models.CharField(
         max_length= 14, 
@@ -218,11 +257,11 @@ class Person(models.Model):
         max_length= 14, 
         blank=True )
 
-    email1=models.EmailField(
+    email=models.EmailField(
         max_length= 64, 
         blank=True )
 
-    email2=models.EmailField(
+    alt_email=models.EmailField(
         max_length= 64, 
         blank=True )
     
@@ -233,7 +272,6 @@ class Person(models.Model):
 
 """ Practice """
 
-# Regions
 class Section(models.Model):
     id=models.AutoField(
         primary_key=True)
@@ -249,7 +287,8 @@ class Section(models.Model):
     def __str__(self):
         return self.name
 
-# Regions
+""" Practice """
+
 class Department(models.Model):
     section = models.ForeignKey(
         Section,
@@ -290,35 +329,6 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
-
-# Towns and Cities
-class Region(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-
-    name=models.CharField(
-        max_length =128)
-
-    def __str__(self):
-        return self.name
-
-class Office(models.Model):
-    id=models.AutoField(
-        primary_key=True)
-
-    name=models.CharField(
-        max_length =128)
-
-    region=models.ForeignKey(
-        Region,
-        on_delete=models.SET_NULL,
-        null=True)
-    
-    def __str__(self):
-        return self.name
-
-""" Practice """
-
 # Positions
 class Position(models.Model):
     id=models.AutoField(
@@ -385,28 +395,40 @@ class BoardOfDirector(models.Model):
 class Staff(models.Model):
     id=models.AutoField(primary_key=True)
 
+    staff_number=models.CharField(
+        max_length=32,
+        default='QW23')
+    
     person=models.ForeignKey(
         Person, 
         on_delete=models.SET_NULL, 
         null=True)
 
-    staff_number=models.CharField(
-        max_length=32,
-        default='QW23')
-    
-    description=models.TextField(
-        max_length=512)
-    
     rank=models.ForeignKey(
         Rank, 
         on_delete=models.SET_NULL, 
         null=True)
 
+    department=models.ForeignKey(
+        Department, 
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True)
+
+    description=models.TextField(
+        max_length=512)
+    
     dateOfFirstAppointment=models.DateField(
         'date of First Appointment', 
         blank= True, 
         null=True)
-   
+
+    office = models.ForeignKey(
+        Office,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True
+    )   
     def __str__(self):
         return self.description
 
@@ -438,6 +460,7 @@ class Management(models.Model):
     )
     description=models.TextField(
         max_length=512)
+
     date_of_first_appointment=models.DateField(
         'date of First Appointment', 
         blank= True, 
@@ -456,7 +479,6 @@ class Management(models.Model):
         super().save(*arg, **kwarg)
 
 """ Projects Information Starts """
-
 # Projects Model
 class Project(models.Model): 
     id=models.AutoField(primary_key=True)
@@ -488,7 +510,7 @@ class Project(models.Model):
         max_digits=9,
         decimal_places=2, 
         null=True)
-    coordinator=models.ForeignKey(
+    project_coordinator=models.ForeignKey(
         Staff,
         on_delete=models.SET_NULL,
         null=True)

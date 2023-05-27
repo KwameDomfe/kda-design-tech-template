@@ -16,7 +16,7 @@
         >   
             {% for x in senior_ranks %}
                <li class="mb0-75"> 
-                    <a href=""
+                    <a href="{% url 'website:ranks' slug=x.slug %}"
                         class="white-90" 
                     >
                     {{ x.name }}s
@@ -36,7 +36,7 @@
         >   
             {% for x in junior_ranks_1 %}
                 <li class="mb0-75">
-                    <a  href=""
+                    <a  href="javascript:void()"
                         class="white-90" 
                     >
                     {{ x.name }}s
@@ -56,7 +56,7 @@
         >   
             {% for x in junior_ranks_2 %}
                 <li class="mb0-75">
-                    <a  href=""
+                    <a  href="javascript:void()"
                         class="white-90" 
                     >{{ x.name }}</a>
                 </li>

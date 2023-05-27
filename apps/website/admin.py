@@ -7,21 +7,22 @@ from django.contrib import admin
 from .models import (
     Category, 
         SubCategory,
-    Person, 
         Title,
         Gender,  
-        Profession,
+        Region,
+
+    Person, 
     Staff, 
+        Profession,
         Rank,
-      
+        Department,
+    Section,
     BoardOfDirector,
     Management, 
         Position,
-        Section,
         Department,
         Service,
         Office,
-        Region,
     Project,
         ProjectDetail,
         ProjectLead,
@@ -31,22 +32,14 @@ from .models import (
 )
 """ Imports End"""
 
-
-# Models Admin Register
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ['name','description']
-
-
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ['name','description']
 """ Categories Admin Start """
-
 class SubCategoryInline(admin.StackedInline):
     model = SubCategory
     extra = 0
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    inlines = [SubCategoryInline,]
     list_display = ['name','description']
     extra = 0
     list_per_page = 5
@@ -54,19 +47,22 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name','description']
     ordering = ['name',]
     # raw_id_fields = ['']
-    inlines = [SubCategoryInline,]
 
 """ Categories Admin End """
 
 """ Project Administration Start """
+# Project Inlines
 class ProjectOverviewInline(admin.TabularInline):
     model = ProjectOverview
+    extra = 0
 
 class ProjectDetailInline(admin.TabularInline):
     model = ProjectDetail
 
-class ProjectLeadInline(admin.TabularInline):
+class ProjectLeadInline(admin.StackedInline):
     model = ProjectLead
+    extra = 0
+    list_display = ['staff']
 
 class ProjectTagInline(admin.TabularInline):
     model = ProjectTag
@@ -74,7 +70,10 @@ class ProjectTagInline(admin.TabularInline):
 class ProjectMediaInline(admin.TabularInline):
     model = ProjectMedia
 
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['name','description']
 
+# Project Admin
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [
@@ -92,11 +91,12 @@ class ProjectAdmin(admin.ModelAdmin):
     list_per_page = 5
 """ Project Administration End """
 
+""" Section Start """
+# Section Inlines
 class DepartmentInline(admin.StackedInline):
     model = Department
     extra = 0
-"""  Models Register """
-
+# Section Admin
 @admin.register(Section)
 class SectionAdmin(admin.ModelAdmin):
     inlines = [
@@ -107,30 +107,19 @@ class SectionAdmin(admin.ModelAdmin):
     search_fields = ['name','description']
     ordering = ['name',]
     list_per_page = 5
-""" Project Administration End """
-# admin.site.register(SubCategory)
-# admin.site.register(Category)
-
-# admin.site.register(Project, ProjectAdmin)
-# admin.site.register(ProjectOverview)
-# admin.site.register(ProjectDetail)
-# admin.site.register(ProjectLead)
-# admin.site.register(ProjectMedia)
-# admin.site.register(ProjectTag)
+""" Section End """
 
 admin.site.register(Title)
 admin.site.register(Gender)
+admin.site.register(Region)
 admin.site.register(Profession)
 admin.site.register(Person)
 
-admin.site.register(BoardOfDirector)
-admin.site.register(Management)
-admin.site.register(Position)
+# admin.site.register(BoardOfDirector)
+# admin.site.register(Management)
+# admin.site.register(Position)
 
 admin.site.register(Staff)
 admin.site.register(Rank)
-admin.site.register(Department)
 admin.site.register(Office)
-admin.site.register(Region)
-admin.site.register(Service)
-
+# admin.site.register(Service)

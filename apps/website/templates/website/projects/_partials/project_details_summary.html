@@ -21,7 +21,7 @@
                 Project Coordinator
             </h5>
             <li>
-                {{project.coordinator}}
+                {{project.project_coordinator}}
             </li>     
         </ul> 
     </article>
@@ -43,13 +43,12 @@
             <h5 class="mb0-50">
                 Project Leads
             </h5>
-            
-            {% for x in projectLead %}
+            {% for project_lead in project_leads %}
                 <li>
-                   {{ x }} 
+                   {{ project_lead }} 
                 </li>     
             {% endfor %}
-           
+        
         </ul> 
     </article>
 
@@ -97,7 +96,7 @@
                 white-90"
         >
             <h5 class="mb0-50">
-                Sart Date
+                Start Date
             </h5>
             <p class="mb0-25">{{ project.start_date|date:'F, Y' }}</p>
             <h5 class="mb0-50">

@@ -4,7 +4,7 @@ from . views import (
     index,
     people,
         #Lists Views
-        # ranks, 
+        ranks, 
         principalConsultants, 
         seniorConsultants,
         consultants, 
@@ -85,31 +85,31 @@ urlpatterns = [
                     people, 
                     name='people-home'),
 
-                # path('<slug:slug>/', 
-                #     ranks, 
-                #     name='ranks'),
+                path('<slug:slug>/', 
+                    ranks, 
+                    name='ranks'),
 
-                path('principal-consultants/', 
+                path('aesl-consultants/principal-consultants/', 
                     principalConsultants, 
                     name='principal-consultants'),
 
-                path('principal-consultants/principal-consultant-details', 
+                path('aesl-consultants/principal-consultants/principal-consultant-details', 
                     principalConsultantsDetails, 
                     name='principal-consultant-details'),
                 
-                path('senior-consultants/', 
+                path('aesl-consultants/senior-consultants/', 
                     seniorConsultants, 
                     name='senior-consultants'),
 
-                path('senior-consultants/senior-consultant-details', 
+                path('aesl-consultants/senior-consultants/senior-consultant-details', 
                     seniorConsultantDetails, 
                     name='senior-consultant-details'),
                 
-                path('consultants/', 
+                path('aesl-consultants/consultants\'/', 
                     consultants, 
                     name='consultants'),
                     
-                path('consultants/consultant-details', 
+                path('aesl-consultants/consultants/consultant-details', 
                     consultantDetails, 
                     name='consultant-details'),
                 

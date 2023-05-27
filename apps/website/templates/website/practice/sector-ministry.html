@@ -47,7 +47,7 @@
                         mb1-00 min-vh-100"
                 >   
                     <!-- Sector Ministry Overview -->
-                        <div id="sectorMinistryOverview">
+                        <div id="sm--sectorMinistryOverview">
                             <article id="Project_Overview_1" 
                                 class="gr2s1 gc2s10 "
                             >   
@@ -220,7 +220,7 @@
                             <footer class="gr3s1 gc1s12 
                                 w-100
                                 pa1-00 mb2-00 
-                                bg-gray
+                                bg-gray white-90
                                 i"
                             >
                             Practice || Sector Ministry || Overview
@@ -228,7 +228,7 @@
                         </div>
                     <!-- Sector Ministry Overview -->
                     <!-- Sector Minister -->
-                        <div id=""
+                        <div id="sm--sectorMinister"
                             class="grid gtc12 ggap1-00"    
                         >
                             <header id=""
@@ -237,7 +237,7 @@
                                     class=""
                                 >
                                     <h2 class="mv1-00 pl1-00
-                                        f2-00 ttu"
+                                        white-90 f2-00 ttu"
                                     >
                                         sector minister
                                     </h2>     
@@ -246,7 +246,7 @@
                             <article id="" 
                                 class="gr2s1 gc1s12 grid gtc12"
                             >   
-                                <div class="gr1s1 gc7s6 ph2-00">
+                                <div class="gr1s1 gc7s6 ph2-00 blue0">
                                     <p>
                                         The Minister for Works and hosibb  bla bla bla.
                                     </p>
@@ -298,7 +298,7 @@
                             <footer class="gr3s1 gc1s12 
                                 w-100
                                 pa1-00 
-                                bg-gray 
+                                bg-gray white-90
                                 i"
                             >
                                 Practice || Sector Ministry || Sector Minister
@@ -316,17 +316,43 @@
                         pt5-00
                         sticky top-0"
                     >
-                       
-                        <ul class="mb1-00 bl bw4 pl2-00">
-                            <h3 >Page Sections</h3>
-                            <li class="mb1-00">Overview</li>
-                            <li class="mb1-00">Sector Minister</li>
-                        </ul> 
-                        <div class="h6-00" >
-                            <small>Previous</small> </br>
-                            <a href="{% url 'website:mission-vision-values' %}" class="mb1-00 blue0 f0-75 b">AESL Mission, Vision and Values</a> <br><br>
-                            <small>Next</small> </br>
-                            <a href="{% url 'website:corporate-governance' %}" class="mb1-00 blue0 f0-75 b">AESL Corporate Governance</a>
+                        <div>
+                            <a href= {% url 'website:practice-home' %}
+                                class="dib mb1-00 
+                                    f1-25 blue0 ttu fw6">Back to Practice
+                            </a>
+                            <ul class="mb1-00 bl bw4 pa1-00 b--gray gray f0-75">
+                                <h3 >Sector Ministry</h3>
+                                <li class="mb1-00 i">
+                                    <a href="#sm--sectorMinistryOverview"
+                                        class="gray"
+                                    >
+                                        Ministry of Works and Housing
+                                    </a>
+                                </li>
+                                <li class="mb1-00 i">
+                                    <a href="#sm--sectorMinister"
+                                        class="gray"
+                                    >
+                                        Sector Minister
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+
+                        <div class="h6-00 gray">
+                            <small>Previous</small></br>
+                            <a href="{% url 'website:mission-vision-values' %}" 
+                                class="mb1-00 f0-75 gray b"
+                            >
+                                AESL Mission, Vision and Values
+                            </a> <br><br>
+                            <small>Next</small></br>
+                            <a href="{% url 'website:corporate-governance' %}" 
+                                class="mb1-00 f0-75 gray b"
+                            >
+                                AESL Corporate Governance
+                            </a>
                         </div>
                     </div>
                     

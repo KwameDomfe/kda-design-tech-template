@@ -6,7 +6,7 @@ from .models import (
     Category, SubCategory,
     Project, 
         ProjectOverview, 
-        # ProjectLead, 
+        ProjectLead, 
         ProjectDetail, 
         ProjectTag, 
         ProjectMedia,
@@ -161,26 +161,26 @@ def people(request):
     # Render Template
     return render(request,'website/people/people-home.html', context)
 
-# def ranks(request):
-#     # pageNav querysets
-#     rank = Rank.objects.all()
-#     senior_ranks = Rank.objects.all()[0:3]
-#     junior_ranks_1 = Rank.objects.all()[3:7]
-#     junior_ranks_2 = Rank.objects.all()[7:9]
-#     alumni_ranks = Rank.objects.all()[9:]
-#     projectCategories_qs = Category.objects.all()
+def ranks(request):
+    # pageNav querysets
+    rank = Rank.objects.all()
+    senior_ranks = Rank.objects.all()[0:3]
+    junior_ranks_1 = Rank.objects.all()[3:7]
+    junior_ranks_2 = Rank.objects.all()[7:9]
+    alumni_ranks = Rank.objects.all()[9:]
+    projectCategories_qs = Category.objects.all()
 
-#     # pageNav context
-#     context = {
-#         'ranks' :rank,
-#         'senior_ranks' :senior_ranks,
-#         'junior_ranks_1' :junior_ranks_1,
-#         'junior_ranks_2' :junior_ranks_2,
-#         'alumni_ranks' :alumni_ranks,
-#         'project_categories_list' :projectCategories_qs,
-#     }
-#     # render method
-#     return render(request,'website/people/principal-consultants/principal-consultants.html', context)
+    # pageNav context
+    context = {
+        'ranks' :rank,
+        'senior_ranks' :senior_ranks,
+        'junior_ranks_1' :junior_ranks_1,
+        'junior_ranks_2' :junior_ranks_2,
+        'alumni_ranks' :alumni_ranks,
+        'project_categories_list' :projectCategories_qs,
+    }
+    # render method
+    return render(request,'website/people/principal-consultants/principal-consultants.html', context)
     
 def principalConsultants(request):
     #pageNav querysets
@@ -950,11 +950,13 @@ def projects(request):
     projectCategories_qs_1 = Category.objects.all().reverse()[:5]
     projectCategories_qs_2 = Category.objects.all().reverse()[5:]
     
+    
     context = {
                 'projects_list': projects_qs,
                 'project_categories_list':projectCategories_qs,
                 'project_categories_list_1':projectCategories_qs_1,
                 'project_categories_list_2':projectCategories_qs_2,
+               
             }
     
     return render(request,'website/projects/projects-home.html', context)
@@ -993,29 +995,19 @@ def projectDetails(request, slug = None):
             raise Http404
     projectCategories = Category.objects.all() 
     projectOverview = ProjectOverview.objects.all()
-        
+    project_leads = ProjectLead.objects.all()   
     context = {
             'project_categories_list':projectCategories,
             'project': project_obj,
-            'projectOverview' :projectOverview
+            'projectOverview' :projectOverview,
+            'project_leads':project_leads,
     }
         
     return render(request, 'website/projects/projects_detail_view.html', context)
 
 def projectsMap(request):
-        
-#         projects_qs = Project.objects.all() #print(projects_qs)
-#         projectCategories_qs = Category.objects.all()#print(projectCategories_qs)
-#         projectCategories_qs_1 = Category.objects.all()[:5]#print(projectCategories_qs)
-#         projectCategories_qs_2 = Category.objects.all()[5:]#print(projectCategories_qs)
-        
-        context = {
-#                 'projects_list': projects_qs,
-#                 'projectcategories_list':projectCategories_qs,
-#                 'projectcategories_list_1':projectCategories_qs_1,
-#                 'projectcategories_list_2':projectCategories_qs_2
-                
-            }
+    
+        context = {}
 
         return render(request, 'website/projects/projects_map_view.html', context)
 

@@ -81,7 +81,7 @@
                             class="gr1s1 gc1s6
                             flex items-center justify-center
                             relative">
-                            <hgroup 
+                            {% comment %} <hgroup 
                                 class="flex flex-column items-center justify-center
                                     pa0-50 bg-red 
                                     absolute
@@ -92,7 +92,7 @@
                                 <span>
                                 - Techiman, Ghana.
                                 </span>    
-                            </hgroup> 
+                            </hgroup>  {% endcomment %}
                             <figure >
                                 <img src="{% static '_images\principles\_partials\principles_1.png' %}"            
                                     alt=""
@@ -114,7 +114,7 @@
                                     class="pa0-50"
                                 /> 
                             </figure>
-                            <hgroup 
+                            {% comment %} <hgroup 
                                 class="flex flex-column items-center justify-start
                                     pa0-50
                                     bg-red
@@ -126,7 +126,7 @@
                                 <span>
                                 - Accra , Ghana.
                                 </span>    
-                            </hgroup> 
+                            </hgroup>  {% endcomment %}
                         </article>
 
                         <article id="proposed_apartment_2" 
@@ -134,7 +134,7 @@
                             flex items-center justify-center
                             relative">
                         
-                            <hgroup 
+                            {% comment %} <hgroup 
                                 class="flex flex-column items-center justify-start
                                     pa0-50
                                     bg-red
@@ -146,7 +146,7 @@
                                 <span>
                                 - Accra , Ghana.
                                 </span>    
-                            </hgroup> 
+                            </hgroup>  {% endcomment %}
                             <figure class="shadow-5">
                                 <img src="{% static '_images\principles\_partials\principles_1.png' %}"            
                                     alt=""
@@ -161,9 +161,10 @@
                         <article id="Office_Techiman" 
                             class="gr5s1 gc8s5
                                 flex items-center justify-center
-                                relative">
+                                relative"
+                        >
                         
-                            <hgroup 
+                            {% comment %} <hgroup 
                                 class="flex items-center justify-center
                                     bg-red
                                     absolute
@@ -177,7 +178,7 @@
                                 <span class="white-90 flex items-center justify-center">
                                     - Techiman, Ghana.
                                 </span>    
-                            </hgroup> 
+                            </hgroup>  {% endcomment %}
                             <figure >
                                 <img src="{% static '_images\principles\_partials\principles_1.png' %}"            
                                     alt=""
@@ -222,7 +223,7 @@
                 class="gc4s1 
                     blue0 relative"
             >
-                <div class="flex flex-column justify-between
+                {% comment %} <div class="flex flex-column justify-between
                     min-vh-100 
                     ph2-00 pt6-00
                     sticky top-0"
@@ -240,7 +241,7 @@
                         <small>Next</small> </br>
                         <a href="{% url 'website:principles-empowerment' %}" class="mb1-00 blue0 f0-75 b">AESL Empowerment</a>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
             <!-- AESL History Aside  End -->
         </div>

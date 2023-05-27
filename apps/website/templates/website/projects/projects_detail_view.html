@@ -67,7 +67,7 @@
                                     >
                                         <p class="mb0-00 pv4-00 lh-copy tracked tj">
                                             {% lorem 50 w random %}.
-                                        </p>   
+                                        </p>
                                     </hgroup> 
                                 </header>
                                 <div class="gc1s12 flex ggap2-00 lh-copy">
@@ -1157,7 +1157,7 @@
                         </section>
                         <!-- Page Footer -->
                         <footer id="pageFooter"
-                            class=""
+                            class="mb1-00"
                         > 
                             {% include 'website/_partials/page_footer.html' %}
                         </footer>
@@ -1180,7 +1180,11 @@
                     >
                         
                         <ul class="mb1-00 bl bw4 pl1-00 f0-75">
-                            <h3 >Page Sections</h3>
+                            <h3 class="ttu f1-00">
+                                <a href="{% url 'website:projects-home' %}"
+                                    class="blue0"    
+                                >Back to Projects</a>
+                            </h3>
                             <li class="mb1-00 i">
                                 <a href="#projectDetails--Overview"
                                             class="blue0"
